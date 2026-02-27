@@ -1,0 +1,118 @@
+{
+  "BigRestaurant": {
+    "requiredObjects": [
+      {
+        "id": "Chair01",
+        "count": 2
+      },
+      {
+        "id": "Chair02",
+        "count": 0
+      },
+      {
+        "id": "KitchenRange01",
+        "count": 2
+      }
+    ]
+  },
+  "Restaurant": {
+    "requiredObjects": [
+      {
+        "id": "KitchenRange01",
+        "count": 2
+      },
+      {
+        "id": "Chair01",
+        "count": 0
+      }
+    ]
+  },
+  "1House": {
+    "requiredObjects": []
+  },
+  "SmallHouse": {
+    "requiredObjects": []
+  },
+  "2-3House": {
+    "requiredObjects": []
+  },
+  "BigHouse": {
+    "requiredObjects": []
+  },
+  "5House": {
+    "requiredObjects": []
+  },
+  "6House": {
+    "requiredObjects": []
+  },
+  "8House": {
+    "requiredObjects": []
+  },
+  "MiddleHouse": {
+    "requiredObjects": []
+  },
+  "FireStation": {
+    "requiredObjects": [
+      {
+        "id": "Table02",
+        "count": 1
+      }
+    ]
+  },
+  "ConvenienceStore": {
+    "requiredObjects": [
+      {
+        "id": "Table03",
+        "count": 1
+      },
+      {
+        "id": "VDMachine01",
+        "count": 1
+      }
+    ]
+  },
+  "CentralPark": {
+    "requiredObjects": [
+      {
+        "id": "Table02",
+        "count": 3
+      }
+    ]
+  },
+  "Bank": {
+    "requiredObjects": [
+      {
+        "id": "Table02",
+        "count": 1
+      }
+    ]
+  },
+  "Entertainment": {
+    "requiredObjects": [
+      {
+        "id": "Piano01",
+        "count": 1
+      },
+      {
+        "id": "Mic01",
+        "count": 0
+      }
+    ]
+  },
+  "Gimbab": {
+    "requiredObjects": [
+      {
+        "id": "Table03",
+        "count": 1
+      }
+    ]
+  },
+  "Exhibition": {
+    "requiredObjects": [
+      {
+        "id": "DEV_Reception_BarStool01",
+        "count": 1
+      }
+    ]
+  }
+}
