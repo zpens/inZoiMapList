@@ -599,14 +599,14 @@ function renderMemoDetail(memo) {
     <div class="memo-form" id="memoForm">
       <label style="font-size:12px;color:var(--text2)">제목</label>
       <input type="text" id="memoName" value="${memo.name.replace(/"/g,'&quot;')}" placeholder="메모 제목">
+      ${imagesHtml}
+      <div class="memo-paste-hint">📋 이미지를 Ctrl+V로 붙여넣기 가능</div>
       <div style="display:flex;align-items:center;justify-content:space-between">
         <label style="font-size:12px;color:var(--text2)">설명</label>
         <span class="memo-edit-toggle" onclick="toggleMemoEdit()">${memo.description ? '편집' : '작성'}</span>
       </div>
       <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요..." style="display:${memo.description ? 'none' : 'block'}">${memo.description || ''}</textarea>
       <div id="memoPreview" class="memo-preview" style="display:${memo.description ? 'block' : 'none'};cursor:pointer" onclick="toggleMemoEdit()">${memo.description ? linkifyText(memo.description.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>') : ''}</div>
-      ${imagesHtml}
-      <div class="memo-paste-hint">📋 이미지를 Ctrl+V로 붙여넣기 가능</div>
       <div style="font-size:11px;color:var(--text2)">생성: ${new Date(memo.createdAt).toLocaleString('ko')}</div>
       <div style="display:flex;gap:8px">
         <button class="btn btn-accent" onclick="saveMemoDetail('${memo.id}')" style="flex:1">💾 저장</button>
