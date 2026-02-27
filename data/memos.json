@@ -20,9 +20,9 @@
   "Cahaya": [
     {
       "id": "memo_1709200000005",
-      "name": "차하야 시장 메모",
+      "name": "차하야 시장 메모테스트",
       "city": "Cahaya",
-      "description": "전통 시장 구역 배치 계획",
+      "description": "테스트",
       "createdAt": "2026-02-28T15:05:00Z"
     }
   ]
