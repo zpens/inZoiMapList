@@ -113,6 +113,13 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .memo-link:hover{color:#6aa3ff}
 .memo-edit-toggle{font-size:11px;color:var(--accent);cursor:pointer}
 .memo-edit-toggle:hover{text-decoration:underline}
+.memo-images{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.memo-img-wrap{position:relative;border-radius:6px;overflow:hidden;background:var(--bg)}
+.memo-img{width:100%;display:block;border-radius:6px;cursor:pointer}
+.memo-img-del{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.7);color:#fff;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:.15s}
+.memo-img-wrap:hover .memo-img-del{opacity:1}
+.memo-img-del:hover{background:#ef4444}
+.memo-paste-hint{font-size:10px;color:var(--text2);opacity:.6;text-align:center}
 /* Selected ring animation */
 .selected-on-map .pin-head{border-color:var(--accent)}
 .selected-on-map .pin-head::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--accent);animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite;opacity:0}

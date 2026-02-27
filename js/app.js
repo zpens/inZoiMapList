@@ -586,13 +586,17 @@ function renderMemoDetail(memo) {
   detailEmpty.style.display = 'none';
   detailContent.style.display = 'block';
   const pos = currentMap().positions[memo.id];
+  const images = memo.images || [];
+  const imagesHtml = images.length > 0
+    ? `<div class="memo-images">${images.map((img, i) => `<div class="memo-img-wrap"><img src="${img}" class="memo-img"><div class="memo-img-del" onclick="deleteMemoImage('${memo.id}',${i})">✕</div></div>`).join('')}</div>`
+    : '';
   detailContent.innerHTML = `
     <div class="detail-header">
       <span class="detail-type-badge Memo">📝 메모</span>
       <div class="detail-title">${memo.name}</div>
       <div class="detail-id">${memo.id}</div>
     </div>
-    <div class="memo-form">
+    <div class="memo-form" id="memoForm">
       <label style="font-size:12px;color:var(--text2)">제목</label>
       <input type="text" id="memoName" value="${memo.name.replace(/"/g,'&quot;')}" placeholder="메모 제목">
       <div style="display:flex;align-items:center;justify-content:space-between">
@@ -601,6 +605,8 @@ function renderMemoDetail(memo) {
       </div>
       <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요..." style="display:${memo.description ? 'none' : 'block'}">${memo.description || ''}</textarea>
       <div id="memoPreview" class="memo-preview" style="display:${memo.description ? 'block' : 'none'};cursor:pointer" onclick="toggleMemoEdit()">${memo.description ? linkifyText(memo.description.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>') : ''}</div>
+      ${imagesHtml}
+      <div class="memo-paste-hint">📋 이미지를 Ctrl+V로 붙여넣기 가능</div>
       <div style="font-size:11px;color:var(--text2)">생성: ${new Date(memo.createdAt).toLocaleString('ko')}</div>
       <div style="display:flex;gap:8px">
         <button class="btn btn-accent" onclick="saveMemoDetail('${memo.id}')" style="flex:1">💾 저장</button>
@@ -615,6 +621,11 @@ function renderMemoDetail(memo) {
       ${!pos ? `<button class="btn btn-accent" onclick="startPlacing('${memo.id}')">📌 지도에 배치</button>` : `<button class="btn" onclick="startPlacing('${memo.id}')">📍 위치 이동</button><button class="btn" onclick="removePlacement('${memo.id}')" style="color:#ef4444">🗑️ 배치 해제</button>`}
     </div>
   `;
+  // Attach paste listener for images
+  const memoForm = $('memoForm');
+  if (memoForm) {
+    memoForm.addEventListener('paste', e => handleMemoPaste(e, memo.id));
+  }
 }
 
 function addMemo() {
@@ -632,6 +643,56 @@ function addMemo() {
   renderSiteList();
   selectSite(id);
   toast('메모가 추가되었습니다');
+}
+
+function resizeImage(dataUrl, maxSize) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      let w = img.width, h = img.height;
+      if (w <= maxSize && h <= maxSize) { resolve(dataUrl); return; }
+      if (w > h) { h = Math.round(h * maxSize / w); w = maxSize; }
+      else { w = Math.round(w * maxSize / h); h = maxSize; }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL('image/jpeg', 0.8));
+    };
+    img.src = dataUrl;
+  });
+}
+
+function handleMemoPaste(e, memoId) {
+  const items = e.clipboardData && e.clipboardData.items;
+  if (!items) return;
+  for (const item of items) {
+    if (item.type.startsWith('image/')) {
+      e.preventDefault();
+      const file = item.getAsFile();
+      const reader = new FileReader();
+      reader.onload = async ev => {
+        const resized = await resizeImage(ev.target.result, 800);
+        const memo = findMemo(memoId);
+        if (!memo) return;
+        if (!memo.images) memo.images = [];
+        memo.images.push(resized);
+        saveMemos();
+        renderMemoDetail(memo);
+        toast('이미지가 추가되었습니다');
+      };
+      reader.readAsDataURL(file);
+      break;
+    }
+  }
+}
+
+function deleteMemoImage(memoId, idx) {
+  const memo = findMemo(memoId);
+  if (!memo || !memo.images) return;
+  memo.images.splice(idx, 1);
+  saveMemos();
+  renderMemoDetail(memo);
+  toast('이미지가 삭제되었습니다');
 }
 
 function toggleMemoEdit() {
