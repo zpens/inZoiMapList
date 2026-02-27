@@ -84,13 +84,20 @@
   </div>
   <!-- Right Panel -->
   <div class="right-panel">
-    <div class="panel-header">상세 정보</div>
+    <div class="panel-header"><button class="mobile-back-btn" id="btnBackToList">← 목록</button><span>상세 정보</span></div>
     <div class="detail-empty" id="detailEmpty">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       <p style="font-size:13px">부지를 선택하면<br>상세 정보가 표시됩니다</p>
     </div>
     <div class="detail-content" id="detailContent" style="display:none"></div>
   </div>
+</div>
+<!-- Mobile Tab Bar -->
+<div class="mobile-tab-bar" id="mobileTabBar">
+  <button class="mobile-tab active" data-panel="map">🗺️<span>지도</span></button>
+  <button class="mobile-tab" data-panel="list">📋<span>목록</span></button>
+  <button class="mobile-tab" data-panel="detail">ℹ️<span>상세</span></button>
+  <button class="mobile-tab" data-panel="menu">⚙️<span>메뉴</span></button>
 </div>
 <!-- Context Menu -->
 <div class="context-menu" id="contextMenu">

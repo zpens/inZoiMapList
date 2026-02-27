@@ -767,6 +767,7 @@ function startPlacing(id) {
   const memo = findMemo(id);
   const name = s ? s.name : (memo ? memo.name : id);
   modeIndicator.textContent = `📌 "${name}" 배치 중 - 지도를 클릭하세요 (ESC 취소)`;
+  if (isMobile()) switchMobileTab('map');
 }
 
 function stopPlacing() {
@@ -797,6 +798,8 @@ function selectSite(id) {
   // Scroll list to selected
   const el = siteListEl.querySelector(`[data-id="${id}"]`);
   if (el) el.scrollIntoView({ block: 'nearest' });
+  // Mobile: auto-switch to detail tab
+  if (isMobile() && id) switchMobileTab('detail');
 }
 
 // Pan map so that a placed site is centered on screen
@@ -1033,6 +1036,87 @@ $('btnImport').onclick = () => {
   };
   inp.click();
 };
+
+// ============ MOBILE ============
+function isMobile() { return window.innerWidth <= 768; }
+
+function switchMobileTab(panel) {
+  const tabBar = $('mobileTabBar');
+  if (!tabBar) return;
+  tabBar.querySelectorAll('.mobile-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.panel === panel);
+  });
+  document.querySelector('.left-panel').classList.toggle('mobile-show', panel === 'list');
+  document.querySelector('.right-panel').classList.toggle('mobile-show', panel === 'detail');
+  document.querySelector('.header-controls').classList.toggle('mobile-show', panel === 'menu');
+}
+
+// Tab bar clicks
+const mobileTabBar = $('mobileTabBar');
+if (mobileTabBar) {
+  mobileTabBar.addEventListener('click', e => {
+    const tab = e.target.closest('.mobile-tab');
+    if (!tab) return;
+    switchMobileTab(tab.dataset.panel);
+  });
+}
+
+// Back button in detail panel
+$('btnBackToList').addEventListener('click', () => {
+  if (isMobile()) switchMobileTab('list');
+});
+
+// ============ TOUCH PAN / ZOOM ============
+let touchStartX = 0, touchStartY = 0, touchPanStartX = 0, touchPanStartY = 0;
+let touchZoomDist = 0;
+let isTouchPanning = false;
+
+canvasArea.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    const t = e.touches[0];
+    touchStartX = t.clientX;
+    touchStartY = t.clientY;
+    const m = currentMap();
+    touchPanStartX = m.panX;
+    touchPanStartY = m.panY;
+    isTouchPanning = true;
+  } else if (e.touches.length === 2) {
+    isTouchPanning = false;
+    const dx = e.touches[0].clientX - e.touches[1].clientX;
+    const dy = e.touches[0].clientY - e.touches[1].clientY;
+    touchZoomDist = Math.hypot(dx, dy);
+  }
+}, { passive: false });
+
+canvasArea.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (e.touches.length === 1 && isTouchPanning) {
+    const m = currentMap();
+    m.panX = touchPanStartX + (e.touches[0].clientX - touchStartX);
+    m.panY = touchPanStartY + (e.touches[0].clientY - touchStartY);
+    applyTransform();
+  } else if (e.touches.length === 2) {
+    const dx = e.touches[0].clientX - e.touches[1].clientX;
+    const dy = e.touches[0].clientY - e.touches[1].clientY;
+    const dist = Math.hypot(dx, dy);
+    if (touchZoomDist > 0) {
+      const scale = dist / touchZoomDist;
+      const cx = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      const cy = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      const rect = canvasArea.getBoundingClientRect();
+      zoomTo(currentMap().zoom * scale, cx - rect.left, cy - rect.top);
+      touchZoomDist = dist;
+    }
+  }
+}, { passive: false });
+
+canvasArea.addEventListener('touchend', e => {
+  if (e.touches.length === 0) {
+    isTouchPanning = false;
+    touchZoomDist = 0;
+    saveState();
+  }
+});
 
 // ============ INIT ============
 async function init() {
