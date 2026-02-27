@@ -671,23 +671,68 @@ $('uploadOverlay').addEventListener('click', e => {
 });
 
 // ============ EXPORT / IMPORT ============
+
+// Save positions to server (shared with everyone)
+$('btnSavePositions').onclick = async () => {
+  const positions = {};
+  Object.keys(state.maps).forEach(c => {
+    positions[c] = state.maps[c].positions;
+  });
+  try {
+    toast('위치 데이터 저장 중...');
+    const res = await fetch('/.netlify/functions/save-positions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(positions)
+    });
+    const result = await res.json();
+    if (res.ok) {
+      toast('위치가 저장되었습니다! (30초 후 배포 반영)');
+    } else {
+      toast('저장 실패: ' + (result.error || '알 수 없는 오류'));
+    }
+  } catch (err) {
+    toast('저장 실패: 서버에 연결할 수 없습니다');
+    console.error(err);
+  }
+};
+
+// Save map images to local file
+$('btnSaveImages').onclick = () => {
+  const data = { version: 2, maps: {} };
+  let hasImage = false;
+  Object.keys(state.maps).forEach(c => {
+    if (state.maps[c].imageData) {
+      data.maps[c] = { imageData: state.maps[c].imageData };
+      hasImage = true;
+    }
+  });
+  if (!hasImage) { toast('저장된 지도 이미지가 없습니다'); return; }
+  const blob = new Blob([JSON.stringify(data)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `inzoi_map_images_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  toast('지도 이미지가 다운로드되었습니다');
+};
+
+// Full backup export (local download)
 $('btnExport').onclick = () => {
-  const includeImages = confirm('지도 이미지도 함께 저장할까요?\n(이미지 포함 시 파일 크기가 커집니다)\n\n확인 = 이미지 포함 / 취소 = 위치 데이터만');
   const data = { version: 2, maps: {} };
   Object.keys(state.maps).forEach(c => {
     data.maps[c] = {
       positions: state.maps[c].positions
     };
-    if (includeImages && state.maps[c].imageData) {
+    if (state.maps[c].imageData) {
       data.maps[c].imageData = state.maps[c].imageData;
     }
   });
   const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `inzoi_map_${new Date().toISOString().slice(0,10)}.json`;
+  a.download = `inzoi_map_backup_${new Date().toISOString().slice(0,10)}.json`;
   a.click();
-  toast('데이터가 저장되었습니다');
+  toast('전체 백업이 다운로드되었습니다');
 };
 
 $('btnImport').onclick = () => {
@@ -754,29 +799,42 @@ async function init() {
   // Load map images from IndexedDB
   await loadImagesFromDB();
 
-  // If no saved data exists (first visit), auto-load the default save
-  const hasData = Object.keys(state.maps).some(c =>
-    Object.keys(state.maps[c].positions).length > 0 || state.maps[c].imageData
+  // Load shared positions from server
+  const hasPositions = Object.keys(state.maps).some(c =>
+    Object.keys(state.maps[c].positions).length > 0
   );
-  if (!hasData) {
+  if (!hasPositions) {
+    try {
+      const res = await fetch('data/positions.json');
+      if (res.ok) {
+        const positions = await res.json();
+        for (const c of Object.keys(positions)) {
+          if (state.maps[c]) {
+            state.maps[c].positions = positions[c] || {};
+          }
+        }
+        saveState();
+      }
+    } catch(e) { console.warn('Failed to load positions', e); }
+  }
+
+  // Load map images from save file if not in IndexedDB
+  const hasImages = Object.keys(state.maps).some(c => state.maps[c].imageData);
+  if (!hasImages) {
     try {
       const res = await fetch('saves/inzoi_map_2026-02-26.json');
       if (res.ok) {
         const data = await res.json();
         if (data.maps) {
           for (const c of Object.keys(data.maps)) {
-            if (state.maps[c]) {
-              state.maps[c].positions = data.maps[c].positions || {};
-              if (data.maps[c].imageData) {
-                state.maps[c].imageData = data.maps[c].imageData;
-                await IDB.saveImage('map_' + c, data.maps[c].imageData);
-              }
+            if (state.maps[c] && data.maps[c].imageData) {
+              state.maps[c].imageData = data.maps[c].imageData;
+              await IDB.saveImage('map_' + c, data.maps[c].imageData);
             }
           }
-          saveState();
         }
       }
-    } catch(e) { console.warn('Failed to load default save', e); }
+    } catch(e) { console.warn('Failed to load map images', e); }
   }
 
   // Render views
