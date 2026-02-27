@@ -318,11 +318,12 @@ function renderMapSites() {
     // Always-visible label when filtered
     const showLabel = isFiltered && filtered.has(id);
     const labelHtml = showLabel
-      ? `<div class="pin-label-fixed">${s ? `${iconEmoji} ${name}<br><span style="font-size:9px;opacity:.7">${s.sizeX}×${s.sizeY}</span>` : name}</div>`
+      ? `<div class="pin-label-fixed">${name}${s ? ` <span style="font-size:9px;opacity:.7">${s.sizeX}×${s.sizeY}</span>` : ''}</div>`
       : '';
     el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelHtml}`;
     el.dataset.id = id;
     el.dataset.name = name;
+    if (s) el.dataset.size = `${s.sizeX}×${s.sizeY}`;
     canvasContainer.appendChild(el);
   });
   // Re-apply counter-scale for zoom > 1
@@ -446,8 +447,9 @@ document.body.appendChild(pinTooltip);
 
 canvasArea.addEventListener('mouseover', e => {
   const pin = e.target.closest('.placed-site');
-  if (pin && pin.dataset.name) {
-    pinTooltip.textContent = pin.dataset.name;
+  if (pin && pin.dataset.name && state.filters.has('all')) {
+    const size = pin.dataset.size;
+    pinTooltip.textContent = size ? `${pin.dataset.name}  ${size}` : pin.dataset.name;
     pinTooltip.classList.add('show');
   }
 });
