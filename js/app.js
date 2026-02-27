@@ -751,14 +751,39 @@ async function init() {
   // Connect data to state
   state.sites = SITES_DATA;
 
-  // Render initial views
+  // Load map images from IndexedDB
+  await loadImagesFromDB();
+
+  // If no saved data exists (first visit), auto-load the default save
+  const hasData = Object.keys(state.maps).some(c =>
+    Object.keys(state.maps[c].positions).length > 0 || state.maps[c].imageData
+  );
+  if (!hasData) {
+    try {
+      const res = await fetch('saves/inzoi_map_2026-02-26.json');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.maps) {
+          for (const c of Object.keys(data.maps)) {
+            if (state.maps[c]) {
+              state.maps[c].positions = data.maps[c].positions || {};
+              if (data.maps[c].imageData) {
+                state.maps[c].imageData = data.maps[c].imageData;
+                await IDB.saveImage('map_' + c, data.maps[c].imageData);
+              }
+            }
+          }
+          saveState();
+        }
+      }
+    } catch(e) { console.warn('Failed to load default save', e); }
+  }
+
+  // Render views
   loadMapForCity();
   renderSiteList();
   renderMapSites();
 
-  // Load map images from IndexedDB (async), then fit to view
-  await loadImagesFromDB();
-  renderMapSites();
   // Wait a tick for image to render, then fit
   setTimeout(() => {
     if (mapImage.complete && mapImage.naturalWidth) { fitToView(); }
