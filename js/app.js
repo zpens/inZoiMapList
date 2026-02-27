@@ -315,13 +315,14 @@ function renderMapSites() {
     el.style.top = pos.y + 'px';
     const iconEmoji = memo ? '📝' : getIcon(s);
     const name = memo ? memo.name : s.name;
+    // Always-visible label when filtered
     const showLabel = isFiltered && filtered.has(id);
-    const labelText = showLabel
-      ? `<div class="pin-label" style="opacity:1;pointer-events:none">${name}${s ? `<br><span style="font-size:10px;opacity:.7">${s.sizeX}×${s.sizeY}</span>` : ''}</div>`
-      : `<div class="pin-label">${name}</div>`;
-    el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelText}`;
+    const labelHtml = showLabel
+      ? `<div class="pin-label-fixed">${name}</div>`
+      : '';
+    el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelHtml}`;
     el.dataset.id = id;
-    el.title = memo ? `📝 ${memo.name}` : `${iconEmoji} ${s.name} (${s.displayType || s.siteType}) ${s.sizeX}×${s.sizeY}`;
+    el.dataset.name = name;
     canvasContainer.appendChild(el);
   });
   // Re-apply counter-scale for zoom > 1
@@ -436,6 +437,29 @@ $('mapOpacity').addEventListener('input', e => {
   const val = e.target.value;
   mapImage.style.opacity = val / 100;
   $('opacityValue').textContent = val + '%';
+});
+
+// Pin tooltip (fixed position, avoids overflow clipping)
+const pinTooltip = document.createElement('div');
+pinTooltip.className = 'pin-tooltip';
+document.body.appendChild(pinTooltip);
+
+canvasArea.addEventListener('mouseover', e => {
+  const pin = e.target.closest('.placed-site');
+  if (pin && pin.dataset.name) {
+    pinTooltip.textContent = pin.dataset.name;
+    pinTooltip.classList.add('show');
+  }
+});
+canvasArea.addEventListener('mouseout', e => {
+  const pin = e.target.closest('.placed-site');
+  if (pin) pinTooltip.classList.remove('show');
+});
+canvasArea.addEventListener('mousemove', e => {
+  if (pinTooltip.classList.contains('show')) {
+    pinTooltip.style.left = (e.clientX + 12) + 'px';
+    pinTooltip.style.top = (e.clientY - 8) + 'px';
+  }
 });
 
 // Pan with middle mouse button (wheel click)
