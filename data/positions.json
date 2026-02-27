@@ -101,7 +101,24 @@
       "y": 395.536764332525
     }
   },
-  "RedCity": {},
+  "RedCity": {
+    "RedCity_Public_FuneralHome": {
+      "x": 1896.5581311327264,
+      "y": 321.7978206071851
+    },
+    "RedCity_Public_BlessBayBeach03_2": {
+      "x": 1005.9673108231597,
+      "y": 385.36051569138925
+    },
+    "RedCity_Business_School": {
+      "x": 1646.1194706159,
+      "y": 974.9363197442967
+    },
+    "RedCity_Public_SunsetBay": {
+      "x": 580.4034032408528,
+      "y": 460.50252993342644
+    }
+  },
   "Cahaya": {
     "Cahaya_Residence_EmptySite1": {
       "x": 1681.1846332531204,
