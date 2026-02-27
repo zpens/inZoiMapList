@@ -23,7 +23,13 @@ const state = {
   panStart: {x:0,y:0},
   isDraggingSite: false,
   dragSiteId: null,
-  dragOffset: {x:0,y:0}
+  dragOffset: {x:0,y:0},
+  // Stats
+  statsMode: false,
+  statsGroupBy: 'siteType',
+  statsCityFilter: 'all',
+  statsSortKey: 'count',
+  statsSortDir: 'desc'
 };
 
 // Init maps state
@@ -832,6 +838,15 @@ document.querySelectorAll('.city-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.city-tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
+
+    if (tab.dataset.city === 'Stats') {
+      state.statsMode = true;
+      showStats();
+      return;
+    }
+
+    state.statsMode = false;
+    hideStats();
     state.currentCity = tab.dataset.city;
     state.selectedSiteId = null;
     loadMapForCity();
@@ -1036,6 +1051,193 @@ $('btnImport').onclick = () => {
   };
   inp.click();
 };
+
+// ============ STATS DASHBOARD ============
+const STATS_GROUP_OPTIONS = [
+  { value: 'siteType', label: '부지 유형' },
+  { value: 'displayType', label: '표시 타입' },
+  { value: 'icon', label: '아이콘' },
+  { value: 'standardizedSize', label: '표준 크기' },
+  { value: 'city', label: '도시별' }
+];
+const STATS_CITY_OPTIONS = [
+  { value: 'all', label: '전체 도시' },
+  { value: 'Gangnam', label: '도원' },
+  { value: 'RedCity', label: '블리스베이' },
+  { value: 'Cahaya', label: '차하야' }
+];
+const CITY_LABEL = { Gangnam: '도원', RedCity: '블리스베이', Cahaya: '차하야' };
+const TYPE_LABEL = { Residence: '주거', Business: '비즈니스', Public: '공용', Bus: '버스', Override: '오버라이드' };
+
+function showStats() {
+  $('statsDashboard').style.display = 'flex';
+  renderStats();
+}
+function hideStats() {
+  $('statsDashboard').style.display = 'none';
+}
+
+function statsAvg(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+
+function renderStats() {
+  const dashboard = $('statsDashboard');
+  const groupBy = state.statsGroupBy;
+  const cityFilter = state.statsCityFilter;
+  const sortKey = state.statsSortKey;
+  const sortDir = state.statsSortDir;
+
+  // Filter sites
+  let sites = state.sites;
+  if (cityFilter !== 'all') sites = sites.filter(s => s.city === cityFilter);
+
+  // Gather positions
+  const allPositions = {};
+  Object.keys(state.maps).forEach(c => {
+    if (cityFilter === 'all' || cityFilter === c) {
+      Object.assign(allPositions, state.maps[c].positions);
+    }
+  });
+
+  // Summary stats
+  const totalCount = sites.length;
+  const totalArea = sites.reduce((sum, s) => sum + (s.sizeX || 0) * (s.sizeY || 0), 0);
+  const pricedSites = sites.filter(s => s.price > 1);
+  const avgPrice = pricedSites.length ? Math.round(statsAvg(pricedSites.map(s => s.price))) : 0;
+  const placedCount = sites.filter(s => allPositions[s.id]).length;
+  const resCount = sites.filter(s => s.siteType === 'Residence').length;
+  const bizCount = sites.filter(s => s.siteType === 'Business').length;
+  const pubCount = sites.filter(s => s.siteType === 'Public').length;
+
+  // Group
+  const groups = {};
+  sites.forEach(s => {
+    let key = s[groupBy] || '(없음)';
+    if (groupBy === 'city') key = CITY_LABEL[key] || key;
+    if (groupBy === 'siteType') key = TYPE_LABEL[key] || key;
+    if (!groups[key]) groups[key] = { name: key, count: 0, area: 0, prices: [], placed: 0, sizes: [] };
+    const g = groups[key];
+    g.count++;
+    const area = (s.sizeX || 0) * (s.sizeY || 0);
+    g.area += area;
+    g.sizes.push(area);
+    if (s.price > 1) g.prices.push(s.price);
+    if (allPositions[s.id]) g.placed++;
+  });
+
+  // Sort
+  let rows = Object.values(groups);
+  const maxCount = Math.max(...rows.map(r => r.count), 1);
+  rows.sort((a, b) => {
+    let va, vb;
+    if (sortKey === 'name') { va = a.name; vb = b.name; return sortDir === 'asc' ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1); }
+    if (sortKey === 'count') { va = a.count; vb = b.count; }
+    else if (sortKey === 'area') { va = a.area; vb = b.area; }
+    else if (sortKey === 'avgArea') { va = a.count ? a.area / a.count : 0; vb = b.count ? b.area / b.count : 0; }
+    else if (sortKey === 'avgPrice') { va = statsAvg(a.prices); vb = statsAvg(b.prices); }
+    else if (sortKey === 'placed') { va = a.placed; vb = b.placed; }
+    else { va = a.count; vb = b.count; }
+    return sortDir === 'asc' ? va - vb : vb - va;
+  });
+
+  // Sort indicator helper
+  const sc = (key) => sortKey === key ? (sortDir === 'asc' ? ' sorted-asc' : ' sorted-desc') : '';
+
+  // Controls HTML
+  const groupOptions = STATS_GROUP_OPTIONS.map(o =>
+    `<option value="${o.value}"${o.value === groupBy ? ' selected' : ''}>${o.label}</option>`
+  ).join('');
+  const cityOptions = STATS_CITY_OPTIONS.map(o =>
+    `<option value="${o.value}"${o.value === cityFilter ? ' selected' : ''}>${o.label}</option>`
+  ).join('');
+
+  // Table rows
+  const tableRows = rows.map(r => {
+    const avgArea = r.count ? Math.round(r.area / r.count) : 0;
+    const avgP = r.prices.length ? Math.round(statsAvg(r.prices)) : 0;
+    const minP = r.prices.length ? Math.min(...r.prices) : 0;
+    const maxP = r.prices.length ? Math.max(...r.prices) : 0;
+    const pctW = Math.round(r.count / maxCount * 100);
+    return `<tr>
+      <td><div class="stats-bar-cell"><span class="stats-bar" style="width:${pctW}%"></span>${r.name}</div></td>
+      <td class="num">${r.count}</td>
+      <td class="num">${r.area.toLocaleString()}</td>
+      <td class="num">${avgArea.toLocaleString()}</td>
+      <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
+      <td class="num">${r.prices.length ? '₦' + minP.toLocaleString() + ' ~ ₦' + maxP.toLocaleString() : '-'}</td>
+      <td class="num">${r.placed}/${r.count}</td>
+    </tr>`;
+  }).join('');
+
+  dashboard.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <h2 style="font-size:16px;font-weight:700">📊 부지 통계</h2>
+      <div class="stats-controls">
+        <span class="stats-label">그룹:</span>
+        <select class="stats-select" id="statsGroupBy">${groupOptions}</select>
+        <span class="stats-label">도시:</span>
+        <select class="stats-select" id="statsCityFilter">${cityOptions}</select>
+      </div>
+    </div>
+    <div class="stats-cards">
+      <div class="stats-card"><div class="stats-card-value">${totalCount}</div><div class="stats-card-label">총 부지</div></div>
+      <div class="stats-card"><div class="stats-card-value">${totalArea.toLocaleString()}</div><div class="stats-card-label">총 면적</div></div>
+      <div class="stats-card"><div class="stats-card-value">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</div><div class="stats-card-label">평균 가격</div></div>
+      <div class="stats-card"><div class="stats-card-value">${placedCount}/${totalCount}</div><div class="stats-card-label">배치 완료</div></div>
+      <div class="stats-card res"><div class="stats-card-value">${resCount}</div><div class="stats-card-label">🏠 주거</div></div>
+      <div class="stats-card biz"><div class="stats-card-value">${bizCount}</div><div class="stats-card-label">🏢 비즈니스</div></div>
+      <div class="stats-card pub"><div class="stats-card-value">${pubCount}</div><div class="stats-card-label">🌳 공용</div></div>
+    </div>
+    <div class="stats-table-wrap">
+      <table class="stats-table">
+        <thead><tr>
+          <th data-sort="name" class="${sc('name')}">그룹</th>
+          <th data-sort="count" class="${sc('count')}">개수</th>
+          <th data-sort="area" class="${sc('area')}">총면적</th>
+          <th data-sort="avgArea" class="${sc('avgArea')}">평균면적</th>
+          <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
+          <th>가격범위</th>
+          <th data-sort="placed" class="${sc('placed')}">배치율</th>
+        </tr></thead>
+        <tbody>${tableRows}</tbody>
+        <tfoot><tr style="font-weight:600;background:var(--panel)">
+          <td>합계</td>
+          <td class="num">${totalCount}</td>
+          <td class="num">${totalArea.toLocaleString()}</td>
+          <td class="num">${totalCount ? Math.round(totalArea / totalCount).toLocaleString() : 0}</td>
+          <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
+          <td class="num">${pricedSites.length ? '₦' + Math.min(...pricedSites.map(s=>s.price)).toLocaleString() + ' ~ ₦' + Math.max(...pricedSites.map(s=>s.price)).toLocaleString() : '-'}</td>
+          <td class="num">${placedCount}/${totalCount}</td>
+        </tr></tfoot>
+      </table>
+    </div>
+  `;
+
+  // Bind control events
+  $('statsGroupBy').addEventListener('change', e => {
+    state.statsGroupBy = e.target.value;
+    renderStats();
+  });
+  $('statsCityFilter').addEventListener('change', e => {
+    state.statsCityFilter = e.target.value;
+    renderStats();
+  });
+  // Table header sort
+  dashboard.querySelectorAll('.stats-table th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (state.statsSortKey === key) {
+        state.statsSortDir = state.statsSortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.statsSortKey = key;
+        state.statsSortDir = key === 'name' ? 'asc' : 'desc';
+      }
+      renderStats();
+    });
+  });
+}
 
 // ============ MOBILE ============
 function isMobile() { return window.innerWidth <= 768; }
