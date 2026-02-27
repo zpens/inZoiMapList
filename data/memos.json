@@ -1,5 +1,13 @@
 {
-  "Gangnam": [],
+  "Gangnam": [
+    {
+      "id": "memo_1772226814130",
+      "name": "새 메모",
+      "city": "Gangnam",
+      "description": "",
+      "createdAt": "2026-02-27T21:13:34.130Z"
+    }
+  ],
   "RedCity": [],
   "Cahaya": []
 }
