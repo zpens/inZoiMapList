@@ -9,13 +9,5 @@
     }
   ],
   "RedCity": [],
-  "Cahaya": [
-    {
-      "id": "memo_1709200000005",
-      "name": "차하야 시장 메모테스트",
-      "city": "Cahaya",
-      "description": "테스트",
-      "createdAt": "2026-02-28T15:05:00Z"
-    }
-  ]
+  "Cahaya": []
 }
