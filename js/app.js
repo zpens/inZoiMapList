@@ -569,6 +569,12 @@ canvasArea.addEventListener('contextmenu', e => {
 });
 document.addEventListener('click', () => { contextMenu.style.display='none'; });
 
+// URL auto-link helper
+function linkifyText(text) {
+  if (!text) return '';
+  return text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener" class="memo-link">$1</a>');
+}
+
 // ============ MEMO FUNCTIONS ============
 function findMemo(id) {
   if (!id || !id.startsWith('memo_')) return null;
@@ -591,6 +597,7 @@ function renderMemoDetail(memo) {
       <input type="text" id="memoName" value="${memo.name.replace(/"/g,'&quot;')}" placeholder="메모 제목">
       <label style="font-size:12px;color:var(--text2)">설명</label>
       <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요...">${memo.description || ''}</textarea>
+      ${memo.description ? `<div class="memo-preview">${linkifyText(memo.description.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>')}</div>` : ''}
       <div style="font-size:11px;color:var(--text2)">생성: ${new Date(memo.createdAt).toLocaleString('ko')}</div>
       <div style="display:flex;gap:8px">
         <button class="btn btn-accent" onclick="saveMemoDetail('${memo.id}')" style="flex:1">💾 저장</button>
