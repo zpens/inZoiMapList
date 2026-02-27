@@ -106,6 +106,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .memo-form textarea{min-height:120px;line-height:1.6}
 .memo-add-btn{margin:8px 14px;padding:8px;border-radius:6px;border:1px dashed var(--border);background:transparent;color:var(--text2);cursor:pointer;font-size:12px;font-family:inherit;transition:.2s;text-align:center}
 .memo-add-btn:hover{border-color:#14b8a6;color:#14b8a6;background:rgba(20,184,166,.05)}
+.memo-delete{cursor:pointer;color:var(--text2);font-size:14px;flex-shrink:0;padding:2px 4px;border-radius:4px;transition:.15s;line-height:1}
+.memo-delete:hover{color:#ef4444;background:rgba(239,68,68,.1)}
 /* Selected ring animation */
 .selected-on-map .pin-head{border-color:var(--accent)}
 .selected-on-map .pin-head::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--accent);animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite;opacity:0}

@@ -10,7 +10,7 @@ let MEMOS_DATA = { Gangnam: [], RedCity: [], Cahaya: [] };
 const state = {
   currentCity: 'Gangnam',
   sites: SITES_DATA,
-  filter: 'all',
+  filters: new Set(['all']),
   search: '',
   selectedSiteId: null,
   placingId: null,
@@ -126,24 +126,26 @@ function formatPrice(p) {
 function currentMap() { return state.maps[state.currentCity]; }
 
 function getFilteredSites() {
-  if (state.filter === 'Memo') {
-    const memos = MEMOS_DATA[state.currentCity] || [];
-    if (state.search) {
-      const q = state.search.toLowerCase();
-      return memos.filter(m => m.name.toLowerCase().includes(q) || (m.description||'').toLowerCase().includes(q));
-    }
-    return memos;
-  }
-  const results = state.sites.filter(s => {
+  const filters = state.filters;
+  const isAll = filters.has('all');
+  const q = state.search ? state.search.toLowerCase() : '';
+
+  // Sites: include if 'all' or matching siteType is selected
+  const sites = state.sites.filter(s => {
     if (s.city !== state.currentCity) return false;
-    if (state.filter !== 'all' && s.siteType !== state.filter) return false;
-    if (state.search) {
-      const q = state.search.toLowerCase();
-      if (!s.name.toLowerCase().includes(q) && !s.id.toLowerCase().includes(q) && !(s.displayType||'').toLowerCase().includes(q)) return false;
-    }
+    if (!isAll && !filters.has(s.siteType)) return false;
+    if (q && !s.name.toLowerCase().includes(q) && !s.id.toLowerCase().includes(q) && !(s.displayType||'').toLowerCase().includes(q)) return false;
     return true;
   });
-  return results;
+
+  // Memos: include if 'all' or 'Memo' is selected
+  let memos = [];
+  if (isAll || filters.has('Memo')) {
+    memos = (MEMOS_DATA[state.currentCity] || []).slice();
+    if (q) memos = memos.filter(m => m.name.toLowerCase().includes(q) || (m.description||'').toLowerCase().includes(q));
+  }
+
+  return sites.concat(memos);
 }
 
 function saveState() {
@@ -173,34 +175,35 @@ function renderSiteList() {
   const items = getFilteredSites();
   const positions = currentMap().positions;
   let html = '';
-  if (state.filter === 'Memo') {
+  // Show "add memo" button when Memo filter is active
+  if (state.filters.has('all') || state.filters.has('Memo')) {
     html += '<div class="memo-add-btn" onclick="addMemo()">+ 메모 추가</div>';
-    items.forEach(m => {
-      const placed = positions[m.id] ? ' placed' : '';
-      const selected = state.selectedSiteId === m.id ? ' selected' : '';
-      html += `<div class="site-item${placed}${selected}" data-id="${m.id}">
+  }
+  items.forEach(item => {
+    const isMemo = item.id.startsWith('memo_');
+    const placed = positions[item.id] ? ' placed' : '';
+    const selected = state.selectedSiteId === item.id ? ' selected' : '';
+    if (isMemo) {
+      html += `<div class="site-item${placed}${selected}" data-id="${item.id}">
         <div class="site-dot Memo" style="font-size:14px;width:auto;height:auto;background:none">📝</div>
         <div class="site-info">
-          <div class="site-name">${m.name}</div>
-          <div class="site-meta">메모 · ${new Date(m.createdAt).toLocaleDateString('ko')}</div>
+          <div class="site-name">${item.name}</div>
+          <div class="site-meta">메모 · ${new Date(item.createdAt).toLocaleDateString('ko')}</div>
         </div>
         ${placed ? '<span class="site-badge">배치됨</span>' : ''}
+        <div class="memo-delete" onclick="event.stopPropagation();deleteMemo('${item.id}')" title="삭제">✕</div>
       </div>`;
-    });
-  } else {
-    items.forEach(s => {
-      const placed = positions[s.id] ? ' placed' : '';
-      const selected = state.selectedSiteId === s.id ? ' selected' : '';
-      html += `<div class="site-item${placed}${selected}" data-id="${s.id}">
-        <div class="site-dot ${s.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(s)}</div>
+    } else {
+      html += `<div class="site-item${placed}${selected}" data-id="${item.id}">
+        <div class="site-dot ${item.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(item)}</div>
         <div class="site-info">
-          <div class="site-name">${s.name}</div>
-          <div class="site-meta">${s.displayType || s.siteType} · ${s.sizeX}×${s.sizeY}</div>
+          <div class="site-name">${item.name}</div>
+          <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}</div>
         </div>
         ${placed ? '<span class="site-badge">배치됨</span>' : ''}
       </div>`;
-    });
-  }
+    }
+  });
   siteListEl.innerHTML = html;
   $('siteCount').textContent = items.length + '개';
   const allCitySites = state.sites.filter(s => s.city === state.currentCity);
@@ -297,7 +300,7 @@ function renderMapSites() {
   document.querySelectorAll('.placed-site').forEach(el => el.remove());
   const positions = currentMap().positions;
   const filtered = new Set(getFilteredSites().map(s=>s.id));
-  const isFiltered = state.filter !== 'all';
+  const isFiltered = !state.filters.has('all');
   Object.keys(positions).forEach(id => {
     const s = state.sites.find(x=>x.id===id);
     const memo = !s ? findMemo(id) : null;
@@ -729,11 +732,30 @@ document.querySelectorAll('.city-tab').forEach(tab => {
 });
 
 // ============ FILTERS ============
+function updateFilterChips() {
+  document.querySelectorAll('.filter-chip').forEach(c => {
+    c.classList.toggle('active', state.filters.has(c.dataset.type));
+  });
+}
 document.querySelectorAll('.filter-chip').forEach(chip => {
   chip.addEventListener('click', () => {
-    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    state.filter = chip.dataset.type;
+    const type = chip.dataset.type;
+    if (type === 'all') {
+      // 'all' clicked: reset to only 'all'
+      state.filters.clear();
+      state.filters.add('all');
+    } else {
+      // Toggle specific type
+      state.filters.delete('all');
+      if (state.filters.has(type)) {
+        state.filters.delete(type);
+      } else {
+        state.filters.add(type);
+      }
+      // If nothing selected, revert to 'all'
+      if (state.filters.size === 0) state.filters.add('all');
+    }
+    updateFilterChips();
     renderSiteList();
     renderMapSites();
   });
