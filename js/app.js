@@ -315,8 +315,9 @@ function renderMapSites() {
     el.style.top = pos.y + 'px';
     const iconEmoji = memo ? '📝' : getIcon(s);
     const name = memo ? memo.name : s.name;
-    // Always-visible label only when 'all' is selected
-    const labelHtml = state.filters.has('all')
+    // Always-visible label when filtered
+    const showLabel = isFiltered && filtered.has(id);
+    const labelHtml = showLabel
       ? `<div class="pin-label-fixed">${name}</div>`
       : '';
     el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelHtml}`;
