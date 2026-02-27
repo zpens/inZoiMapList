@@ -1,13 +1,6 @@
 {
   "Gangnam": [
     {
-      "id": "memo_1709200000001",
-      "name": "공원 옆 카페 자리",
-      "city": "Gangnam",
-      "description": "센트럴파크 옆에 카페 배치하면 좋을 것 같음. 2층 건물 프리셋 추천.",
-      "createdAt": "2026-02-28T14:00:00Z"
-    },
-    {
       "id": "memo_1772228719267",
       "name": "테스트",
       "city": "Gangnam",
