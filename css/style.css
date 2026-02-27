@@ -116,7 +116,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .pin-tooltip{position:fixed;background:rgba(0,0,0,.85);color:#fff;padding:4px 10px;border-radius:5px;font-size:12px;white-space:nowrap;pointer-events:none;z-index:9999;opacity:0;transition:opacity .12s;font-family:'Noto Sans KR',sans-serif}
 .pin-tooltip.show{opacity:1}
 /* Always-visible label when filtered */
-.pin-label-fixed{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:4px;background:rgba(0,0,0,.8);color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;white-space:nowrap;pointer-events:none}
+.pin-label-fixed{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:4px;background:rgba(0,0,0,.8);color:#fff;padding:2px 8px;border-radius:4px;font-size:10px;pointer-events:none;text-align:center;line-height:1.4;white-space:nowrap}
 /* Zoom Controls */
 .zoom-controls{position:absolute;bottom:16px;left:16px;display:flex;flex-direction:column;gap:4px;z-index:10}
 .zoom-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:.2s}

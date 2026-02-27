@@ -318,7 +318,7 @@ function renderMapSites() {
     // Always-visible label when filtered
     const showLabel = isFiltered && filtered.has(id);
     const labelHtml = showLabel
-      ? `<div class="pin-label-fixed">${name}</div>`
+      ? `<div class="pin-label-fixed">${s ? `${iconEmoji} ${name}<br><span style="font-size:9px;opacity:.7">${s.sizeX}×${s.sizeY}</span>` : name}</div>`
       : '';
     el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelHtml}`;
     el.dataset.id = id;
