@@ -3,6 +3,7 @@ let SITES_DATA = [];
 let PRESET_DATA = {};
 let DETAIL_EXTRA = {};
 let SITE_IMAGES = {};
+let MEMOS_DATA = { Gangnam: [], RedCity: [], Cahaya: [] };
 
 
 // ============ STATE ============
@@ -125,7 +126,15 @@ function formatPrice(p) {
 function currentMap() { return state.maps[state.currentCity]; }
 
 function getFilteredSites() {
-  return state.sites.filter(s => {
+  if (state.filter === 'Memo') {
+    const memos = MEMOS_DATA[state.currentCity] || [];
+    if (state.search) {
+      const q = state.search.toLowerCase();
+      return memos.filter(m => m.name.toLowerCase().includes(q) || (m.description||'').toLowerCase().includes(q));
+    }
+    return memos;
+  }
+  const results = state.sites.filter(s => {
     if (s.city !== state.currentCity) return false;
     if (state.filter !== 'all' && s.siteType !== state.filter) return false;
     if (state.search) {
@@ -134,6 +143,7 @@ function getFilteredSites() {
     }
     return true;
   });
+  return results;
 }
 
 function saveState() {
@@ -160,23 +170,39 @@ function saveMapImage(city) {
 
 // ============ RENDER SITE LIST ============
 function renderSiteList() {
-  const sites = getFilteredSites();
+  const items = getFilteredSites();
   const positions = currentMap().positions;
   let html = '';
-  sites.forEach(s => {
-    const placed = positions[s.id] ? ' placed' : '';
-    const selected = state.selectedSiteId === s.id ? ' selected' : '';
-    html += `<div class="site-item${placed}${selected}" data-id="${s.id}">
-      <div class="site-dot ${s.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(s)}</div>
-      <div class="site-info">
-        <div class="site-name">${s.name}</div>
-        <div class="site-meta">${s.displayType || s.siteType} · ${s.sizeX}×${s.sizeY}</div>
-      </div>
-      ${placed ? '<span class="site-badge">배치됨</span>' : ''}
-    </div>`;
-  });
+  if (state.filter === 'Memo') {
+    html += '<div class="memo-add-btn" onclick="addMemo()">+ 메모 추가</div>';
+    items.forEach(m => {
+      const placed = positions[m.id] ? ' placed' : '';
+      const selected = state.selectedSiteId === m.id ? ' selected' : '';
+      html += `<div class="site-item${placed}${selected}" data-id="${m.id}">
+        <div class="site-dot Memo" style="font-size:14px;width:auto;height:auto;background:none">📝</div>
+        <div class="site-info">
+          <div class="site-name">${m.name}</div>
+          <div class="site-meta">메모 · ${new Date(m.createdAt).toLocaleDateString('ko')}</div>
+        </div>
+        ${placed ? '<span class="site-badge">배치됨</span>' : ''}
+      </div>`;
+    });
+  } else {
+    items.forEach(s => {
+      const placed = positions[s.id] ? ' placed' : '';
+      const selected = state.selectedSiteId === s.id ? ' selected' : '';
+      html += `<div class="site-item${placed}${selected}" data-id="${s.id}">
+        <div class="site-dot ${s.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(s)}</div>
+        <div class="site-info">
+          <div class="site-name">${s.name}</div>
+          <div class="site-meta">${s.displayType || s.siteType} · ${s.sizeX}×${s.sizeY}</div>
+        </div>
+        ${placed ? '<span class="site-badge">배치됨</span>' : ''}
+      </div>`;
+    });
+  }
   siteListEl.innerHTML = html;
-  $('siteCount').textContent = sites.length + '개';
+  $('siteCount').textContent = items.length + '개';
   const allCitySites = state.sites.filter(s => s.city === state.currentCity);
   const placedN = Object.keys(positions).length;
   $('placedCount').textContent = '배치: ' + placedN + '개';
@@ -185,6 +211,9 @@ function renderSiteList() {
 
 // ============ RENDER DETAIL ============
 function renderDetail(siteId) {
+  // Check if it's a memo
+  const memo = findMemo(siteId);
+  if (memo) { renderMemoDetail(memo); return; }
   const s = state.sites.find(x => x.id === siteId);
   if (!s) { detailContent.style.display='none'; detailEmpty.style.display='flex'; return; }
   detailEmpty.style.display='none';
@@ -271,24 +300,25 @@ function renderMapSites() {
   const isFiltered = state.filter !== 'all';
   Object.keys(positions).forEach(id => {
     const s = state.sites.find(x=>x.id===id);
-    if (!s) return;
+    const memo = !s ? findMemo(id) : null;
+    if (!s && !memo) return;
     const pos = positions[id];
-    const pinClass = s.icon || s.siteType;
+    const pinClass = memo ? 'Memo' : (s.icon || s.siteType);
     const el = document.createElement('div');
     el.className = `placed-site pin-${pinClass}`;
     if (state.selectedSiteId === id) el.classList.add('selected-on-map');
     if (!filtered.has(id)) el.style.opacity = '0.15';
     el.style.left = pos.x + 'px';
     el.style.top = pos.y + 'px';
-    const iconEmoji = getIcon(s);
-    // When a specific type filter is active, show name+size label always for matching pins
+    const iconEmoji = memo ? '📝' : getIcon(s);
+    const name = memo ? memo.name : s.name;
     const showLabel = isFiltered && filtered.has(id);
     const labelText = showLabel
-      ? `<div class="pin-label" style="opacity:1;pointer-events:none">${s.name}<br><span style="font-size:10px;opacity:.7">${s.sizeX}×${s.sizeY}</span></div>`
-      : `<div class="pin-label">${s.name}</div>`;
+      ? `<div class="pin-label" style="opacity:1;pointer-events:none">${name}${s ? `<br><span style="font-size:10px;opacity:.7">${s.sizeX}×${s.sizeY}</span>` : ''}</div>`
+      : `<div class="pin-label">${name}</div>`;
     el.innerHTML = `<div class="pin-head">${iconEmoji}</div><div class="pin-tail"></div>${labelText}`;
     el.dataset.id = id;
-    el.title = `${iconEmoji} ${s.name} (${s.displayType || s.siteType}) ${s.sizeX}×${s.sizeY}`;
+    el.title = memo ? `📝 ${memo.name}` : `${iconEmoji} ${s.name} (${s.displayType || s.siteType}) ${s.sizeX}×${s.sizeY}`;
     canvasContainer.appendChild(el);
   });
   // Re-apply counter-scale for zoom > 1
@@ -346,21 +376,14 @@ function fitToView() {
   const areaH = canvasArea.clientHeight;
   if (!areaW || !areaH) return;
 
-  // Determine content bounds
   let contentW = 0, contentH = 0;
+  let offsetX = 0, offsetY = 0;
 
-  // If map image is loaded, use its natural size
-  if (mapImage.naturalWidth && mapImage.style.display !== 'none') {
-    contentW = mapImage.naturalWidth;
-    contentH = mapImage.naturalHeight;
-  }
-
-  // Also consider placed sites bounds (they might extend beyond image)
+  // Always fit to placed sites if any exist
   const positions = m.positions;
   const ids = Object.keys(positions);
   if (ids.length > 0) {
-    let maxX = contentW, maxY = contentH;
-    let minX = Infinity, minY = Infinity;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     ids.forEach(id => {
       const p = positions[id];
       const s = state.sites.find(x => x.id === id);
@@ -371,10 +394,14 @@ function fitToView() {
       maxX = Math.max(maxX, p.x + w);
       maxY = Math.max(maxY, p.y + h);
     });
-    if (minX < 0) contentW = maxX - minX;
-    else contentW = Math.max(contentW, maxX);
-    if (minY < 0) contentH = maxY - minY;
-    else contentH = Math.max(contentH, maxY);
+    contentW = maxX - minX;
+    contentH = maxY - minY;
+    offsetX = minX;
+    offsetY = minY;
+  } else if (mapImage.naturalWidth && mapImage.style.display !== 'none') {
+    // No placed sites — fall back to map image size
+    contentW = mapImage.naturalWidth;
+    contentH = mapImage.naturalHeight;
   }
 
   // Fallback if nothing to fit
@@ -385,15 +412,15 @@ function fitToView() {
   }
 
   // Calculate zoom to fit with padding
-  const padding = 40;
+  const padding = 60;
   const scaleX = (areaW - padding * 2) / contentW;
   const scaleY = (areaH - padding * 2) / contentH;
-  m.zoom = Math.min(scaleX, scaleY, 3); // cap at 3x
-  m.zoom = Math.max(m.zoom, 0.05); // floor
+  m.zoom = Math.min(scaleX, scaleY, 3);
+  m.zoom = Math.max(m.zoom, 0.05);
 
-  // Center the content
-  m.panX = (areaW - contentW * m.zoom) / 2;
-  m.panY = (areaH - contentH * m.zoom) / 2;
+  // Center the content (offset accounts for sites not starting at 0,0)
+  m.panX = (areaW - contentW * m.zoom) / 2 - offsetX * m.zoom;
+  m.panY = (areaH - contentH * m.zoom) / 2 - offsetY * m.zoom;
 
   applyTransform();
   saveState();
@@ -513,13 +540,114 @@ canvasArea.addEventListener('contextmenu', e => {
 });
 document.addEventListener('click', () => { contextMenu.style.display='none'; });
 
+// ============ MEMO FUNCTIONS ============
+function findMemo(id) {
+  if (!id || !id.startsWith('memo_')) return null;
+  const memos = MEMOS_DATA[state.currentCity] || [];
+  return memos.find(m => m.id === id) || null;
+}
+
+function renderMemoDetail(memo) {
+  detailEmpty.style.display = 'none';
+  detailContent.style.display = 'block';
+  const pos = currentMap().positions[memo.id];
+  detailContent.innerHTML = `
+    <div class="detail-header">
+      <span class="detail-type-badge Memo">📝 메모</span>
+      <div class="detail-title">${memo.name}</div>
+      <div class="detail-id">${memo.id}</div>
+    </div>
+    <div class="memo-form">
+      <label style="font-size:12px;color:var(--text2)">제목</label>
+      <input type="text" id="memoName" value="${memo.name.replace(/"/g,'&quot;')}" placeholder="메모 제목">
+      <label style="font-size:12px;color:var(--text2)">설명</label>
+      <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요...">${memo.description || ''}</textarea>
+      <div style="font-size:11px;color:var(--text2)">생성: ${new Date(memo.createdAt).toLocaleString('ko')}</div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-accent" onclick="saveMemoDetail('${memo.id}')" style="flex:1">💾 저장</button>
+        <button class="btn" onclick="deleteMemo('${memo.id}')" style="color:#ef4444">🗑️ 삭제</button>
+      </div>
+    </div>
+    ${pos ? `<div class="detail-section" style="padding:0 16px"><h3>배치 위치</h3><div class="detail-grid">
+      <div class="detail-field"><label>X</label><value>${Math.round(pos.x)}</value></div>
+      <div class="detail-field"><label>Y</label><value>${Math.round(pos.y)}</value></div>
+    </div></div>` : ''}
+    <div class="detail-actions">
+      ${!pos ? `<button class="btn btn-accent" onclick="startPlacing('${memo.id}')">📌 지도에 배치</button>` : `<button class="btn" onclick="startPlacing('${memo.id}')">📍 위치 이동</button><button class="btn" onclick="removePlacement('${memo.id}')" style="color:#ef4444">🗑️ 배치 해제</button>`}
+    </div>
+  `;
+}
+
+function addMemo() {
+  const id = 'memo_' + Date.now();
+  const memo = {
+    id,
+    name: '새 메모',
+    city: state.currentCity,
+    description: '',
+    createdAt: new Date().toISOString()
+  };
+  if (!MEMOS_DATA[state.currentCity]) MEMOS_DATA[state.currentCity] = [];
+  MEMOS_DATA[state.currentCity].push(memo);
+  saveMemos();
+  renderSiteList();
+  selectSite(id);
+  toast('메모가 추가되었습니다');
+}
+
+function deleteMemo(id) {
+  const memos = MEMOS_DATA[state.currentCity] || [];
+  const idx = memos.findIndex(m => m.id === id);
+  if (idx === -1) return;
+  memos.splice(idx, 1);
+  // Remove from map if placed
+  delete currentMap().positions[id];
+  saveMemos();
+  saveState();
+  state.selectedSiteId = null;
+  renderSiteList();
+  renderDetail(null);
+  renderMapSites();
+  toast('메모가 삭제되었습니다');
+}
+
+function saveMemoDetail(id) {
+  const memo = findMemo(id);
+  if (!memo) return;
+  const nameEl = $('memoName');
+  const descEl = $('memoDesc');
+  if (nameEl) memo.name = nameEl.value.trim() || '새 메모';
+  if (descEl) memo.description = descEl.value.trim();
+  saveMemos();
+  renderSiteList();
+  renderMapSites();
+  toast('메모가 저장되었습니다');
+}
+
+async function saveMemos() {
+  try {
+    const res = await fetch('/.netlify/functions/save-memos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(MEMOS_DATA)
+    });
+    if (!res.ok) {
+      console.warn('메모 서버 저장 실패');
+    }
+  } catch (err) {
+    console.warn('메모 서버 저장 실패:', err);
+  }
+}
+
 // ============ PLACE / REMOVE ============
 function startPlacing(id) {
   state.placingId = id;
   canvasArea.classList.add('placing');
   modeIndicator.style.display = 'block';
   const s = state.sites.find(x=>x.id===id);
-  modeIndicator.textContent = `📌 "${s?.name}" 배치 중 - 지도를 클릭하세요 (ESC 취소)`;
+  const memo = findMemo(id);
+  const name = s ? s.name : (memo ? memo.name : id);
+  modeIndicator.textContent = `📌 "${name}" 배치 중 - 지도를 클릭하세요 (ESC 취소)`;
 }
 
 function stopPlacing() {
@@ -768,17 +896,6 @@ $('btnImport').onclick = () => {
   inp.click();
 };
 
-$('btnResetPositions').onclick = () => {
-  if (confirm(`${({Gangnam:'도원',RedCity:'블리스베이',Cahaya:'차하야'})[state.currentCity]}의 모든 배치를 초기화할까요?`)) {
-    currentMap().positions = {};
-    saveState();
-    renderMapSites();
-    renderSiteList();
-    if (state.selectedSiteId) renderDetail(state.selectedSiteId);
-    toast('배치가 초기화되었습니다');
-  }
-};
-
 // ============ INIT ============
 async function init() {
   // Load data files
@@ -795,6 +912,15 @@ async function init() {
 
   // Connect data to state
   state.sites = SITES_DATA;
+
+  // Load memos from server
+  try {
+    const memosRes = await fetch('data/memos.json');
+    if (memosRes.ok) {
+      const memos = await memosRes.json();
+      MEMOS_DATA = memos;
+    }
+  } catch(e) { console.warn('Failed to load memos', e); }
 
   // Load map images from IndexedDB
   await loadImagesFromDB();
