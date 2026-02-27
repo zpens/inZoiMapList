@@ -913,9 +913,9 @@ async function init() {
   // Connect data to state
   state.sites = SITES_DATA;
 
-  // Load memos from server
+  // Load memos from server (via Netlify Function for real-time data)
   try {
-    const memosRes = await fetch('data/memos.json');
+    const memosRes = await fetch('/.netlify/functions/get-memos');
     if (memosRes.ok) {
       const memos = await memosRes.json();
       MEMOS_DATA = memos;

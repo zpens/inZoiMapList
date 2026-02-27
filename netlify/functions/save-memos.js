@@ -55,6 +55,12 @@ exports.handler = async (event) => {
       return { statusCode: putRes.status, body: JSON.stringify({ error: err }) };
     }
 
+    // Trigger Netlify rebuild so the updated file is served
+    const BUILD_HOOK = process.env.BUILD_HOOK;
+    if (BUILD_HOOK) {
+      await fetch(BUILD_HOOK, { method: 'POST' }).catch(() => {});
+    }
+
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
