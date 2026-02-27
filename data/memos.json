@@ -13,13 +13,6 @@
       "city": "Gangnam",
       "description": "학교 반경 내에 가족형 주거 3~4개 배치 필요. 사이즈 20x20 이상으로.",
       "createdAt": "2026-02-28T14:05:00Z"
-    },
-    {
-      "id": "memo_1709200000004",
-      "name": "역세권 상가 배치",
-      "city": "Gangnam",
-      "description": "지하철역 출구 근처 상업시설 배치 테스트",
-      "createdAt": "2026-02-28T15:00:00Z"
     }
   ],
   "RedCity": [
