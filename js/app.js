@@ -595,9 +595,12 @@ function renderMemoDetail(memo) {
     <div class="memo-form">
       <label style="font-size:12px;color:var(--text2)">제목</label>
       <input type="text" id="memoName" value="${memo.name.replace(/"/g,'&quot;')}" placeholder="메모 제목">
-      <label style="font-size:12px;color:var(--text2)">설명</label>
-      <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요...">${memo.description || ''}</textarea>
-      ${memo.description ? `<div class="memo-preview">${linkifyText(memo.description.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>')}</div>` : ''}
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <label style="font-size:12px;color:var(--text2)">설명</label>
+        <span class="memo-edit-toggle" onclick="toggleMemoEdit()">${memo.description ? '편집' : '작성'}</span>
+      </div>
+      <textarea id="memoDesc" rows="6" placeholder="상세 설명을 입력하세요..." style="display:${memo.description ? 'none' : 'block'}">${memo.description || ''}</textarea>
+      <div id="memoPreview" class="memo-preview" style="display:${memo.description ? 'block' : 'none'};cursor:pointer" onclick="toggleMemoEdit()">${memo.description ? linkifyText(memo.description.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>') : ''}</div>
       <div style="font-size:11px;color:var(--text2)">생성: ${new Date(memo.createdAt).toLocaleString('ko')}</div>
       <div style="display:flex;gap:8px">
         <button class="btn btn-accent" onclick="saveMemoDetail('${memo.id}')" style="flex:1">💾 저장</button>
@@ -629,6 +632,25 @@ function addMemo() {
   renderSiteList();
   selectSite(id);
   toast('메모가 추가되었습니다');
+}
+
+function toggleMemoEdit() {
+  const ta = $('memoDesc');
+  const pv = $('memoPreview');
+  if (!ta || !pv) return;
+  const editing = ta.style.display !== 'none';
+  if (editing) {
+    // Switch to preview
+    const text = ta.value.trim();
+    pv.innerHTML = text ? linkifyText(text.replace(/</g,'&lt;').replace(/>/g,'&gt;')).replace(/\n/g,'<br>') : '<span style="color:var(--text2)">클릭하여 설명 작성...</span>';
+    ta.style.display = 'none';
+    pv.style.display = 'block';
+  } else {
+    // Switch to edit
+    ta.style.display = 'block';
+    pv.style.display = 'none';
+    ta.focus();
+  }
 }
 
 function deleteMemo(id) {
