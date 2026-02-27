@@ -99,10 +99,6 @@
     "Gangnam_Public_CentralParkFountain": {
       "x": 1183.0930665828134,
       "y": 395.536764332525
-    },
-    "Gangnam_BusinessSite7": {
-      "x": 814.5070652173913,
-      "y": 974.4915760869566
     }
   },
   "RedCity": {},
@@ -390,6 +386,10 @@
     "Cahaya_BusinessSite5": {
       "x": 1680.0874227885408,
       "y": 532.5705688428466
+    },
+    "Cahaya_RabbitHole_School1": {
+      "x": 1802.182522701911,
+      "y": 855.6217082115655
     }
   }
 }
