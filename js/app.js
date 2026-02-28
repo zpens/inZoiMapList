@@ -751,7 +751,7 @@ function saveMemoDetail(id) {
 
 async function saveMemos() {
   try {
-    const res = await fetch('/.netlify/functions/save-memos', {
+    const res = await fetch('/save-memos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(MEMOS_DATA)
@@ -964,7 +964,7 @@ $('btnSavePositions').onclick = async () => {
   });
   try {
     toast('위치 데이터 저장 중...');
-    const res = await fetch('/.netlify/functions/save-positions', {
+    const res = await fetch('/save-positions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(positions)
@@ -1339,7 +1339,7 @@ async function init() {
 
   // Load memos from server (via Netlify Function for real-time data)
   try {
-    const memosRes = await fetch('/.netlify/functions/get-memos');
+    const memosRes = await fetch('/get-memos');
     if (memosRes.ok) {
       const memos = await memosRes.json();
       MEMOS_DATA = memos;
