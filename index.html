@@ -69,15 +69,13 @@
     <div class="stats-dashboard" id="statsDashboard" style="display:none"></div>
     <div class="mode-indicator" id="modeIndicator">📌 클릭하여 부지 배치</div>
     <div class="zoom-controls">
-      <button class="zoom-btn" id="panUp" title="위로 이동">↑</button>
-      <div style="display:flex;gap:4px">
-        <button class="zoom-btn" id="panLeft" title="왼쪽 이동">←</button>
-        <button class="zoom-btn" id="panRight" title="오른쪽 이동">→</button>
-      </div>
-      <button class="zoom-btn" id="panDown" title="아래로 이동">↓</button>
       <button class="zoom-btn" id="zoomFit" title="전체 보기 (이미지에 맞춤)">⊡</button>
+      <div class="zoom-info" id="zoomInfo">100%</div>
+      <button class="zoom-btn" id="panUp" title="위로 이동">↑</button>
+      <button class="zoom-btn" id="panLeft" title="왼쪽 이동">←</button>
+      <button class="zoom-btn" id="panRight" title="오른쪽 이동">→</button>
+      <button class="zoom-btn" id="panDown" title="아래로 이동">↓</button>
     </div>
-    <div class="zoom-info" id="zoomInfo">100%</div>
     <div class="opacity-control" id="opacityControl">
       <label>🗺️ 지도 투명도</label>
       <input type="range" id="mapOpacity" min="0" max="100" value="60">

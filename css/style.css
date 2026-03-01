@@ -131,10 +131,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 /* Always-visible label when filtered */
 .pin-label-fixed{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:4px;background:rgba(0,0,0,.8);color:#fff;padding:2px 8px;border-radius:4px;font-size:10px;pointer-events:none;text-align:center;line-height:1.4;white-space:nowrap}
 /* Zoom Controls */
-.zoom-controls{position:absolute;bottom:16px;left:16px;display:flex;flex-direction:column;gap:4px;z-index:10}
+.zoom-controls{position:absolute;bottom:16px;left:16px;display:flex;flex-direction:row;align-items:center;gap:4px;z-index:10}
 .zoom-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:.2s}
 .zoom-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-.zoom-info{position:absolute;bottom:16px;left:60px;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--text2);z-index:10}
+.zoom-info{position:static;background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--text2)}
 .opacity-control{position:absolute;bottom:16px;right:16px;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:6px 12px;display:flex;align-items:center;gap:8px;z-index:10}
 .opacity-control label{font-size:11px;color:var(--text2);white-space:nowrap}
 .opacity-control input[type=range]{width:100px;height:4px;-webkit-appearance:none;appearance:none;background:var(--border);border-radius:2px;outline:none;cursor:pointer}
@@ -293,7 +293,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 
   /* Canvas area adjustments */
   .zoom-controls{bottom:64px;left:12px}
-  .zoom-info{bottom:64px;left:64px}
   .opacity-control{bottom:64px;right:12px;padding:4px 8px}
   .opacity-control label{font-size:10px}
   .opacity-control input[type=range]{width:60px}
