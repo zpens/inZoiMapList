@@ -288,14 +288,15 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   /* Touch target sizes */
   .site-item{padding:12px 14px;min-height:44px}
   .filter-chip{padding:6px 12px;font-size:12px}
-  .zoom-btn{width:44px;height:44px}
+  .zoom-btn{width:36px;height:36px;font-size:16px}
   .pin-head{width:30px;height:30px;font-size:15px;border-width:2px}
 
-  /* Canvas area adjustments */
-  .zoom-controls{bottom:64px;left:12px}
-  .opacity-control{bottom:64px;right:12px;padding:4px 8px}
-  .opacity-control label{font-size:10px}
-  .opacity-control input[type=range]{width:60px}
+  /* Canvas area adjustments: tab bar is 52px, add 16px margin = 68px */
+  .zoom-controls{bottom:68px;left:12px;gap:3px}
+  .zoom-info{display:none}
+  .opacity-control{bottom:68px;right:12px;padding:4px 8px}
+  .opacity-control label{display:none}
+  .opacity-control input[type=range]{width:70px}
   .opacity-control span{font-size:10px}
   .mode-indicator{top:8px;font-size:11px;padding:5px 12px}
 
