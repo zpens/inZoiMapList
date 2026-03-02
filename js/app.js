@@ -1080,7 +1080,9 @@ function showStats() {
   renderStats();
 }
 function hideStats() {
-  $('statsDashboard').style.display = 'none';
+  const d = $('statsDashboard');
+  d.style.display = 'none';
+  d.style.overflowY = '';
   state.statsSelectedGroup = null;
 }
 
@@ -1300,8 +1302,11 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
 
   const cityHeader = showCity ? '<th>도시</th>' : '';
 
+  // overflow:hidden on dashboard so inner flex:1 child can scroll
+  dashboard.style.overflowY = 'hidden';
+
   dashboard.innerHTML = `
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0">
+    <div style="flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
       <div style="display:flex;align-items:center;gap:12px">
         <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
         <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
@@ -1311,7 +1316,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
         <select class="stats-select" id="detailCityFilter">${cityOptions}</select>
       </div>
     </div>
-    <div class="stats-table-wrap" style="flex:1;overflow-y:auto;">
+    <div class="stats-table-wrap" style="flex:1;overflow-y:auto;min-height:0;">
       <table class="stats-table">
         <thead><tr>
           <th>부지명</th>
@@ -1326,6 +1331,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   `;
 
   document.getElementById('statsDrillBack').addEventListener('click', () => {
+    dashboard.style.overflowY = '';
     state.statsSelectedGroup = null;
     renderStats();
   });
@@ -1335,11 +1341,11 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     renderStats();
   });
 
-  // Click site row → select site and close stats
+  // Click site row → show detail in right panel only (keep stats open)
   dashboard.querySelectorAll('tr[data-id]').forEach(tr => {
     tr.addEventListener('click', () => {
-      hideStats();
-      selectSite(tr.dataset.id);
+      state.selectedSiteId = tr.dataset.id;
+      renderDetail(tr.dataset.id);
     });
   });
 }
