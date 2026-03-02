@@ -1113,6 +1113,8 @@ function renderStats() {
   const avgPrice = pricedSites.length ? Math.round(statsAvg(pricedSites.map(s => s.price))) : 0;
   const placedCount = sites.filter(s => allPositions[s.id]).length;
   const stdCount = sites.filter(s => isStdSize(s)).length;
+  const sitesWithPresets = sites.filter(s => PRESET_DATA[s.id]?.length).length;
+  const totalPresets = sites.reduce((sum, s) => sum + (PRESET_DATA[s.id]?.length || 0), 0);
   const resCount = sites.filter(s => s.siteType === 'Residence').length;
   const bizCount = sites.filter(s => s.siteType === 'Business').length;
   const pubCount = sites.filter(s => s.siteType === 'Public').length;
@@ -1123,7 +1125,7 @@ function renderStats() {
     let key = s[groupBy] || '(없음)';
     if (groupBy === 'city') key = CITY_LABEL[key] || key;
     if (groupBy === 'siteType') key = TYPE_LABEL[key] || key;
-    if (!groups[key]) groups[key] = { name: key, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0 };
+    if (!groups[key]) groups[key] = { name: key, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
     const g = groups[key];
     g.count++;
     const area = (s.sizeX || 0) * (s.sizeY || 0);
@@ -1132,6 +1134,7 @@ function renderStats() {
     if (s.price > 1) g.prices.push(s.price);
     if (allPositions[s.id]) g.placed++;
     if (isStdSize(s)) g.std++;
+    g.presets += (PRESET_DATA[s.id]?.length || 0);
   });
 
   // Sort
@@ -1145,6 +1148,7 @@ function renderStats() {
     else if (sortKey === 'avgArea') { va = a.count ? a.area / a.count : 0; vb = b.count ? b.area / b.count : 0; }
     else if (sortKey === 'avgPrice') { va = statsAvg(a.prices); vb = statsAvg(b.prices); }
     else if (sortKey === 'placed') { va = a.placed; vb = b.placed; }
+    else if (sortKey === 'presets') { va = a.presets; vb = b.presets; }
     else { va = a.count; vb = b.count; }
     return sortDir === 'asc' ? va - vb : vb - va;
   });
@@ -1175,6 +1179,7 @@ function renderStats() {
       <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
       <td class="num">${r.prices.length ? '₦' + minP.toLocaleString() + ' ~ ₦' + maxP.toLocaleString() : '-'}</td>
       <td class="num">${r.std ? `<span style="color:var(--accent)">${r.std}</span>` : '-'}</td>
+      <td class="num">${r.presets || '-'}</td>
     </tr>`;
   }).join('');
 
@@ -1193,6 +1198,8 @@ function renderStats() {
       <div class="stats-card"><div class="stats-card-value">${totalArea.toLocaleString()}</div><div class="stats-card-label">총 면적</div></div>
       <div class="stats-card"><div class="stats-card-value">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</div><div class="stats-card-label">평균 가격</div></div>
       <div class="stats-card"><div class="stats-card-value" style="color:var(--accent)">${stdCount}</div><div class="stats-card-label">📐 규격 부지</div></div>
+      <div class="stats-card"><div class="stats-card-value">${sitesWithPresets}</div><div class="stats-card-label">🏗️ 프리셋 보유</div></div>
+      <div class="stats-card"><div class="stats-card-value">${totalPresets}</div><div class="stats-card-label">🏗️ 총 프리셋 수</div></div>
       <div class="stats-card res"><div class="stats-card-value">${resCount}</div><div class="stats-card-label">🏠 주거</div></div>
       <div class="stats-card biz"><div class="stats-card-value">${bizCount}</div><div class="stats-card-label">🏢 비즈니스</div></div>
       <div class="stats-card pub"><div class="stats-card-value">${pubCount}</div><div class="stats-card-label">🌳 공용</div></div>
@@ -1207,6 +1214,7 @@ function renderStats() {
           <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
           <th>가격범위</th>
           <th>규격</th>
+          <th data-sort="presets" class="${sc('presets')}">프리셋</th>
         </tr></thead>
         <tbody>${tableRows}</tbody>
         <tfoot><tr style="font-weight:600;background:var(--panel)">
@@ -1217,6 +1225,7 @@ function renderStats() {
           <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
           <td class="num">${pricedSites.length ? '₦' + Math.min(...pricedSites.map(s=>s.price)).toLocaleString() + ' ~ ₦' + Math.max(...pricedSites.map(s=>s.price)).toLocaleString() : '-'}</td>
           <td class="num" style="color:var(--accent)">${stdCount}</td>
+          <td class="num">${totalPresets}</td>
         </tr></tfoot>
       </table>
     </div>
