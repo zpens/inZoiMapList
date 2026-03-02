@@ -32,7 +32,8 @@ const state = {
   statsSortDir: 'desc',
   statsSelectedGroup: null,
   detailSortKey: 'name',
-  detailSortDir: 'asc'
+  detailSortDir: 'asc',
+  detailSearch: ''
 };
 
 // Init maps state
@@ -1283,7 +1284,12 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   const sortDir = state.detailSortDir;
 
   // Filter sites for this group
-  const groupSites = sites.filter(s => (s[groupBy] || '(없음)') === group.rawKey);
+  const q = state.detailSearch.trim().toLowerCase();
+  const groupSites = sites.filter(s => {
+    if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
+    if (!q) return true;
+    return s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q);
+  });
 
   // Sort
   const sorted = [...groupSites].sort((a, b) => {
@@ -1335,6 +1341,8 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
           <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
         </div>
         <div class="stats-controls">
+          <input id="detailSearch" type="text" placeholder="부지명 또는 ID 검색..." value="${state.detailSearch}"
+            style="padding:6px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:12px;font-family:inherit;outline:none;width:200px;">
           <span class="stats-label">도시:</span>
           <select class="stats-select" id="detailCityFilter">${cityOptions}</select>
         </div>
@@ -1359,6 +1367,12 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     state.statsSelectedGroup = null;
     state.detailSortKey = 'name';
     state.detailSortDir = 'asc';
+    state.detailSearch = '';
+    renderStats();
+  });
+
+  document.getElementById('detailSearch').addEventListener('input', e => {
+    state.detailSearch = e.target.value;
     renderStats();
   });
 
