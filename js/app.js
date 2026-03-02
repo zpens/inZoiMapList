@@ -30,7 +30,9 @@ const state = {
   statsCityFilter: 'all',
   statsSortKey: 'count',
   statsSortDir: 'desc',
-  statsSelectedGroup: null
+  statsSelectedGroup: null,
+  detailSortKey: 'name',
+  detailSortDir: 'asc'
 };
 
 // Init maps state
@@ -1277,10 +1279,26 @@ function renderStats() {
 }
 
 function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
+  const sortKey = state.detailSortKey;
+  const sortDir = state.detailSortDir;
+
   // Filter sites for this group
   const groupSites = sites.filter(s => (s[groupBy] || '(없음)') === group.rawKey);
-  // Sort by name
-  const sorted = [...groupSites].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+
+  // Sort
+  const sorted = [...groupSites].sort((a, b) => {
+    let va, vb;
+    if (sortKey === 'name') {
+      return sortDir === 'asc'
+        ? a.name.localeCompare(b.name, 'ko')
+        : b.name.localeCompare(a.name, 'ko');
+    }
+    if (sortKey === 'city') { va = CITY_LABEL[a.city] || a.city; vb = CITY_LABEL[b.city] || b.city; return sortDir === 'asc' ? va.localeCompare(vb, 'ko') : vb.localeCompare(va, 'ko'); }
+    if (sortKey === 'size') { va = (a.sizeX || 0) * (a.sizeY || 0); vb = (b.sizeX || 0) * (b.sizeY || 0); }
+    else if (sortKey === 'price') { va = a.price || 0; vb = b.price || 0; }
+    else if (sortKey === 'presets') { va = PRESET_DATA[a.id]?.length || 0; vb = PRESET_DATA[b.id]?.length || 0; }
+    return sortDir === 'asc' ? va - vb : vb - va;
+  });
 
   const cityFilter = state.statsCityFilter;
   const showCity = cityFilter === 'all';
@@ -1288,6 +1306,8 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   const cityOptions = STATS_CITY_OPTIONS.map(o =>
     `<option value="${o.value}"${o.value === cityFilter ? ' selected' : ''}>${o.label}</option>`
   ).join('');
+
+  const sc = (key) => sortKey === key ? (sortDir === 'asc' ? ' sorted-asc' : ' sorted-desc') : '';
 
   const tableRows = sorted.map(s => {
     const presets = PRESET_DATA[s.id]?.length || 0;
@@ -1302,7 +1322,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     </tr>`;
   }).join('');
 
-  const cityHeader = showCity ? '<th>도시</th>' : '';
+  const cityHeader = showCity ? `<th data-sort="city" class="${sc('city')}" style="cursor:pointer">도시</th>` : '';
 
   // Use inner wrapper to avoid conflict with dashboard's padding/gap CSS
   dashboard.style.cssText = 'position:absolute;inset:0;background:var(--bg);z-index:20;overflow:hidden;';
@@ -1322,11 +1342,11 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       <div style="flex:1;overflow-y:auto;min-height:0;">
         <table class="stats-table">
           <thead><tr>
-            <th>부지명</th>
+            <th data-sort="name" class="${sc('name')}" style="cursor:pointer">부지명</th>
             ${cityHeader}
-            <th>크기</th>
-            <th>가격</th>
-            <th>프리셋</th>
+            <th data-sort="size" class="${sc('size')}" style="cursor:pointer">크기</th>
+            <th data-sort="price" class="${sc('price')}" style="cursor:pointer">가격</th>
+            <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer">프리셋</th>
           </tr></thead>
           <tbody>${tableRows}</tbody>
         </table>
@@ -1337,12 +1357,28 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   document.getElementById('statsDrillBack').addEventListener('click', () => {
     dashboard.style.cssText = '';
     state.statsSelectedGroup = null;
+    state.detailSortKey = 'name';
+    state.detailSortDir = 'asc';
     renderStats();
   });
 
   document.getElementById('detailCityFilter').addEventListener('change', e => {
     state.statsCityFilter = e.target.value;
     renderStats();
+  });
+
+  // Header sort
+  dashboard.querySelectorAll('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort;
+      if (state.detailSortKey === key) {
+        state.detailSortDir = state.detailSortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.detailSortKey = key;
+        state.detailSortDir = key === 'name' || key === 'city' ? 'asc' : 'desc';
+      }
+      renderStats();
+    });
   });
 
   // Click site row → show detail in right panel only (keep stats open)
