@@ -1280,65 +1280,55 @@ function renderStats() {
 }
 
 function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
-  const sortKey = state.detailSortKey;
-  const sortDir = state.detailSortDir;
-
-  // Filter sites for this group
-  const q = state.detailSearch.trim().toLowerCase();
-  const groupSites = sites.filter(s => {
-    if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
-    if (!q) return true;
-    return s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q);
-  });
-
-  // Sort
-  const sorted = [...groupSites].sort((a, b) => {
-    let va, vb;
-    if (sortKey === 'name') {
-      return sortDir === 'asc'
-        ? a.name.localeCompare(b.name, 'ko')
-        : b.name.localeCompare(a.name, 'ko');
-    }
-    if (sortKey === 'city') { va = CITY_LABEL[a.city] || a.city; vb = CITY_LABEL[b.city] || b.city; return sortDir === 'asc' ? va.localeCompare(vb, 'ko') : vb.localeCompare(va, 'ko'); }
-    if (sortKey === 'size') { va = (a.sizeX || 0) * (a.sizeY || 0); vb = (b.sizeX || 0) * (b.sizeY || 0); }
-    else if (sortKey === 'price') { va = a.price || 0; vb = b.price || 0; }
-    else if (sortKey === 'presets') { va = PRESET_DATA[a.id]?.length || 0; vb = PRESET_DATA[b.id]?.length || 0; }
-    return sortDir === 'asc' ? va - vb : vb - va;
-  });
-
   const cityFilter = state.statsCityFilter;
   const showCity = cityFilter === 'all';
 
-  const cityOptions = STATS_CITY_OPTIONS.map(o =>
-    `<option value="${o.value}"${o.value === cityFilter ? ' selected' : ''}>${o.label}</option>`
-  ).join('');
+  // Shared: filter+sort rows → HTML string
+  const buildRows = () => {
+    const q = state.detailSearch.trim().toLowerCase();
+    const sk = state.detailSortKey;
+    const sd = state.detailSortDir;
+    const filtered = sites.filter(s => {
+      if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
+      if (!q) return true;
+      return s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q);
+    });
+    filtered.sort((a, b) => {
+      let va, vb;
+      if (sk === 'name') return sd === 'asc' ? a.name.localeCompare(b.name, 'ko') : b.name.localeCompare(a.name, 'ko');
+      if (sk === 'city') { va = CITY_LABEL[a.city]||a.city; vb = CITY_LABEL[b.city]||b.city; return sd === 'asc' ? va.localeCompare(vb,'ko') : vb.localeCompare(va,'ko'); }
+      if (sk === 'size') { va = (a.sizeX||0)*(a.sizeY||0); vb = (b.sizeX||0)*(b.sizeY||0); }
+      else if (sk === 'price') { va = a.price||0; vb = b.price||0; }
+      else if (sk === 'presets') { va = PRESET_DATA[a.id]?.length||0; vb = PRESET_DATA[b.id]?.length||0; }
+      return sd === 'asc' ? va - vb : vb - va;
+    });
+    return filtered.map(s => {
+      const presets = PRESET_DATA[s.id]?.length || 0;
+      const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
+      const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td>${cityTd}<td class="num">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+    }).join('');
+  };
 
-  const sc = (key) => sortKey === key ? (sortDir === 'asc' ? ' sorted-asc' : ' sorted-desc') : '';
+  // Bind row click events
+  const bindRows = () => {
+    dashboard.querySelectorAll('tr[data-id]').forEach(tr => {
+      tr.addEventListener('click', () => { state.selectedSiteId = tr.dataset.id; renderDetail(tr.dataset.id); });
+    });
+  };
 
-  const tableRows = sorted.map(s => {
-    const presets = PRESET_DATA[s.id]?.length || 0;
-    const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
-    const cityName = showCity ? `<td>${CITY_LABEL[s.city] || s.city}</td>` : '';
-    return `<tr style="cursor:pointer" data-id="${s.id}">
-      <td>${s.name}</td>
-      ${cityName}
-      <td class="num">${s.sizeX} × ${s.sizeY}${stdBadge}</td>
-      <td class="num">${s.price > 1 ? '₦' + s.price.toLocaleString() : '-'}</td>
-      <td class="num">${presets || '-'}</td>
-    </tr>`;
-  }).join('');
-
+  const sc = (key) => state.detailSortKey === key ? (state.detailSortDir === 'asc' ? ' sorted-asc' : ' sorted-desc') : '';
   const cityHeader = showCity ? `<th data-sort="city" class="${sc('city')}" style="cursor:pointer">도시</th>` : '';
+  const cityOptions = STATS_CITY_OPTIONS.map(o => `<option value="${o.value}"${o.value===cityFilter?' selected':''}>${o.label}</option>`).join('');
 
-  // Use inner wrapper to avoid conflict with dashboard's padding/gap CSS
+  // Full render
   dashboard.style.cssText = 'position:absolute;inset:0;background:var(--bg);z-index:20;overflow:hidden;';
-
   dashboard.innerHTML = `
     <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding:20px;gap:12px;overflow:hidden;box-sizing:border-box;">
       <div style="flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
         <div style="display:flex;align-items:center;gap:12px">
           <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
-          <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+          <h2 style="font-size:16px;font-weight:700">${group.name}</h2>
         </div>
         <div class="stats-controls">
           <input id="detailSearch" type="text" placeholder="부지명 또는 ID 검색..." value="${state.detailSearch}"
@@ -1356,11 +1346,12 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
             <th data-sort="price" class="${sc('price')}" style="cursor:pointer">가격</th>
             <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer">프리셋</th>
           </tr></thead>
-          <tbody>${tableRows}</tbody>
+          <tbody>${buildRows()}</tbody>
         </table>
       </div>
     </div>
   `;
+  bindRows();
 
   document.getElementById('statsDrillBack').addEventListener('click', () => {
     dashboard.style.cssText = '';
@@ -1371,12 +1362,11 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     renderStats();
   });
 
+  // Search: tbody만 교체 → input 요소 유지 → 한글 IME 정상 작동
   document.getElementById('detailSearch').addEventListener('input', e => {
     state.detailSearch = e.target.value;
-    const cursor = e.target.selectionStart;
-    renderStats();
-    const newInput = document.getElementById('detailSearch');
-    if (newInput) { newInput.focus(); newInput.setSelectionRange(cursor, cursor); }
+    const tbody = dashboard.querySelector('tbody');
+    if (tbody) { tbody.innerHTML = buildRows(); bindRows(); }
   });
 
   document.getElementById('detailCityFilter').addEventListener('change', e => {
@@ -1395,14 +1385,6 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
         state.detailSortDir = key === 'name' || key === 'city' ? 'asc' : 'desc';
       }
       renderStats();
-    });
-  });
-
-  // Click site row → show detail in right panel only (keep stats open)
-  dashboard.querySelectorAll('tr[data-id]').forEach(tr => {
-    tr.addEventListener('click', () => {
-      state.selectedSiteId = tr.dataset.id;
-      renderDetail(tr.dataset.id);
     });
   });
 }
