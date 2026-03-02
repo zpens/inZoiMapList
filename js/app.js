@@ -1400,5 +1400,5 @@ async function init() {
   }, 100);
 }
 
-// Start the app
-init().catch(err => console.error('Failed to initialize:', err));
+// Start the app (called after authentication)
+window.startApp = () => init().catch(err => console.error('Failed to initialize:', err));

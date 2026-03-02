@@ -106,6 +106,76 @@
 </div>
 <!-- Toast -->
 <div class="toast" id="toast"></div>
+<!-- Login Overlay -->
+<div id="loginOverlay" style="position:fixed;inset:0;background:#0a0a0f;display:flex;align-items:center;justify-content:center;z-index:10000;">
+  <div style="text-align:center;font-family:'Noto Sans KR',sans-serif;">
+    <img src="img/InZOI_Logo.png" alt="inZOI" style="height:36px;margin-bottom:24px;opacity:0.8;">
+    <div style="color:#5a5970;font-size:12px;letter-spacing:2px;margin-bottom:32px;">SITE MAP</div>
+    <form id="loginForm" onsubmit="return doLogin(event)">
+      <input id="loginPw" type="password" placeholder="비밀번호 입력" autocomplete="current-password"
+        style="width:240px;padding:12px 16px;border:1px solid #2a2a3d;border-radius:8px;background:#12121a;color:#e8e6f0;font-size:14px;outline:none;text-align:center;">
+      <div id="loginError" style="color:#ff6b6b;font-size:12px;margin-top:10px;height:18px;"></div>
+      <button type="submit" style="margin-top:8px;padding:10px 48px;border:1px solid #6c5ce7;background:#6c5ce7;color:#fff;border-radius:8px;font-size:14px;cursor:pointer;transition:opacity 0.2s;"
+        onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Enter</button>
+    </form>
+  </div>
+</div>
 <script src="js/app.js"></script>
+<script>
+  function getAuth() {
+    try {
+      const d = JSON.parse(localStorage.getItem('inzoi_map_auth') || '{}');
+      if (d.token && d.expires > Date.now()) return d.token;
+    } catch(e) {}
+    return null;
+  }
+
+  function setAuth(token) {
+    localStorage.setItem('inzoi_map_auth', JSON.stringify({ token, expires: Date.now() + 90*24*60*60*1000 }));
+  }
+
+  async function doLogin(e) {
+    e.preventDefault();
+    const pw = document.getElementById('loginPw').value;
+    const errEl = document.getElementById('loginError');
+    errEl.textContent = '';
+    try {
+      const r = await fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+      const d = await r.json();
+      if (d.ok && d.token) {
+        setAuth(d.token);
+        document.getElementById('loginOverlay').style.display = 'none';
+        window.startApp();
+        return false;
+      }
+      errEl.textContent = d.error || '인증 실패';
+    } catch(err) {
+      errEl.textContent = '서버 연결 실패';
+    }
+    return false;
+  }
+
+  async function checkAuth() {
+    const token = getAuth();
+    if (!token) return false;
+    try {
+      const r = await fetch('/api/auth', { headers: { 'X-Auth-Token': token } });
+      return r.ok;
+    } catch(e) { return false; }
+  }
+
+  checkAuth().then(ok => {
+    if (ok) {
+      document.getElementById('loginOverlay').style.display = 'none';
+      window.startApp();
+    } else {
+      document.getElementById('loginPw').focus();
+    }
+  });
+</script>
 </body>
 </html>
