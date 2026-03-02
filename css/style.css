@@ -220,7 +220,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .stats-table tr:hover td{background:var(--panel2)}
 .stats-table .num{text-align:right;font-variant-numeric:tabular-nums}
 .stats-bar-cell{display:flex;align-items:center;gap:6px}
-.stats-bar{height:6px;border-radius:3px;background:var(--accent);min-width:2px}
+.stats-bar-fill{height:6px;border-radius:3px;background:var(--accent);min-width:2px}
 
 /* ============ MOBILE TAB BAR (hidden on PC) ============ */
 .mobile-tab-bar{display:none}

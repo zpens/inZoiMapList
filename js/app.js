@@ -1161,7 +1161,7 @@ function renderStats() {
     const maxP = r.prices.length ? Math.max(...r.prices) : 0;
     const pctW = Math.round(r.count / maxCount * 100);
     return `<tr>
-      <td><div class="stats-bar-cell"><span class="stats-bar" style="width:${pctW}%"></span>${r.name}</div></td>
+      <td><div class="stats-bar-cell"><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
       <td class="num">${avgArea.toLocaleString()}</td>
