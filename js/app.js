@@ -29,7 +29,8 @@ const state = {
   statsGroupBy: 'siteType',
   statsCityFilter: 'all',
   statsSortKey: 'count',
-  statsSortDir: 'desc'
+  statsSortDir: 'desc',
+  statsSelectedGroup: null
 };
 
 // Init maps state
@@ -1080,6 +1081,7 @@ function showStats() {
 }
 function hideStats() {
   $('statsDashboard').style.display = 'none';
+  state.statsSelectedGroup = null;
 }
 
 function statsAvg(arr) {
@@ -1106,6 +1108,12 @@ function renderStats() {
     }
   });
 
+  // Drill-down view
+  if (state.statsSelectedGroup) {
+    renderStatsDetail(dashboard, sites, allPositions, state.statsSelectedGroup, groupBy);
+    return;
+  }
+
   // Summary stats
   const totalCount = sites.length;
   const totalArea = sites.reduce((sum, s) => sum + (s.sizeX || 0) * (s.sizeY || 0), 0);
@@ -1122,10 +1130,11 @@ function renderStats() {
   // Group
   const groups = {};
   sites.forEach(s => {
-    let key = s[groupBy] || '(없음)';
-    if (groupBy === 'city') key = CITY_LABEL[key] || key;
-    if (groupBy === 'siteType') key = TYPE_LABEL[key] || key;
-    if (!groups[key]) groups[key] = { name: key, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
+    const rawKey = s[groupBy] || '(없음)';
+    let key = rawKey;
+    if (groupBy === 'city') key = CITY_LABEL[rawKey] || rawKey;
+    if (groupBy === 'siteType') key = TYPE_LABEL[rawKey] || rawKey;
+    if (!groups[key]) groups[key] = { name: key, rawKey, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
     const g = groups[key];
     g.count++;
     const area = (s.sizeX || 0) * (s.sizeY || 0);
@@ -1171,8 +1180,8 @@ function renderStats() {
     const minP = r.prices.length ? Math.min(...r.prices) : 0;
     const maxP = r.prices.length ? Math.max(...r.prices) : 0;
     const pctW = Math.round(r.count / maxCount * 100);
-    return `<tr>
-      <td><div class="stats-bar-cell"><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
+    return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}">
+      <td><div class="stats-bar-cell"><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name} <span style="font-size:10px;color:var(--text2);margin-left:4px">▶</span></div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
       <td class="num">${avgArea.toLocaleString()}</td>
@@ -1234,10 +1243,12 @@ function renderStats() {
   // Bind control events
   $('statsGroupBy').addEventListener('change', e => {
     state.statsGroupBy = e.target.value;
+    state.statsSelectedGroup = null;
     renderStats();
   });
   $('statsCityFilter').addEventListener('change', e => {
     state.statsCityFilter = e.target.value;
+    state.statsSelectedGroup = null;
     renderStats();
   });
   // Table header sort
@@ -1251,6 +1262,72 @@ function renderStats() {
         state.statsSortDir = key === 'name' ? 'asc' : 'desc';
       }
       renderStats();
+    });
+  });
+  // Group row click → drill-down
+  dashboard.querySelectorAll('.stats-table tbody tr[data-rawkey]').forEach(tr => {
+    tr.addEventListener('click', () => {
+      const rawKey = tr.dataset.rawkey;
+      const name = tr.querySelector('td')?.textContent?.replace('▶', '').trim() || rawKey;
+      state.statsSelectedGroup = { rawKey, name };
+      renderStats();
+    });
+  });
+}
+
+function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
+  // Filter sites for this group
+  const groupSites = sites.filter(s => (s[groupBy] || '(없음)') === group.rawKey);
+  // Sort by name
+  const sorted = [...groupSites].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+
+  const cityFilter = state.statsCityFilter;
+  const showCity = cityFilter === 'all';
+
+  const tableRows = sorted.map(s => {
+    const presets = PRESET_DATA[s.id]?.length || 0;
+    const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
+    const cityName = showCity ? `<td>${CITY_LABEL[s.city] || s.city}</td>` : '';
+    return `<tr style="cursor:pointer" data-id="${s.id}">
+      <td>${s.name}</td>
+      ${cityName}
+      <td class="num">${s.sizeX} × ${s.sizeY}${stdBadge}</td>
+      <td class="num">${s.price > 1 ? '₦' + s.price.toLocaleString() : '-'}</td>
+      <td class="num">${presets || '-'}</td>
+    </tr>`;
+  }).join('');
+
+  const cityHeader = showCity ? '<th>도시</th>' : '';
+
+  dashboard.innerHTML = `
+    <div style="display:flex;align-items:center;gap:12px">
+      <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
+      <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+    </div>
+    <div class="stats-table-wrap">
+      <table class="stats-table">
+        <thead><tr>
+          <th>부지명</th>
+          ${cityHeader}
+          <th>크기</th>
+          <th>가격</th>
+          <th>프리셋</th>
+        </tr></thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>
+  `;
+
+  document.getElementById('statsDrillBack').addEventListener('click', () => {
+    state.statsSelectedGroup = null;
+    renderStats();
+  });
+
+  // Click site row → select site and close stats
+  dashboard.querySelectorAll('tr[data-id]').forEach(tr => {
+    tr.addEventListener('click', () => {
+      hideStats();
+      selectSite(tr.dataset.id);
     });
   });
 }
