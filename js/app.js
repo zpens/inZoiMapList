@@ -1373,7 +1373,10 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
 
   document.getElementById('detailSearch').addEventListener('input', e => {
     state.detailSearch = e.target.value;
+    const cursor = e.target.selectionStart;
     renderStats();
+    const newInput = document.getElementById('detailSearch');
+    if (newInput) { newInput.focus(); newInput.setSelectionRange(cursor, cursor); }
   });
 
   document.getElementById('detailCityFilter').addEventListener('change', e => {
