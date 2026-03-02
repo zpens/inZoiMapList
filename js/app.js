@@ -1181,12 +1181,11 @@ function renderStats() {
     const maxP = r.prices.length ? Math.max(...r.prices) : 0;
     const pctW = Math.round(r.count / maxCount * 100);
     return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}">
-      <td><div class="stats-bar-cell"><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name} <span style="font-size:10px;color:var(--text2);margin-left:4px">▶</span></div></td>
+      <td><div class="stats-bar-cell"><span style="font-size:10px;color:var(--accent);margin-right:6px;flex-shrink:0">▶</span><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
       <td class="num">${avgArea.toLocaleString()}</td>
       <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
-      <td class="num">${r.prices.length ? '₦' + minP.toLocaleString() + ' ~ ₦' + maxP.toLocaleString() : '-'}</td>
       <td class="num">${r.std ? `<span style="color:var(--accent)">${r.std}</span>` : '-'}</td>
       <td class="num">${r.presets || '-'}</td>
     </tr>`;
@@ -1221,7 +1220,6 @@ function renderStats() {
           <th data-sort="area" class="${sc('area')}">총면적</th>
           <th data-sort="avgArea" class="${sc('avgArea')}">평균면적</th>
           <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
-          <th>가격범위</th>
           <th>규격</th>
           <th data-sort="presets" class="${sc('presets')}">프리셋</th>
         </tr></thead>
@@ -1232,7 +1230,6 @@ function renderStats() {
           <td class="num">${totalArea.toLocaleString()}</td>
           <td class="num">${totalCount ? Math.round(totalArea / totalCount).toLocaleString() : 0}</td>
           <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
-          <td class="num">${pricedSites.length ? '₦' + Math.min(...pricedSites.map(s=>s.price)).toLocaleString() + ' ~ ₦' + Math.max(...pricedSites.map(s=>s.price)).toLocaleString() : '-'}</td>
           <td class="num" style="color:var(--accent)">${stdCount}</td>
           <td class="num">${totalPresets}</td>
         </tr></tfoot>
@@ -1284,6 +1281,10 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   const cityFilter = state.statsCityFilter;
   const showCity = cityFilter === 'all';
 
+  const cityOptions = STATS_CITY_OPTIONS.map(o =>
+    `<option value="${o.value}"${o.value === cityFilter ? ' selected' : ''}>${o.label}</option>`
+  ).join('');
+
   const tableRows = sorted.map(s => {
     const presets = PRESET_DATA[s.id]?.length || 0;
     const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
@@ -1300,11 +1301,17 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
   const cityHeader = showCity ? '<th>도시</th>' : '';
 
   dashboard.innerHTML = `
-    <div style="display:flex;align-items:center;gap:12px">
-      <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
-      <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
+        <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+      </div>
+      <div class="stats-controls">
+        <span class="stats-label">도시:</span>
+        <select class="stats-select" id="detailCityFilter">${cityOptions}</select>
+      </div>
     </div>
-    <div class="stats-table-wrap">
+    <div class="stats-table-wrap" style="flex:1;overflow-y:auto;">
       <table class="stats-table">
         <thead><tr>
           <th>부지명</th>
@@ -1320,6 +1327,11 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
 
   document.getElementById('statsDrillBack').addEventListener('click', () => {
     state.statsSelectedGroup = null;
+    renderStats();
+  });
+
+  document.getElementById('detailCityFilter').addEventListener('change', e => {
+    state.statsCityFilter = e.target.value;
     renderStats();
   });
 
