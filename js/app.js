@@ -1081,8 +1081,8 @@ function showStats() {
 }
 function hideStats() {
   const d = $('statsDashboard');
+  d.style.cssText = '';
   d.style.display = 'none';
-  d.style.overflowY = '';
   state.statsSelectedGroup = null;
 }
 
@@ -1302,36 +1302,38 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
 
   const cityHeader = showCity ? '<th>도시</th>' : '';
 
-  // overflow:hidden on dashboard so inner flex:1 child can scroll
-  dashboard.style.overflowY = 'hidden';
+  // Use inner wrapper to avoid conflict with dashboard's padding/gap CSS
+  dashboard.style.cssText = 'position:absolute;inset:0;background:var(--bg);z-index:20;overflow:hidden;';
 
   dashboard.innerHTML = `
-    <div style="flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
-      <div style="display:flex;align-items:center;gap:12px">
-        <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
-        <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding:20px;gap:12px;overflow:hidden;box-sizing:border-box;">
+      <div style="flex-shrink:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button id="statsDrillBack" style="padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);cursor:pointer;font-size:12px;font-family:inherit;">← 뒤로</button>
+          <h2 style="font-size:16px;font-weight:700">${group.name} <span style="font-size:13px;color:var(--text2);font-weight:400">(${groupSites.length}개)</span></h2>
+        </div>
+        <div class="stats-controls">
+          <span class="stats-label">도시:</span>
+          <select class="stats-select" id="detailCityFilter">${cityOptions}</select>
+        </div>
       </div>
-      <div class="stats-controls">
-        <span class="stats-label">도시:</span>
-        <select class="stats-select" id="detailCityFilter">${cityOptions}</select>
+      <div style="flex:1;overflow-y:auto;min-height:0;">
+        <table class="stats-table">
+          <thead><tr>
+            <th>부지명</th>
+            ${cityHeader}
+            <th>크기</th>
+            <th>가격</th>
+            <th>프리셋</th>
+          </tr></thead>
+          <tbody>${tableRows}</tbody>
+        </table>
       </div>
-    </div>
-    <div class="stats-table-wrap" style="flex:1;overflow-y:auto;min-height:0;">
-      <table class="stats-table">
-        <thead><tr>
-          <th>부지명</th>
-          ${cityHeader}
-          <th>크기</th>
-          <th>가격</th>
-          <th>프리셋</th>
-        </tr></thead>
-        <tbody>${tableRows}</tbody>
-      </table>
     </div>
   `;
 
   document.getElementById('statsDrillBack').addEventListener('click', () => {
-    dashboard.style.overflowY = '';
+    dashboard.style.cssText = '';
     state.statsSelectedGroup = null;
     renderStats();
   });
