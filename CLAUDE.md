@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Hosting**: Cloudflare Pages (https://inzoi-map-editor.pages.dev/)
 - **Production branch**: `master`
 - **Server functions**: Netlify Functions in `netlify/functions/` — these handle saving data back to GitHub
-- Push to `master` to trigger deployment. If Cloudflare Pages doesn't auto-deploy, use:
+- **Cloudflare Pages does NOT auto-deploy from GitHub push.** Always deploy manually after every push:
   ```bash
   WRANGLER_HOME=~/Library/Preferences/.wrangler wrangler pages deploy . --project-name=inzoi-map-editor
   ```
