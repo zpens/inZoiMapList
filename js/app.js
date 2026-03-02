@@ -1167,7 +1167,6 @@ function renderStats() {
       <td class="num">${avgArea.toLocaleString()}</td>
       <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
       <td class="num">${r.prices.length ? '₦' + minP.toLocaleString() + ' ~ ₦' + maxP.toLocaleString() : '-'}</td>
-      <td class="num">${r.placed}/${r.count}</td>
     </tr>`;
   }).join('');
 
@@ -1185,7 +1184,6 @@ function renderStats() {
       <div class="stats-card"><div class="stats-card-value">${totalCount}</div><div class="stats-card-label">총 부지</div></div>
       <div class="stats-card"><div class="stats-card-value">${totalArea.toLocaleString()}</div><div class="stats-card-label">총 면적</div></div>
       <div class="stats-card"><div class="stats-card-value">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</div><div class="stats-card-label">평균 가격</div></div>
-      <div class="stats-card"><div class="stats-card-value">${placedCount}/${totalCount}</div><div class="stats-card-label">배치 완료</div></div>
       <div class="stats-card res"><div class="stats-card-value">${resCount}</div><div class="stats-card-label">🏠 주거</div></div>
       <div class="stats-card biz"><div class="stats-card-value">${bizCount}</div><div class="stats-card-label">🏢 비즈니스</div></div>
       <div class="stats-card pub"><div class="stats-card-value">${pubCount}</div><div class="stats-card-label">🌳 공용</div></div>
@@ -1199,7 +1197,6 @@ function renderStats() {
           <th data-sort="avgArea" class="${sc('avgArea')}">평균면적</th>
           <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
           <th>가격범위</th>
-          <th data-sort="placed" class="${sc('placed')}">배치율</th>
         </tr></thead>
         <tbody>${tableRows}</tbody>
         <tfoot><tr style="font-weight:600;background:var(--panel)">
@@ -1209,7 +1206,6 @@ function renderStats() {
           <td class="num">${totalCount ? Math.round(totalArea / totalCount).toLocaleString() : 0}</td>
           <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
           <td class="num">${pricedSites.length ? '₦' + Math.min(...pricedSites.map(s=>s.price)).toLocaleString() + ' ~ ₦' + Math.max(...pricedSites.map(s=>s.price)).toLocaleString() : '-'}</td>
-          <td class="num">${placedCount}/${totalCount}</td>
         </tr></tfoot>
       </table>
     </div>
