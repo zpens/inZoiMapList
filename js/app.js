@@ -370,6 +370,8 @@ function zoomTo(newZoom, cx, cy) {
 
 // Mouse wheel zoom
 canvasArea.addEventListener('wheel', e => {
+  // Don't intercept wheel events when stats dashboard is visible
+  if (state.statsMode) return;
   e.preventDefault();
   const factor = e.deltaY > 0 ? 0.9 : 1.1;
   const rect = canvasArea.getBoundingClientRect();
