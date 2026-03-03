@@ -1,3 +1,18 @@
+// ============ VERSION / CHANGELOG ============
+const APP_VERSION = '1.0.0';
+const CHANGELOG = [
+  { ver: '1.0.0', date: '2026-03-03', changes: [
+    '버전 정보 모달 추가',
+    '프리셋 ID 상세 뷰에 표시',
+    '한국어 IME 입력 버그 수정',
+    '통계 대시보드 추가',
+    '메모 기능 (이미지 첨부 포함)',
+    '지도 이미지 저장/불러오기',
+    '다중 도시 지원 (도원, 블리스베이, 차하야)',
+    '부지 배치 및 위치 공유',
+  ] },
+];
+
 // ============ DATA (loaded from JSON files) ============
 let SITES_DATA = [];
 let PRESET_DATA = {};
@@ -958,6 +973,28 @@ $('uploadOverlay').addEventListener('drop', e => {
 // Click outside upload box closes overlay
 $('uploadOverlay').addEventListener('click', e => {
   if (e.target === $('uploadOverlay')) $('uploadOverlay').classList.remove('active');
+});
+
+// ============ VERSION MODAL ============
+$('headerTitle').onclick = () => {
+  const overlay = $('versionOverlay');
+  // Render current version
+  $('versionCurrent').innerHTML = `현재 버전: <strong>v${APP_VERSION}</strong>`;
+  // Render changelog
+  $('versionLog').innerHTML = CHANGELOG.map(entry => `
+    <div class="version-entry">
+      <div class="version-entry-head">
+        <span class="version-entry-ver">v${entry.ver}</span>
+        <span class="version-entry-date">${entry.date}</span>
+      </div>
+      <ul>${entry.changes.map(c => `<li>${c}</li>`).join('')}</ul>
+    </div>
+  `).join('');
+  overlay.classList.add('active');
+};
+$('versionClose').onclick = () => $('versionOverlay').classList.remove('active');
+$('versionOverlay').addEventListener('click', e => {
+  if (e.target === $('versionOverlay')) $('versionOverlay').classList.remove('active');
 });
 
 // ============ EXPORT / IMPORT ============
