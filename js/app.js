@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.3.0';
+const APP_VERSION = '1.3.1';
 const CHANGELOG = [
+  { ver: '1.3.1', date: '2026-03-04', changes: [
+    '통계 세부항목에 부지 ID 컬럼 추가',
+  ] },
   { ver: '1.3.0', date: '2026-03-04', changes: [
     '통계 부지유형 그룹 테이블에 규격부지/비규격 행 추가',
   ] },
@@ -1386,6 +1389,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     filtered.sort((a, b) => {
       let va, vb;
       if (sk === 'name') return sd === 'asc' ? a.name.localeCompare(b.name, 'ko') : b.name.localeCompare(a.name, 'ko');
+      if (sk === 'id') return sd === 'asc' ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id);
       if (sk === 'city') { va = CITY_LABEL[a.city]||a.city; vb = CITY_LABEL[b.city]||b.city; return sd === 'asc' ? va.localeCompare(vb,'ko') : vb.localeCompare(va,'ko'); }
       if (sk === 'size') { va = (a.sizeX||0)*(a.sizeY||0); vb = (b.sizeX||0)*(b.sizeY||0); }
       else if (sk === 'price') { va = a.price||0; vb = b.price||0; }
@@ -1396,7 +1400,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const presets = PRESET_DATA[s.id]?.length || 0;
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
@@ -1431,6 +1435,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
         <table class="stats-table">
           <thead><tr>
             <th data-sort="name" class="${sc('name')}" style="cursor:pointer">부지명</th>
+            <th data-sort="id" class="${sc('id')}" style="cursor:pointer">ID</th>
             ${cityHeader}
             <th data-sort="size" class="${sc('size')}" style="cursor:pointer;width:100px;text-align:right">크기</th>
             <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:100px;text-align:right">가격</th>
