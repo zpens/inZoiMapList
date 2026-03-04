@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.2.0';
+const APP_VERSION = '1.3.0';
 const CHANGELOG = [
+  { ver: '1.3.0', date: '2026-03-04', changes: [
+    '통계 부지유형 그룹 테이블에 규격부지/비규격 행 추가',
+  ] },
   { ver: '1.2.0', date: '2026-03-04', changes: [
     '통계 그룹 기준에 "규격 여부" 추가 (규격/비규격 그룹 분류)',
     '통계 세부항목 크기·가격·프리셋 컬럼 정렬 수정',
@@ -1177,7 +1180,8 @@ function renderStats() {
 
   // Drill-down view
   if (state.statsSelectedGroup) {
-    renderStatsDetail(dashboard, sites, allPositions, state.statsSelectedGroup, groupBy);
+    const drillGroupBy = state.statsSelectedGroup.overrideGroupBy || groupBy;
+    renderStatsDetail(dashboard, sites, allPositions, state.statsSelectedGroup, drillGroupBy);
     return;
   }
 
@@ -1241,14 +1245,12 @@ function renderStats() {
     `<option value="${o.value}"${o.value === cityFilter ? ' selected' : ''}>${o.label}</option>`
   ).join('');
 
-  // Table rows
-  const tableRows = rows.map(r => {
+  // Table row helper
+  const buildRow = (r, maxC) => {
     const avgArea = r.count ? Math.round(r.area / r.count) : 0;
     const avgP = r.prices.length ? Math.round(statsAvg(r.prices)) : 0;
-    const minP = r.prices.length ? Math.min(...r.prices) : 0;
-    const maxP = r.prices.length ? Math.max(...r.prices) : 0;
-    const pctW = Math.round(r.count / maxCount * 100);
-    return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}">
+    const pctW = Math.round(r.count / maxC * 100);
+    return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}" ${r.groupByOverride ? `data-groupby="${r.groupByOverride}"` : ''}>
       <td><div class="stats-bar-cell"><span style="font-size:10px;color:var(--accent);margin-right:6px;flex-shrink:0">▶</span><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
@@ -1257,7 +1259,31 @@ function renderStats() {
       <td class="num">${r.std ? `<span style="color:var(--accent)">${r.std}</span>` : '-'}</td>
       <td class="num">${r.presets || '-'}</td>
     </tr>`;
-  }).join('');
+  };
+  const tableRows = rows.map(r => buildRow(r, maxCount)).join('');
+
+  // Build virtual "규격부지" rows when groupBy is siteType
+  let stdExtraRows = '';
+  if (groupBy === 'siteType') {
+    const stdSites = sites.filter(s => isStdSize(s));
+    const nonStdSites = sites.filter(s => !isStdSize(s));
+    const buildVirtual = (list, name, rawKey) => {
+      const r = { name, rawKey, groupByOverride: 'isStandard', count: list.length, area: 0, prices: [], placed: 0, std: 0, presets: 0 };
+      list.forEach(s => {
+        r.area += (s.sizeX||0)*(s.sizeY||0);
+        if (s.price > 1) r.prices.push(s.price);
+        if (allPositions[s.id]) r.placed++;
+        if (isStdSize(s)) r.std++;
+        r.presets += (PRESET_DATA[s.id]?.length || 0);
+      });
+      return r;
+    };
+    const stdRow = buildVirtual(stdSites, '📐 규격부지', 'standard');
+    const nonStdRow = buildVirtual(nonStdSites, '비규격', 'nonstandard');
+    const virtMax = Math.max(stdRow.count, nonStdRow.count, 1);
+    stdExtraRows = `<tr><td colspan="7" style="padding:2px 10px;border-bottom:2px solid var(--accent);opacity:.5;font-size:10px;color:var(--text2)">규격 여부</td></tr>` +
+      buildRow(stdRow, virtMax) + buildRow(nonStdRow, virtMax);
+  }
 
   dashboard.innerHTML = `
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
@@ -1291,7 +1317,7 @@ function renderStats() {
           <th>규격</th>
           <th data-sort="presets" class="${sc('presets')}">프리셋</th>
         </tr></thead>
-        <tbody>${tableRows}</tbody>
+        <tbody>${tableRows}${stdExtraRows}</tbody>
         <tfoot><tr style="font-weight:600;background:var(--panel)">
           <td>합계</td>
           <td class="num">${totalCount}</td>
@@ -1334,7 +1360,8 @@ function renderStats() {
     tr.addEventListener('click', () => {
       const rawKey = tr.dataset.rawkey;
       const name = tr.querySelector('td')?.textContent?.replace('▶', '').trim() || rawKey;
-      state.statsSelectedGroup = { rawKey, name };
+      const overrideGroupBy = tr.dataset.groupby || null;
+      state.statsSelectedGroup = { rawKey, name, overrideGroupBy };
       renderStats();
     });
   });
