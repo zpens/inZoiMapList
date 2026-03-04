@@ -37,6 +37,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .filter-chip[data-type="Public"].active{background:var(--pub)}
 .filter-chip[data-type="Override"].active{background:var(--ovr)}
 .filter-chip[data-type="all"].active{background:var(--accent)}
+.filter-chip[data-type="Standard"].active{background:#3b82f6}
 .filter-chip[data-type="Memo"].active{background:#14b8a6}
 .site-list{flex:1;overflow-y:auto;padding:4px 0}
 .site-list::-webkit-scrollbar{width:5px}

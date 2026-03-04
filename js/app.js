@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 const CHANGELOG = [
+  { ver: '1.1.0', date: '2026-03-04', changes: [
+    '규격 부지 필터 추가 (📐 규격 칩으로 표준 규격 부지만 모아보기)',
+  ] },
   { ver: '1.0.0', date: '2026-03-03', changes: [
     '버전 정보 모달 추가',
     '프리셋 ID 상세 뷰에 표시',
@@ -152,20 +155,24 @@ function currentMap() { return state.maps[state.currentCity]; }
 
 function getFilteredSites() {
   const filters = state.filters;
-  const isAll = filters.has('all');
+  const hasStdFilter = filters.has('Standard');
+  // For type checking, treat as 'all' if 'all' is set or only 'Standard' remains
+  const typeFilters = new Set([...filters].filter(f => f !== 'Standard' && f !== 'all' && f !== 'Memo'));
+  const isAll = filters.has('all') || typeFilters.size === 0;
   const q = state.search ? state.search.toLowerCase() : '';
 
-  // Sites: include if 'all' or matching siteType is selected
+  // Sites: include if 'all' or matching siteType is selected, plus optional standard-size filter
   const sites = state.sites.filter(s => {
     if (s.city !== state.currentCity) return false;
-    if (!isAll && !filters.has(s.siteType)) return false;
+    if (!isAll && !typeFilters.has(s.siteType)) return false;
+    if (hasStdFilter && !isStdSize(s)) return false;
     if (q && !s.name.toLowerCase().includes(q) && !s.id.toLowerCase().includes(q) && !(s.displayType||'').toLowerCase().includes(q)) return false;
     return true;
   });
 
-  // Memos: include if 'all' or 'Memo' is selected
+  // Memos: include if 'all' or 'Memo' is selected (but not when Standard filter is active)
   let memos = [];
-  if (isAll || filters.has('Memo')) {
+  if (!hasStdFilter && (isAll || filters.has('Memo'))) {
     memos = (MEMOS_DATA[state.currentCity] || []).slice();
     if (q) memos = memos.filter(m => m.name.toLowerCase().includes(q) || (m.description||'').toLowerCase().includes(q));
   }
@@ -200,8 +207,8 @@ function renderSiteList() {
   const items = getFilteredSites();
   const positions = currentMap().positions;
   let html = '';
-  // Show "add memo" button when Memo filter is active
-  if (state.filters.has('all') || state.filters.has('Memo')) {
+  // Show "add memo" button when Memo filter is active (not when Standard filter is active)
+  if (!state.filters.has('Standard') && (state.filters.has('all') || state.filters.has('Memo'))) {
     html += '<div class="memo-add-btn" onclick="addMemo()">+ 메모 추가</div>';
   }
   items.forEach(item => {
@@ -325,7 +332,7 @@ function renderMapSites() {
   document.querySelectorAll('.placed-site').forEach(el => el.remove());
   const positions = currentMap().positions;
   const filtered = new Set(getFilteredSites().map(s=>s.id));
-  const isFiltered = !state.filters.has('all');
+  const isFiltered = !state.filters.has('all') || state.filters.has('Standard');
   Object.keys(positions).forEach(id => {
     const s = state.sites.find(x=>x.id===id);
     const memo = !s ? findMemo(id) : null;
@@ -896,9 +903,19 @@ document.querySelectorAll('.filter-chip').forEach(chip => {
   chip.addEventListener('click', () => {
     const type = chip.dataset.type;
     if (type === 'all') {
-      // 'all' clicked: reset to only 'all'
+      // 'all' clicked: reset everything including Standard
       state.filters.clear();
       state.filters.add('all');
+    } else if (type === 'Standard') {
+      // Standard toggles independently as a cross-cutting filter
+      if (state.filters.has('Standard')) {
+        state.filters.delete('Standard');
+      } else {
+        state.filters.add('Standard');
+      }
+      // Ensure at least 'all' or a type filter remains
+      const remaining = [...state.filters].filter(f => f !== 'Standard');
+      if (remaining.length === 0) state.filters.add('all');
     } else {
       // Toggle specific type
       state.filters.delete('all');
@@ -907,8 +924,9 @@ document.querySelectorAll('.filter-chip').forEach(chip => {
       } else {
         state.filters.add(type);
       }
-      // If nothing selected, revert to 'all'
-      if (state.filters.size === 0) state.filters.add('all');
+      // If no type/memo filters remain, revert to 'all' (keep Standard if present)
+      const remaining = [...state.filters].filter(f => f !== 'Standard');
+      if (remaining.length === 0) state.filters.add('all');
     }
     updateFilterChips();
     renderSiteList();
