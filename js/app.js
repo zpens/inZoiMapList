@@ -1,6 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.2.0';
 const CHANGELOG = [
+  { ver: '1.2.0', date: '2026-03-04', changes: [
+    '통계 그룹 기준에 "규격 여부" 추가 (규격/비규격 그룹 분류)',
+    '통계 세부항목 크기·가격·프리셋 컬럼 정렬 수정',
+  ] },
   { ver: '1.1.0', date: '2026-03-04', changes: [
     '규격 부지 필터 추가 (📐 규격 칩으로 표준 규격 부지만 모아보기)',
   ] },
@@ -1116,6 +1120,7 @@ $('btnImport').onclick = () => {
 // ============ STATS DASHBOARD ============
 const STATS_GROUP_OPTIONS = [
   { value: 'siteType', label: '부지 유형' },
+  { value: 'isStandard', label: '규격 여부' },
   { value: 'displayType', label: '표시 타입' },
   { value: 'icon', label: '아이콘' },
   { value: 'standardizedSize', label: '표준 크기' },
@@ -1192,10 +1197,11 @@ function renderStats() {
   // Group
   const groups = {};
   sites.forEach(s => {
-    const rawKey = s[groupBy] || '(없음)';
+    const rawKey = groupBy === 'isStandard' ? (isStdSize(s) ? 'standard' : 'nonstandard') : (s[groupBy] || '(없음)');
     let key = rawKey;
     if (groupBy === 'city') key = CITY_LABEL[rawKey] || rawKey;
-    if (groupBy === 'siteType') key = TYPE_LABEL[rawKey] || rawKey;
+    else if (groupBy === 'siteType') key = TYPE_LABEL[rawKey] || rawKey;
+    else if (groupBy === 'isStandard') key = rawKey === 'standard' ? '📐 규격' : '비규격';
     if (!groups[key]) groups[key] = { name: key, rawKey, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
     const g = groups[key];
     g.count++;
@@ -1344,7 +1350,9 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     const sk = state.detailSortKey;
     const sd = state.detailSortDir;
     const filtered = sites.filter(s => {
-      if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
+      if (groupBy === 'isStandard') {
+        if (group.rawKey === 'standard' ? !isStdSize(s) : isStdSize(s)) return false;
+      } else if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
       if (!q) return true;
       return s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q);
     });
@@ -1361,7 +1369,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const presets = PRESET_DATA[s.id]?.length || 0;
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td>${cityTd}<td class="num">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
@@ -1397,9 +1405,9 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
           <thead><tr>
             <th data-sort="name" class="${sc('name')}" style="cursor:pointer">부지명</th>
             ${cityHeader}
-            <th data-sort="size" class="${sc('size')}" style="cursor:pointer">크기</th>
-            <th data-sort="price" class="${sc('price')}" style="cursor:pointer">가격</th>
-            <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer">프리셋</th>
+            <th data-sort="size" class="${sc('size')}" style="cursor:pointer;width:100px;text-align:right">크기</th>
+            <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:100px;text-align:right">가격</th>
+            <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer;width:70px;text-align:right">프리셋</th>
           </tr></thead>
           <tbody>${buildRows()}</tbody>
         </table>
