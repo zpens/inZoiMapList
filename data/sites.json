@@ -6465,7 +6465,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_RecordCompany1",
@@ -6486,7 +6487,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_Newspaper1",
@@ -6507,7 +6509,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_ResearchCenter1",
@@ -6528,7 +6531,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_ITCompany1",
@@ -6549,7 +6553,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_BusinessSite9",
@@ -6570,7 +6575,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_Architects",
@@ -6591,7 +6597,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_Newspapers",
@@ -6612,7 +6619,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_ITCompany",
@@ -6633,7 +6641,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_RecordCompany",
@@ -6654,7 +6663,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "RedCity_ResearchCenter1",
@@ -6675,6 +6685,7 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   }
 ]

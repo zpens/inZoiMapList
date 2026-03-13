@@ -1,6 +1,11 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.3.3';
+const APP_VERSION = '1.4.0';
 const CHANGELOG = [
+  { ver: '1.4.0', date: '2026-03-14', changes: [
+    '신규 부지 NEW 뱃지 표시 (목록, 상세정보, 통계 세부항목)',
+    '통계 그룹 기준에 "신규/기존" 추가',
+    '통계 요약 카드에 신규 부지 수 표시',
+  ] },
   { ver: '1.3.3', date: '2026-03-14', changes: [
     '프리셋 데이터 대소문자 불일치 매칭 수정',
   ] },
@@ -246,7 +251,7 @@ function renderSiteList() {
       html += `<div class="site-item${placed}${selected}" data-id="${item.id}">
         <div class="site-dot ${item.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(item)}</div>
         <div class="site-info">
-          <div class="site-name">${item.name}</div>
+          <div class="site-name">${item.name}${item.addedDate ? ' <span style="background:#22c55e;color:#fff;font-size:8px;font-weight:700;padding:1px 3px;border-radius:3px;vertical-align:middle">NEW</span>' : ''}</div>
           <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}</div>
         </div>
         ${placed ? '<span class="site-badge">배치됨</span>' : ''}
@@ -287,7 +292,7 @@ function renderDetail(siteId) {
   detailContent.innerHTML = `
     ${siteImgHtml}
     <div class="detail-header">
-      <span class="detail-type-badge ${s.siteType}">${getIcon(s)} ${s.siteType}</span>
+      <span class="detail-type-badge ${s.siteType}">${getIcon(s)} ${s.siteType}</span>${s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:6px">NEW ${s.addedDate}</span>` : ''}
       <div class="detail-title">${s.name}</div>
       <div class="detail-id">${s.id}</div>
     </div>
@@ -1134,6 +1139,7 @@ $('btnImport').onclick = () => {
 const STATS_GROUP_OPTIONS = [
   { value: 'siteType', label: '부지 유형' },
   { value: 'isStandard', label: '규격 여부' },
+  { value: 'isNew', label: '신규/기존' },
   { value: 'displayType', label: '표시 타입' },
   { value: 'icon', label: '아이콘' },
   { value: 'standardizedSize', label: '표준 크기' },
@@ -1204,6 +1210,7 @@ function renderStats() {
   const stdCount = sites.filter(s => isStdSize(s)).length;
   const sitesWithPresets = sites.filter(s => PRESET_DATA[s.id]?.length).length;
   const totalPresets = sites.reduce((sum, s) => sum + (PRESET_DATA[s.id]?.length || 0), 0);
+  const newCount = sites.filter(s => s.addedDate).length;
   const resCount = sites.filter(s => s.siteType === 'Residence').length;
   const bizCount = sites.filter(s => s.siteType === 'Business').length;
   const pubCount = sites.filter(s => s.siteType === 'Public').length;
@@ -1211,11 +1218,14 @@ function renderStats() {
   // Group
   const groups = {};
   sites.forEach(s => {
-    const rawKey = groupBy === 'isStandard' ? (isStdSize(s) ? 'standard' : 'nonstandard') : (s[groupBy] || '(없음)');
+    const rawKey = groupBy === 'isStandard' ? (isStdSize(s) ? 'standard' : 'nonstandard')
+      : groupBy === 'isNew' ? (s.addedDate ? 'new' : 'existing')
+      : (s[groupBy] || '(없음)');
     let key = rawKey;
     if (groupBy === 'city') key = CITY_LABEL[rawKey] || rawKey;
     else if (groupBy === 'siteType') key = TYPE_LABEL[rawKey] || rawKey;
     else if (groupBy === 'isStandard') key = rawKey === 'standard' ? '📐 규격' : '비규격';
+    else if (groupBy === 'isNew') key = rawKey === 'new' ? '🆕 신규 부지' : '기존 부지';
     if (!groups[key]) groups[key] = { name: key, rawKey, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
     const g = groups[key];
     g.count++;
@@ -1310,6 +1320,7 @@ function renderStats() {
       <div class="stats-card"><div class="stats-card-value">${totalArea.toLocaleString()}</div><div class="stats-card-label">총 면적</div></div>
       <div class="stats-card"><div class="stats-card-value">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</div><div class="stats-card-label">평균 가격</div></div>
       <div class="stats-card"><div class="stats-card-value" style="color:var(--accent)">${stdCount}</div><div class="stats-card-label">📐 규격 부지</div></div>
+      ${newCount ? `<div class="stats-card"><div class="stats-card-value" style="color:#22c55e">${newCount}</div><div class="stats-card-label">🆕 신규 부지</div></div>` : ''}
       <div class="stats-card"><div class="stats-card-value">${sitesWithPresets}</div><div class="stats-card-label">🏗️ 프리셋 보유</div></div>
       <div class="stats-card"><div class="stats-card-value">${totalPresets}</div><div class="stats-card-label">🏗️ 총 프리셋 수</div></div>
       <div class="stats-card res"><div class="stats-card-value">${resCount}</div><div class="stats-card-label">🏠 주거</div></div>
@@ -1389,6 +1400,8 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     const filtered = sites.filter(s => {
       if (groupBy === 'isStandard') {
         if (group.rawKey === 'standard' ? !isStdSize(s) : isStdSize(s)) return false;
+      } else if (groupBy === 'isNew') {
+        if (group.rawKey === 'new' ? !s.addedDate : !!s.addedDate) return false;
       } else if ((s[groupBy] || '(없음)') !== group.rawKey) return false;
       if (!q) return true;
       return s.name.toLowerCase().includes(q) || s.id.toLowerCase().includes(q);
@@ -1406,8 +1419,9 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
     return filtered.map(s => {
       const presets = PRESET_DATA[s.id]?.length || 0;
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
+      const newBadge = s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px">NEW</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
