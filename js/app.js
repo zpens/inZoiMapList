@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.3.2';
+const APP_VERSION = '1.3.3';
 const CHANGELOG = [
+  { ver: '1.3.3', date: '2026-03-14', changes: [
+    '프리셋 데이터 대소문자 불일치 매칭 수정',
+  ] },
   { ver: '1.3.2', date: '2026-03-14', changes: [
     '신규 부지 11개 추가 (강남 5, 레드시티 6: 건축사무소, IT회사, 신문사, 음반사, 연구소, 미용실)',
     '기존 부지 데이터 업데이트 (규격 사이즈 체계 변경, 가격/유형 수정)',
@@ -1579,7 +1582,15 @@ async function init() {
     fetch('data/site-images.json').then(r => r.json())
   ]);
   SITES_DATA = sites;
-  PRESET_DATA = presets;
+  // Build case-insensitive preset lookup (handles mismatched keys like Redcity vs RedCity)
+  const presetLower = {};
+  for (const k of Object.keys(presets)) presetLower[k.toLowerCase()] = presets[k];
+  PRESET_DATA = new Proxy(presets, {
+    get(target, prop) {
+      if (typeof prop === 'string') return target[prop] ?? presetLower[prop.toLowerCase()];
+      return target[prop];
+    }
+  });
   DETAIL_EXTRA = detailExtra;
   SITE_IMAGES = siteImages;
 
