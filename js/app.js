@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.3';
+const APP_VERSION = '1.5.4';
 const CHANGELOG = [
+  { ver: '1.5.4', date: '2026-03-14', changes: [
+    '부지 배치 시 클릭 위치가 핀 아이콘 정중앙에 오도록 보정',
+  ] },
   { ver: '1.5.3', date: '2026-03-14', changes: [
     '위치 데이터를 항상 서버에서 로드하도록 수정 (전체 공유 정상화)',
   ] },
@@ -632,7 +635,8 @@ canvasArea.addEventListener('click', e => {
     const m = currentMap();
     const rect = canvasArea.getBoundingClientRect();
     const x = (e.clientX - rect.left - m.panX) / m.zoom;
-    const y = (e.clientY - rect.top - m.panY) / m.zoom;
+    // Offset so pin-head center aligns with click: pin-head 36px + tail 8px = 44px total, head center at 18px from top, so offset = 44-18 = 26px
+    const y = (e.clientY - rect.top - m.panY) / m.zoom + 26 / m.zoom;
     m.positions[state.placingId] = { x, y };
     const id = state.placingId;
     stopPlacing();
