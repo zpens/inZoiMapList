@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.2';
+const APP_VERSION = '1.5.3';
 const CHANGELOG = [
+  { ver: '1.5.3', date: '2026-03-14', changes: [
+    '위치 데이터를 항상 서버에서 로드하도록 수정 (전체 공유 정상화)',
+  ] },
   { ver: '1.5.2', date: '2026-03-14', changes: [
     '통계 그룹 테이블에서 규격별 컬럼 제거 (세부항목에서만 표시)',
   ] },
@@ -1664,24 +1667,19 @@ async function init() {
   // Load map images from IndexedDB
   await loadImagesFromDB();
 
-  // Load shared positions from server
-  const hasPositions = Object.keys(state.maps).some(c =>
-    Object.keys(state.maps[c].positions).length > 0
-  );
-  if (!hasPositions) {
-    try {
-      const res = await fetch('data/positions.json');
-      if (res.ok) {
-        const positions = await res.json();
-        for (const c of Object.keys(positions)) {
-          if (state.maps[c]) {
-            state.maps[c].positions = positions[c] || {};
-          }
+  // Always load shared positions from server (overrides local)
+  try {
+    const res = await fetch('data/positions.json');
+    if (res.ok) {
+      const positions = await res.json();
+      for (const c of Object.keys(positions)) {
+        if (state.maps[c]) {
+          state.maps[c].positions = positions[c] || {};
         }
-        saveState();
       }
-    } catch(e) { console.warn('Failed to load positions', e); }
-  }
+      saveState();
+    }
+  } catch(e) { console.warn('Failed to load positions', e); }
 
   // Load map images from save file if not in IndexedDB
   const hasImages = Object.keys(state.maps).some(c => state.maps[c].imageData);
