@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.4.2';
+const APP_VERSION = '1.4.3';
 const CHANGELOG = [
+  { ver: '1.4.3', date: '2026-03-14', changes: [
+    '부지 목록에 규격 부지 표시 추가',
+  ] },
   { ver: '1.4.2', date: '2026-03-14', changes: [
     '상세정보 이미지 클릭 시 라이트박스로 크게 보기 (썸네일, 프리셋)',
   ] },
@@ -259,7 +262,7 @@ function renderSiteList() {
         <div class="site-dot ${item.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(item)}</div>
         <div class="site-info">
           <div class="site-name">${item.name}${item.addedDate ? ' <span style="background:#22c55e;color:#fff;font-size:8px;font-weight:700;padding:1px 3px;border-radius:3px;vertical-align:middle">NEW</span>' : ''}</div>
-          <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}</div>
+          <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}${isStdSize(item) ? ' <span style="color:var(--accent);font-weight:600">규격</span>' : ''}</div>
         </div>
         ${placed ? '<span class="site-badge">배치됨</span>' : ''}
       </div>`;
