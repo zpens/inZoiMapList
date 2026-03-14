@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.6.1';
+const APP_VERSION = '1.6.2';
 const CHANGELOG = [
+  { ver: '1.6.2', date: '2026-03-14', changes: [
+    '블리스베이 자유부지 2개, 미니 부지 1개 목록/통계에서 제거',
+  ] },
   { ver: '1.6.1', date: '2026-03-14', changes: [
     '차하야 부지 규격(standardizedSize) 엑셀 기준으로 수정 (S3/S5 → Z5/Z8/W8/X/Z3/Z4)',
   ] },
@@ -1648,7 +1651,7 @@ async function init() {
     fetch('data/detail-extra.json').then(r => r.json()),
     fetch('data/site-images.json').then(r => r.json())
   ]);
-  SITES_DATA = sites;
+  SITES_DATA = sites.filter(s => !s.disabled);
   // Build case-insensitive preset lookup (handles mismatched keys like Redcity vs RedCity)
   const presetLower = {};
   for (const k of Object.keys(presets)) presetLower[k.toLowerCase()] = presets[k];

@@ -3334,7 +3334,7 @@
     "residentMax": 4,
     "residentMin": 3,
     "operatingHours": "",
-    "disabled": false,
+    "disabled": true,
     "devOnly": false,
     "icon": "House"
   },
@@ -3355,7 +3355,7 @@
     "residentMax": 4,
     "residentMin": 3,
     "operatingHours": "",
-    "disabled": false,
+    "disabled": true,
     "devOnly": false,
     "icon": "House"
   },
@@ -4741,7 +4741,7 @@
     "residentMax": null,
     "residentMin": null,
     "operatingHours": "",
-    "disabled": false,
+    "disabled": true,
     "devOnly": false,
     "icon": ""
   },
