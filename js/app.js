@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.6.0';
+const APP_VERSION = '1.6.1';
 const CHANGELOG = [
+  { ver: '1.6.1', date: '2026-03-14', changes: [
+    '차하야 부지 규격(standardizedSize) 엑셀 기준으로 수정 (S3/S5 → Z5/Z8/W8/X/Z3/Z4)',
+  ] },
   { ver: '1.6.0', date: '2026-03-14', changes: [
     '핀 앵커를 원(head) 중심으로 변경: 배치/드래그 시 클릭 위치 = 원 정중앙',
     '줌인/아웃 시 핀 위치 고정 (transform-origin을 원 중심에 설정)',
