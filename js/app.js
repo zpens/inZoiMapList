@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.4.1';
+const APP_VERSION = '1.4.2';
 const CHANGELOG = [
+  { ver: '1.4.2', date: '2026-03-14', changes: [
+    '상세정보 이미지 클릭 시 라이트박스로 크게 보기 (썸네일, 프리셋)',
+  ] },
   { ver: '1.4.1', date: '2026-03-14', changes: [
     '모바일 헤더 터치 영역 확대 (44px 이상)',
     'iOS 안전 영역(safe-area) 대응 (노치/홈바)',
@@ -289,7 +292,7 @@ function renderDetail(siteId) {
   const parentId = s.id.replace(/_Lobby$/,'').replace(/_lobby$/,'');
   if (parentId !== s.id) imgCandidates.push('img/MapImage_' + parentId + '.PNG');
   
-  const siteImgHtml = `<div class="site-thumb-wrap" id="siteThumb"><img id="siteThumbImg" src="${imgCandidates[0]}" style="width:100%;height:180px;object-fit:cover;display:block" onerror="tryNextThumb(this)"></div>`;
+  const siteImgHtml = `<div class="site-thumb-wrap" id="siteThumb"><img id="siteThumbImg" src="${imgCandidates[0]}" style="width:100%;height:180px;object-fit:cover;display:block;cursor:zoom-in" onerror="tryNextThumb(this)" onclick="if(this.naturalWidth)openLightbox(this.src,this.alt)"></div>`;
   // Store candidates for fallback
   window._thumbCandidates = imgCandidates;
   window._thumbIdx = 0;
@@ -317,7 +320,7 @@ function renderDetail(siteId) {
       </div>
     </div>
     ${desc ? `<div class="detail-section"><h3>설명</h3><div class="detail-desc">${desc}</div></div>` : ''}
-    ${PRESET_DATA[s.id] ? `<div class="detail-section"><h3>🏗️ 건축 프리셋 (${PRESET_DATA[s.id].length}종)</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">${PRESET_DATA[s.id].map((p,i) => `<div style="background:var(--bg);border-radius:6px;overflow:hidden;text-align:center"><img src="img/BuildPreset_${p}.PNG" alt="#${i+1}" style="width:100%;height:90px;object-fit:cover;display:block" onerror="this.style.display='none'"><div style="padding:3px 4px;font-size:10px;color:var(--text2)">${p}</div></div>`).join('')}</div></div>` : ''}
+    ${PRESET_DATA[s.id] ? `<div class="detail-section"><h3>🏗️ 건축 프리셋 (${PRESET_DATA[s.id].length}종)</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">${PRESET_DATA[s.id].map((p,i) => `<div style="background:var(--bg);border-radius:6px;overflow:hidden;text-align:center"><img src="img/BuildPreset_${p}.PNG" alt="${p}" style="width:100%;height:90px;object-fit:cover;display:block;cursor:zoom-in" onerror="this.style.display='none'" onclick="openLightbox(this.src,this.alt)"><div style="padding:3px 4px;font-size:10px;color:var(--text2)">${p}</div></div>`).join('')}</div></div>` : ''}
     ${s.detailId && DETAIL_EXTRA[s.detailId] && DETAIL_EXTRA[s.detailId].requiredObjects.length > 0 ? `<div class="detail-section"><h3>📦 필수 오브젝트</h3><div style="display:flex;flex-direction:column;gap:4px">${DETAIL_EXTRA[s.detailId].requiredObjects.map(o => `<div style="background:var(--bg);padding:4px 8px;border-radius:4px;font-size:11px;display:flex;justify-content:space-between"><span>${o.id}</span>${o.count ? `<span style="color:var(--accent)">×${o.count}</span>` : ''}</div>`).join('')}</div></div>` : ''}
     ${pos ? `<div class="detail-section"><h3>배치 위치</h3><div class="detail-grid">
       <div class="detail-field"><label>X</label><value>${Math.round(pos.x)}</value></div>
@@ -327,6 +330,22 @@ function renderDetail(siteId) {
       ${!pos ? `<button class="btn btn-accent" onclick="startPlacing('${s.id}')">📌 지도에 배치</button>` : `<button class="btn" onclick="startPlacing('${s.id}')">📍 위치 이동</button><button class="btn" onclick="removePlacement('${s.id}')" style="color:#ef4444">🗑️ 배치 해제</button>`}
     </div>
   `;
+}
+
+// ============ IMAGE LIGHTBOX ============
+function openLightbox(src, alt) {
+  let overlay = document.getElementById('imgLightbox');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'imgLightbox';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;-webkit-tap-highlight-color:transparent';
+    overlay.innerHTML = '<img style="max-width:92%;max-height:92%;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.6)">';
+    overlay.addEventListener('click', () => overlay.style.display = 'none');
+    document.body.appendChild(overlay);
+  }
+  overlay.querySelector('img').src = src;
+  overlay.querySelector('img').alt = alt || '';
+  overlay.style.display = 'flex';
 }
 
 // ============ ICON MAPPING ============
