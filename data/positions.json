@@ -1291,20 +1291,124 @@
   },
   "CanvasTown": {
     "PurpleCity_Residence6": {
-      "x": 784.3280141843971,
-      "y": 109.69326241134738
+      "x": 556.7,
+      "y": 119.1
     },
     "PurpleCity_Cinema1": {
-      "x": 2067.3617021276596,
-      "y": 943.891843971631
+      "x": 1813.5,
+      "y": 954.4
     },
     "PurpleCity_TackleShop1": {
-      "x": 217.61702127659575,
-      "y": 1011.8971631205673
+      "x": 464.2,
+      "y": 1001.7
     },
     "PurpleCity_Library1": {
-      "x": 1777.2056737588653,
-      "y": 105.15957446808497
+      "x": 2012.1,
+      "y": 95.5
+    },
+    "PurpleCity_AccessoryShop1": {
+      "x": 851.7,
+      "y": 846.2
+    },
+    "PurpleCity_Arcade1": {
+      "x": 402.1,
+      "y": 1044.6
+    },
+    "PurpleCity_ARLibrary1": {
+      "x": 1919.2,
+      "y": 569.7
+    },
+    "PurpleCity_Cafe1": {
+      "x": 429,
+      "y": 740.6
+    },
+    "PurpleCity_ClothingStore1": {
+      "x": 828.3,
+      "y": 960.3
+    },
+    "PurpleCity_Club1": {
+      "x": 725.6,
+      "y": 1079.2
+    },
+    "PurpleCity_CVS1": {
+      "x": 1066.2,
+      "y": 667.5
+    },
+    "PurpleCity_FarmStore1": {
+      "x": 559.8,
+      "y": 990.7
+    },
+    "PurpleCity_FastFood1": {
+      "x": 1301.4,
+      "y": 1013.1
+    },
+    "PurpleCity_FitnessCenter1": {
+      "x": 1421.2,
+      "y": 626.8
+    },
+    "PurpleCity_FurnitureStore1": {
+      "x": 405.6,
+      "y": 854.4
+    },
+    "PurpleCity_LocalOffice1": {
+      "x": 1591.4,
+      "y": 607.3
+    },
+    "PurpleCity_Park1": {
+      "x": 1403.6,
+      "y": 50.6
+    },
+    "PurpleCity_Pharmacy1": {
+      "x": 1203.5,
+      "y": 1024.4
+    },
+    "PurpleCity_PhotoStudio1": {
+      "x": 2011.4,
+      "y": 99.1
+    },
+    "PurpleCity_Playground1": {
+      "x": 727.7,
+      "y": 389.7
+    },
+    "PurpleCity_PoliceStation1": {
+      "x": 1778.1,
+      "y": 585.9
+    },
+    "PurpleCity_RealEstate1": {
+      "x": 924.6,
+      "y": 683.8
+    },
+    "PurpleCity_Residence1": {
+      "x": 904.5,
+      "y": 373
+    },
+    "PurpleCity_Residence2": {
+      "x": 935.4,
+      "y": 222.6
+    },
+    "PurpleCity_Residence3": {
+      "x": 966.3,
+      "y": 72.1
+    },
+    "PurpleCity_Residence4": {
+      "x": 494.9,
+      "y": 420
+    },
+    "PurpleCity_Residence5": {
+      "x": 525.8,
+      "y": 269.5
+    },
+    "PurpleCity_Residence_Free01": {
+      "x": 904.5,
+      "y": 373
+    },
+    "PurpleCity_Restaurant1": {
+      "x": 615.6,
+      "y": 719.2
+    },
+    "PurpleCity_WeddingStudio1": {
+      "x": 1350.1,
+      "y": 311.1
     }
   }
 }
