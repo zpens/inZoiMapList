@@ -1761,6 +1761,23 @@ async function init() {
     } catch(e) { console.warn('Failed to load map images', e); }
   }
 
+  // Load static map images for cities without imageData (e.g. CanvasTown)
+  const STATIC_MAP_IMAGES = { CanvasTown: 'img/map_CanvasTown.png' };
+  for (const [city, imgPath] of Object.entries(STATIC_MAP_IMAGES)) {
+    if (state.maps[city] && !state.maps[city].imageData) {
+      try {
+        const res = await fetch(imgPath);
+        if (res.ok) {
+          const blob = await res.blob();
+          const reader = new FileReader();
+          const dataUrl = await new Promise(resolve => { reader.onload = () => resolve(reader.result); reader.readAsDataURL(blob); });
+          state.maps[city].imageData = dataUrl;
+          await IDB.saveImage('map_' + city, dataUrl);
+        }
+      } catch(e) { console.warn('Failed to load static map for ' + city, e); }
+    }
+  }
+
   // Render views
   loadMapForCity();
   renderSiteList();
