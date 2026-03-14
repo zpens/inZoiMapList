@@ -1,9 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.6';
+const APP_VERSION = '1.6.0';
 const CHANGELOG = [
-  { ver: '1.5.6', date: '2026-03-14', changes: [
-    '핀 위치 줌 안정성 수정: 줌인/아웃 시 핀이 이동하지 않도록 transform-origin 고정',
-    '핀 배치 시 클릭 위치 = 핀 꼬리 끝 (지도에 핀을 꽂는 자연스러운 동작)',
+  { ver: '1.6.0', date: '2026-03-14', changes: [
+    '핀 앵커를 원(head) 중심으로 변경: 배치/드래그 시 클릭 위치 = 원 정중앙',
+    '줌인/아웃 시 핀 위치 고정 (transform-origin을 원 중심에 설정)',
+    '기존 117개 핀 위치 데이터 마이그레이션 완료',
   ] },
   { ver: '1.5.4', date: '2026-03-14', changes: [
     '부지 배치 시 클릭 위치가 핀 아이콘 정중앙에 오도록 보정',
@@ -427,11 +428,11 @@ function renderMapSites() {
     if (s) el.dataset.size = `${s.sizeX}×${s.sizeY}`;
     canvasContainer.appendChild(el);
   });
-  // Re-apply counter-scale for zoom > 1 (combined with translate to keep anchor stable)
+  // Re-apply counter-scale for zoom > 1 (combined with translate to keep head-center anchor stable)
   const m = currentMap();
   const pinScale = m.zoom > 1 ? 1 / m.zoom : 1;
   document.querySelectorAll('.placed-site').forEach(el => {
-    el.style.transform = `translate(-50%, -100%) scale(${pinScale})`;
+    el.style.transform = `translate(-50%, -18px) scale(${pinScale})`;
   });
 }
 
@@ -440,10 +441,10 @@ function applyTransform() {
   const m = currentMap();
   canvasContainer.style.transform = `translate(${m.panX}px,${m.panY}px) scale(${m.zoom})`;
   $('zoomInfo').textContent = Math.round(m.zoom * 100) + '%';
-  // Pin size fixed when zoom > 1: combine translate+scale in one transform for stable anchoring
+  // Pin size fixed when zoom > 1: combine translate+scale in one transform for stable head-center anchoring
   const pinScale = m.zoom > 1 ? 1 / m.zoom : 1;
   document.querySelectorAll('.placed-site').forEach(el => {
-    el.style.transform = `translate(-50%, -100%) scale(${pinScale})`;
+    el.style.transform = `translate(-50%, -18px) scale(${pinScale})`;
   });
 }
 
