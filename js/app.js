@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.1';
+const APP_VERSION = '1.5.2';
 const CHANGELOG = [
+  { ver: '1.5.2', date: '2026-03-14', changes: [
+    '통계 그룹 테이블에서 규격별 컬럼 제거 (세부항목에서만 표시)',
+  ] },
   { ver: '1.5.1', date: '2026-03-14', changes: [
     '부지 목록: 배치된 부지 밝게, 미배치 부지 어둡게 변경',
     '맵 선택 핀 강조 효과 강화 (확대, 글로우, 펄스)',
@@ -1305,13 +1308,11 @@ function renderStats() {
     const avgArea = r.count ? Math.round(r.area / r.count) : 0;
     const avgP = r.prices.length ? Math.round(statsAvg(r.prices)) : 0;
     const pctW = Math.round(r.count / maxC * 100);
-    const szStr = Object.entries(r.stdSizes||{}).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v])=>`${k}:${v}`).join(' ');
     return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}" ${r.groupByOverride ? `data-groupby="${r.groupByOverride}"` : ''}>
       <td><div class="stats-bar-cell"><span style="font-size:10px;color:var(--accent);margin-right:6px;flex-shrink:0">▶</span><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
       <td class="num">${avgArea.toLocaleString()}</td>
-      <td class="num" style="font-size:10px;white-space:nowrap">${szStr || '-'}</td>
       <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
       <td class="num">${r.std ? `<span style="color:var(--accent)">${r.std}</span>` : '-'}</td>
       <td class="num">${r.presets || '-'}</td>
@@ -1339,7 +1340,7 @@ function renderStats() {
     const stdRow = buildVirtual(stdSites, '📐 규격부지', 'standard');
     const nonStdRow = buildVirtual(nonStdSites, '비규격', 'nonstandard');
     const virtMax = Math.max(stdRow.count, nonStdRow.count, 1);
-    stdExtraRows = `<tr><td colspan="8" style="padding:2px 10px;border-bottom:2px solid var(--accent);opacity:.5;font-size:10px;color:var(--text2)">규격 여부</td></tr>` +
+    stdExtraRows = `<tr><td colspan="7" style="padding:2px 10px;border-bottom:2px solid var(--accent);opacity:.5;font-size:10px;color:var(--text2)">규격 여부</td></tr>` +
       buildRow(stdRow, virtMax) + buildRow(nonStdRow, virtMax);
   }
 
@@ -1372,7 +1373,6 @@ function renderStats() {
           <th data-sort="count" class="${sc('count')}">개수</th>
           <th data-sort="area" class="${sc('area')}">총면적</th>
           <th data-sort="avgArea" class="${sc('avgArea')}">평균면적</th>
-          <th>규격별</th>
           <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
           <th>규격</th>
           <th data-sort="presets" class="${sc('presets')}">프리셋</th>
@@ -1383,7 +1383,6 @@ function renderStats() {
           <td class="num">${totalCount}</td>
           <td class="num">${totalArea.toLocaleString()}</td>
           <td class="num">${totalCount ? Math.round(totalArea / totalCount).toLocaleString() : 0}</td>
-          <td class="num" style="font-size:10px">${Object.entries(sites.reduce((m,s)=>{if(s.standardizedSize)m[s.standardizedSize]=(m[s.standardizedSize]||0)+1;return m},{})).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v])=>k+':'+v).join(' ')||'-'}</td>
           <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
           <td class="num" style="color:var(--accent)">${stdCount}</td>
           <td class="num">${totalPresets}</td>
