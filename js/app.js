@@ -2,7 +2,7 @@
 const APP_VERSION = '1.9.1';
 const CHANGELOG = [
   { ver: '1.9.1', date: '2026-03-15', changes: [
-    '통계 세부항목 부지명에 최대 층수 표시',
+    '통계 세부항목에 층수 컬럼 추가 (정렬 가능)',
   ] },
   { ver: '1.9.0', date: '2026-03-15', changes: [
     '부지 최대 층수 정보 추가 (목록 및 상세 화면)',
@@ -1483,6 +1483,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       if (sk === 'city') { va = CITY_LABEL[a.city]||a.city; vb = CITY_LABEL[b.city]||b.city; return sd === 'asc' ? va.localeCompare(vb,'ko') : vb.localeCompare(va,'ko'); }
       if (sk === 'size') { va = (a.sizeX||0)*(a.sizeY||0); vb = (b.sizeX||0)*(b.sizeY||0); }
       else if (sk === 'stdSize') { va = a.standardizedSize||''; vb = b.standardizedSize||''; return sd === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va); }
+      else if (sk === 'maxFloor') { va = a.maxFloor||0; vb = b.maxFloor||0; }
       else if (sk === 'price') { va = a.price||0; vb = b.price||0; }
       else if (sk === 'presets') { va = PRESET_DATA[a.id]?.length||0; vb = PRESET_DATA[b.id]?.length||0; }
       return sd === 'asc' ? va - vb : vb - va;
@@ -1492,8 +1493,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const newBadge = s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px">NEW</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      const floorBadge = s.maxFloor > 0 ? `<span style="color:#60a5fa;font-size:10px;margin-left:4px">${s.maxFloor}층</span>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${floorBadge}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap;color:#60a5fa">${s.maxFloor > 0 ? s.maxFloor+'층' : '-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
@@ -1532,6 +1532,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
             ${cityHeader}
             <th data-sort="size" class="${sc('size')}" style="cursor:pointer;width:100px;text-align:right">크기</th>
             <th data-sort="stdSize" class="${sc('stdSize')}" style="cursor:pointer;width:60px;text-align:right">규격</th>
+            <th data-sort="maxFloor" class="${sc('maxFloor')}" style="cursor:pointer;width:60px;text-align:right">층수</th>
             <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:100px;text-align:right">가격</th>
             <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer;width:70px;text-align:right">프리셋</th>
           </tr></thead>
