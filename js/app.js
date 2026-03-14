@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.9.0';
+const APP_VERSION = '1.9.1';
 const CHANGELOG = [
+  { ver: '1.9.1', date: '2026-03-15', changes: [
+    '통계 세부항목 부지명에 최대 층수 표시',
+  ] },
   { ver: '1.9.0', date: '2026-03-15', changes: [
     '부지 최대 층수 정보 추가 (목록 및 상세 화면)',
   ] },
@@ -1489,7 +1492,8 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const newBadge = s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px">NEW</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      const floorBadge = s.maxFloor > 0 ? `<span style="color:#60a5fa;font-size:10px;margin-left:4px">${s.maxFloor}층</span>` : '';
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${floorBadge}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
