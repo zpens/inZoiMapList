@@ -173,11 +173,12 @@ function main() {
       for (const f of files.filter(f => f.startsWith(prefix))) {
         try {
           const d = readJsonResult(path.join(dir, f));
-          if (d.siteId && d.floorLevelLimit) {
+          if (d.siteId) {
             floorLimitMap[d.siteId] = {
-              maxFloor: d.floorLevelLimit.y || 0,
+              maxFloor: d.floorLevelLimit?.y || 0,
               bFirstFloorLocked: d.bFirstFloorLocked || false,
               bBasementsLocked: d.bBasementsLocked || false,
+              useDynamicGround: d.groundSetting?.useDynamicGround || false,
             };
           }
         } catch (e) {}
@@ -229,9 +230,10 @@ function main() {
     const existing = existingMap[id];
     const icon = existing ? existing.icon : deriveIcon(site);
 
-    // 층수 제한 (Site 레벨 파일에서)
+    // 층수 제한 + 수영장 (Site 레벨 파일에서)
     const floorInfo = floorLimitMap[id];
     const maxFloor = floorInfo ? floorInfo.maxFloor : null;
+    const poolAllowed = floorInfo ? floorInfo.useDynamicGround : false;
 
     const entry = {
       id,
@@ -253,7 +255,12 @@ function main() {
       disabled: d.bDisabled,
       devOnly: d.bDevOnly,
       icon,
-      maxFloor
+      maxFloor,
+      poolAllowed,
+      streamingDistance: d.StreamingDistance || 0,
+      lod0Distance: d.Lod0Distance || 0,
+      lod1Distance: d.Lod1Distance || 0,
+      lod2Distance: d.Lod2Distance || 0,
     };
 
     // 기존에 addedDate가 있었으면 보존

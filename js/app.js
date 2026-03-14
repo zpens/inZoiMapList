@@ -1,6 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '2.0.0';
+const APP_VERSION = '2.1.0';
 const CHANGELOG = [
+  { ver: '2.1.0', date: '2026-03-15', changes: [
+    '상세 정보에 수영장 설치 가능 여부 추가',
+    '상세 정보에 거리/LOD 섹션 추가 (스트리밍, LOD0~2)',
+  ] },
   { ver: '2.0.0', date: '2026-03-15', changes: [
     '캔버스타운 도시 탭 추가 (PurpleCity 부지 30개 분리)',
     '통계 세부항목에 층수 컬럼 추가 (정렬 가능)',
@@ -361,10 +365,20 @@ function renderDetail(siteId) {
         <div class="detail-field"><label>가격</label><value>${formatPrice(s.price)}</value></div>
         ${s.maxFloor > 0 ? `<div class="detail-field"><label>최대 층수</label><value>${s.maxFloor}층</value></div>` : ''}
         <div class="detail-field"><label>자영업 허용</label><value>${s.bizAllowed ? '✅ 가능' : '❌ 불가'}</value></div>
+        <div class="detail-field"><label>수영장 설치</label><value>${s.poolAllowed ? '✅ 가능' : '❌ 불가'}</value></div>
         ${s.residentMax ? `<div class="detail-field"><label>최소 거주</label><value>${s.residentMin}명</value></div>
         <div class="detail-field"><label>최대 거주</label><value>${s.residentMax}명</value></div>` : ''}
         ${s.operatingHours ? `<div class="detail-field" style="grid-column:1/-1"><label>운영 시간</label><value>${s.operatingHours}</value></div>` : ''}
         ${s.detailId ? `<div class="detail-field"><label>상세 ID</label><value>${s.detailId}</value></div>` : ''}
+      </div>
+    </div>
+    <div class="detail-section">
+      <h3>거리/LOD</h3>
+      <div class="detail-grid">
+        <div class="detail-field"><label>스트리밍 거리</label><value>${s.streamingDistance || '-'}</value></div>
+        <div class="detail-field"><label>LOD0 거리</label><value>${s.lod0Distance || '-'}</value></div>
+        <div class="detail-field"><label>LOD1 거리</label><value>${s.lod1Distance || '-'}</value></div>
+        <div class="detail-field"><label>LOD2 거리</label><value>${s.lod2Distance || '-'}</value></div>
       </div>
     </div>
     ${desc ? `<div class="detail-section"><h3>설명</h3><div class="detail-desc">${desc}</div></div>` : ''}

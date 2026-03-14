@@ -19,7 +19,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_CentralAPT105",
@@ -41,7 +46,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_DowonVilla",
@@ -63,7 +73,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free01",
@@ -85,7 +100,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free02",
@@ -107,7 +127,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free03",
@@ -129,7 +154,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free04",
@@ -151,7 +181,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free05",
@@ -173,7 +208,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free06",
@@ -195,7 +235,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free07",
@@ -217,7 +262,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_Free08",
@@ -239,7 +289,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_SkyBD",
@@ -261,7 +316,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_ArchitectureFirm1",
@@ -284,6 +344,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -306,7 +371,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_AR",
@@ -328,7 +398,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Bank",
@@ -350,7 +425,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Cafe",
@@ -372,7 +452,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_ClothStore",
@@ -394,7 +479,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_CutsceneStudio",
@@ -416,7 +506,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Public",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_CVS",
@@ -438,7 +533,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_DynamicLocalShop",
@@ -460,7 +560,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Exhibition",
@@ -482,7 +587,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_FarmStore",
@@ -504,7 +614,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_FireStation",
@@ -526,7 +641,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Gimbab",
@@ -548,7 +668,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Karaoke",
@@ -570,7 +695,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_PcCafe",
@@ -592,7 +722,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_PhotoStudio",
@@ -614,7 +749,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_PoliceStation",
@@ -636,7 +776,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 4000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_Restaurant",
@@ -658,7 +803,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_SajuCafe",
@@ -680,7 +830,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TackleShop1",
@@ -702,7 +857,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut01",
@@ -724,7 +884,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut02",
@@ -746,7 +911,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut03",
@@ -768,7 +938,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut04",
@@ -790,7 +965,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut05",
@@ -812,7 +992,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TakeOut06",
@@ -834,7 +1019,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_TempleFuneral",
@@ -856,7 +1046,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Court1",
@@ -878,7 +1073,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_FakeAgency1",
@@ -900,7 +1100,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_ITCompany1",
@@ -923,6 +1128,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 7,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -946,6 +1156,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -968,7 +1183,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_MedicalCenter",
@@ -990,7 +1210,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_TravelAgency",
@@ -1012,7 +1237,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RecordCompany1",
@@ -1035,6 +1265,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -1058,6 +1293,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -1080,7 +1320,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_FireStation_Lobby",
@@ -1102,7 +1347,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_FireStationTraining",
@@ -1124,7 +1374,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_School",
@@ -1146,7 +1401,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Business_SchoolIn",
@@ -1168,7 +1428,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "School",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite1",
@@ -1190,7 +1455,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite2",
@@ -1212,7 +1482,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite3",
@@ -1234,7 +1509,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite4",
@@ -1256,7 +1536,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite5",
@@ -1278,7 +1563,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite6",
@@ -1300,7 +1590,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite7",
@@ -1322,7 +1617,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite8",
@@ -1344,7 +1644,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_BusinessSite9",
@@ -1367,6 +1672,11 @@
     "devOnly": false,
     "icon": "HouseholdBiz",
     "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -1389,7 +1699,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Out229",
@@ -1411,7 +1726,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Out230",
@@ -1433,7 +1753,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_AdamEnt_Lobby",
@@ -1455,7 +1780,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_AirportShuttle",
@@ -1477,7 +1807,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Bus",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Arcade",
@@ -1499,7 +1834,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralAPT_Lobby",
@@ -1521,7 +1861,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralAPT105_Lobby",
@@ -1543,7 +1888,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralPark",
@@ -1565,7 +1915,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralPark2",
@@ -1587,7 +1942,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralPark3",
@@ -1609,7 +1969,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkFountain",
@@ -1631,7 +1996,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkFountain2",
@@ -1653,7 +2023,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkFountain3",
@@ -1675,7 +2050,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkFountain4",
@@ -1697,7 +2077,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkFountain5",
@@ -1719,7 +2104,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkLawn",
@@ -1741,7 +2131,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralParkLawn2",
@@ -1763,7 +2158,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_CentralRiverPark",
@@ -1785,7 +2185,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Club",
@@ -1807,7 +2212,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_ConcertStage",
@@ -1829,7 +2239,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_EastRiverPark",
@@ -1851,7 +2266,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Empty02",
@@ -1873,7 +2293,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Empty03",
@@ -1895,7 +2320,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_FitnessCenter",
@@ -1917,7 +2347,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_FleaAvenue",
@@ -1939,7 +2374,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_FleaAvenue2",
@@ -1961,7 +2401,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Library",
@@ -1983,7 +2428,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_OutdoorPool",
@@ -2005,7 +2455,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": true,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 6000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Playground",
@@ -2027,7 +2482,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Restaurant_Lobby",
@@ -2049,7 +2509,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_RiverParkFishing",
@@ -2071,7 +2536,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Fishing",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_SkyBD_Lobby",
@@ -2093,7 +2563,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleCafe",
@@ -2115,7 +2590,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleCemetery",
@@ -2137,7 +2617,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Cemetery",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleMid",
@@ -2159,7 +2644,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleNorth",
@@ -2181,7 +2671,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Temple",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleNorth2",
@@ -2203,7 +2698,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Temple",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_TempleSouth",
@@ -2225,7 +2725,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Temple",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_WestRiverPark",
@@ -2247,7 +2752,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 8000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_TaeKwonDo",
@@ -2269,7 +2779,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Residence_DowonVilla_Lobby",
@@ -2291,7 +2806,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_Public_Court",
@@ -2313,7 +2833,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_BroadcastingStation",
@@ -2335,7 +2860,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_CityHall",
@@ -2357,7 +2887,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_Doex",
@@ -2379,7 +2914,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_EducationCenter",
@@ -2401,7 +2941,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_EnvironmentalGroup",
@@ -2423,7 +2968,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_PoliceStation",
@@ -2445,7 +2995,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_StockFirm",
@@ -2467,7 +3022,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Gangnam_RabbitHole_WelfareFoundation",
@@ -2489,7 +3049,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "MiniRedCity_Residence_Area01",
@@ -2532,7 +3097,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": null
+    "maxFloor": null,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Free02",
@@ -2554,7 +3124,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": null
+    "maxFloor": null,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Free03",
@@ -2576,7 +3151,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Free04",
@@ -2598,7 +3178,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Low1_APT",
@@ -2620,7 +3205,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Low3_Empty",
@@ -2642,7 +3232,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Mid1_Empty",
@@ -2664,7 +3259,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Mid3_Free",
@@ -2686,7 +3286,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Mid4_APT",
@@ -2708,7 +3313,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Mid5_APT",
@@ -2730,7 +3340,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up1_Empty",
@@ -2752,7 +3367,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up2_Free",
@@ -2774,7 +3394,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up3_Free",
@@ -2796,7 +3421,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up5_Empty",
@@ -2818,7 +3448,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up6_Free",
@@ -2840,7 +3475,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Residence_Up7_Pent",
@@ -2862,7 +3502,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Architects",
@@ -2885,6 +3530,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -2907,7 +3557,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Bank",
@@ -2929,7 +3584,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Cafe",
@@ -2951,7 +3611,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ClothingStore",
@@ -2973,7 +3638,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Court",
@@ -2995,7 +3665,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_DynamicLocalShop",
@@ -3017,7 +3692,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FarmStore",
@@ -3039,7 +3719,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FastFoodRest",
@@ -3061,7 +3746,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FireStation",
@@ -3083,7 +3773,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FortuneTeller",
@@ -3105,7 +3800,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FuneralHome02",
@@ -3127,7 +3827,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_FurnitureStore",
@@ -3149,7 +3854,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 1000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_IT",
@@ -3171,7 +3881,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Mart",
@@ -3193,7 +3908,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": null
+    "maxFloor": null,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Museum",
@@ -3215,7 +3935,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ParkOffice",
@@ -3237,7 +3962,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": null
+    "maxFloor": null,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_PhotoStudio",
@@ -3259,7 +3989,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_PoliceStation",
@@ -3281,7 +4016,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_SkyLounge",
@@ -3303,7 +4043,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_SurfShop",
@@ -3325,7 +4070,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut01",
@@ -3347,7 +4097,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut02",
@@ -3369,7 +4124,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut03",
@@ -3391,7 +4151,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut04",
@@ -3413,7 +4178,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut05",
@@ -3435,7 +4205,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut06",
@@ -3457,7 +4232,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_TakeOut07",
@@ -3479,7 +4259,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark02",
@@ -3501,7 +4286,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_WeddingStudio",
@@ -3523,7 +4313,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Public",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Court2",
@@ -3545,7 +4340,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_FakeAgency1",
@@ -3567,7 +4367,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_ITCompany",
@@ -3590,6 +4395,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -3613,6 +4423,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -3635,7 +4450,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_CityHall",
@@ -3657,7 +4477,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_MedicalCenter",
@@ -3679,7 +4504,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_Museum02",
@@ -3701,7 +4531,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RecordCompany",
@@ -3724,6 +4559,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -3747,6 +4587,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -3769,7 +4614,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_Park",
@@ -3791,7 +4641,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_School",
@@ -3813,7 +4668,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "School",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_SchoolIn",
@@ -3835,7 +4695,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_SchoolOut",
@@ -3857,7 +4722,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "School",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark02_Entrance",
@@ -3879,7 +4749,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 10000,
+    "lod0Distance": 0,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark02_Road",
@@ -3901,7 +4776,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 10000,
+    "lod0Distance": 0,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark03",
@@ -3923,7 +4803,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark04",
@@ -3945,7 +4830,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark05",
@@ -3967,7 +4857,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark06",
@@ -3989,7 +4884,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Business_ThemePark07",
@@ -4011,7 +4911,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite2",
@@ -4033,7 +4938,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite3",
@@ -4055,7 +4965,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite4",
@@ -4077,7 +4992,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite5",
@@ -4099,7 +5019,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite6",
@@ -4121,7 +5046,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite7",
@@ -4143,7 +5073,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite8",
@@ -4165,7 +5100,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_BusinessSite9",
@@ -4188,6 +5128,11 @@
     "devOnly": false,
     "icon": "",
     "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -4210,7 +5155,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Bus",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Arcade",
@@ -4232,7 +5182,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Avenue",
@@ -4254,7 +5209,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Avenue02",
@@ -4276,7 +5236,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Avenue03",
@@ -4298,7 +5263,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach01",
@@ -4320,7 +5290,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach02",
@@ -4342,7 +5317,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach03",
@@ -4364,7 +5344,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach03_1",
@@ -4386,7 +5371,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach03_2",
@@ -4408,7 +5398,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sports",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_BlessBayBeach04",
@@ -4430,7 +5425,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Empty01",
@@ -4452,7 +5452,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Empty02",
@@ -4474,7 +5479,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Empty03",
@@ -4496,7 +5506,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Redcity_Public_FitnessCenter",
@@ -4539,7 +5554,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Cemetery",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Library",
@@ -4561,7 +5581,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Livestage",
@@ -4583,7 +5608,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Stage",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Livestage02",
@@ -4605,7 +5635,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Stage",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Low1_Lobby",
@@ -4627,7 +5662,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Mid4_Lobby",
@@ -4649,7 +5689,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Mid5_Lobby",
@@ -4671,7 +5716,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach",
@@ -4693,7 +5743,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sports",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach02",
@@ -4715,7 +5770,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach03",
@@ -4737,7 +5797,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach04",
@@ -4759,7 +5824,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach05",
@@ -4781,7 +5851,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleBeach06",
@@ -4803,7 +5878,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Beach",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleGym",
@@ -4825,7 +5905,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sports",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_MuscleGym02",
@@ -4847,7 +5932,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sports",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Park",
@@ -4869,7 +5959,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Park02",
@@ -4891,7 +5986,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Park03",
@@ -4913,7 +6013,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_Park04",
@@ -4935,7 +6040,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_PlayGround",
@@ -4957,7 +6067,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_PlayGround02",
@@ -4979,7 +6094,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2000,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_SkyLounge_Lobby",
@@ -5001,7 +6121,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_SmallClub",
@@ -5023,7 +6148,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_Public_SunsetBay",
@@ -5045,7 +6175,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 22000
   },
   {
     "id": "RedCity_Public_Up7_Pent_Lobby",
@@ -5067,7 +6202,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 0,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_BroadcastingStation",
@@ -5089,7 +6229,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_EducationCenter",
@@ -5111,7 +6256,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_EnvironmentalGroup",
@@ -5133,7 +6283,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_LumiereHall",
@@ -5155,7 +6310,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_StockFirm",
@@ -5177,7 +6337,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_TravelAgency",
@@ -5199,7 +6364,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "RedCity_RabbitHole_WelfareFoundation",
@@ -5221,7 +6391,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_EmptySite1",
@@ -5243,7 +6418,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_EmptySite2",
@@ -5265,7 +6445,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_EmptySite4",
@@ -5287,7 +6472,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_EmptySite5",
@@ -5309,7 +6499,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_LocalHouse1",
@@ -5331,7 +6526,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_NPCSite1",
@@ -5353,7 +6553,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_NPCSite2",
@@ -5375,7 +6580,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_NPCSite3",
@@ -5397,7 +6607,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_NPCSite4",
@@ -5419,7 +6634,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_Resort1",
@@ -5441,7 +6661,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Residence_Resort10",
@@ -5463,7 +6688,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 10000
   },
   {
     "id": "Cahaya_business_ARLibrary1",
@@ -5485,7 +6715,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_BeachCafe1",
@@ -5507,7 +6742,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 10000
   },
   {
     "id": "Cahaya_Business_BrunchCafe1",
@@ -5529,7 +6769,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 10000
   },
   {
     "id": "Cahaya_Business_CafeAndBar1",
@@ -5551,7 +6796,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_CatFoodKiosk",
@@ -5573,7 +6823,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_ClothesShop",
@@ -5596,6 +6851,11 @@
     "devOnly": false,
     "icon": "Shop",
     "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -5618,7 +6878,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_DynamicLocalShop1",
@@ -5640,7 +6905,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_FuneralHome",
@@ -5662,7 +6932,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_LocalRestaurant1",
@@ -5684,7 +6959,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_LocalShop1",
@@ -5706,7 +6986,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_Meditation",
@@ -5728,7 +7013,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_PoliceStation1",
@@ -5750,7 +7040,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_Resort3",
@@ -5772,7 +7067,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_Resort8",
@@ -5794,7 +7094,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_ResortAmenities1",
@@ -5816,7 +7121,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_ResortLobby1",
@@ -5838,7 +7148,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Lobby",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_SmoothieCafe1",
@@ -5860,7 +7175,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Food",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_StiltHouse1",
@@ -5882,7 +7202,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 20000
   },
   {
     "id": "Cahaya_Business_TackleShop1",
@@ -5904,7 +7229,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_TourAgency1",
@@ -5926,7 +7256,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 2
+    "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_TravelAgency",
@@ -5949,6 +7284,11 @@
     "devOnly": false,
     "icon": "Building",
     "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -5971,7 +7311,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Public",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Business_YogaCenter1",
@@ -5993,7 +7338,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_FakeAgency1",
@@ -6015,7 +7365,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_BeachLounge1",
@@ -6037,7 +7392,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Play",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_BeachVolleyball1",
@@ -6059,7 +7419,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Public",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_StiltHouseReception1",
@@ -6081,7 +7446,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sleep",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_BusinessSite4",
@@ -6103,7 +7473,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_BusinessSite5",
@@ -6125,7 +7500,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 4
+    "maxFloor": 4,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_BusinessSite6",
@@ -6147,7 +7527,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 3
+    "maxFloor": 3,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_BusinessSite7",
@@ -6169,7 +7554,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
-    "maxFloor": 5
+    "maxFloor": 5,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_BusinessSite8",
@@ -6192,6 +7582,11 @@
     "devOnly": false,
     "icon": "HouseholdBiz",
     "maxFloor": 2,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000,
     "addedDate": "2026-03-14"
   },
   {
@@ -6214,7 +7609,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Sports",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach2",
@@ -6236,7 +7636,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach3",
@@ -6258,7 +7663,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 3200,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach4",
@@ -6280,7 +7690,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach5",
@@ -6302,7 +7717,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach6",
@@ -6324,7 +7744,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 3200,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach7",
@@ -6346,7 +7771,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach8",
@@ -6368,7 +7798,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Beach9",
@@ -6390,7 +7825,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Cemetery",
@@ -6412,7 +7852,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Cemetery",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_DesertIsland1",
@@ -6434,7 +7879,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_DesertIsland2",
@@ -6456,7 +7906,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Dock",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Field1",
@@ -6478,7 +7933,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Field2",
@@ -6500,7 +7960,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Field3",
@@ -6522,7 +7987,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_GuestHouse1",
@@ -6544,7 +8014,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_LocalBooth1",
@@ -6566,7 +8041,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_LocalBooth2",
@@ -6588,7 +8068,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_NightMarket1",
@@ -6610,7 +8095,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_OutdoorCinema1",
@@ -6632,7 +8122,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Park",
@@ -6654,7 +8149,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Pier1",
@@ -6676,7 +8176,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Fishing",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Pier2",
@@ -6698,7 +8203,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Dock",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 6000,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Pier3",
@@ -6720,7 +8230,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Dock",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 6000,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Pier4",
@@ -6742,7 +8257,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Flight",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 6000,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_ResortPool1",
@@ -6764,7 +8284,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_Temple",
@@ -6786,7 +8311,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Temple",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_TempleInside",
@@ -6808,7 +8338,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Temple",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_TurtleNest1",
@@ -6830,7 +8365,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_VillaPool1",
@@ -6852,7 +8392,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_WaterSlide1",
@@ -6874,7 +8419,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 1
+    "maxFloor": 1,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_RabbitHole_School1",
@@ -6896,7 +8446,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "School",
-    "maxFloor": 0
+    "maxFloor": 0,
+    "poolAllowed": false,
+    "streamingDistance": 6000,
+    "lod0Distance": 300,
+    "lod1Distance": 2300,
+    "lod2Distance": 5000
   },
   {
     "id": "Cahaya_Public_PierWalkway1",
@@ -7023,7 +8578,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence1",
@@ -7045,7 +8605,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence2",
@@ -7067,7 +8632,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence3",
@@ -7089,7 +8659,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence4",
@@ -7111,7 +8686,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence5",
@@ -7133,7 +8713,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Residence6",
@@ -7155,7 +8740,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "House",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_AccessoryShop1",
@@ -7177,7 +8767,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Arcade1",
@@ -7199,7 +8794,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_ARLibrary1",
@@ -7221,7 +8821,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Cafe1",
@@ -7243,7 +8848,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Cinema1",
@@ -7265,7 +8875,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_ClothingStore1",
@@ -7287,7 +8902,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Club1",
@@ -7309,7 +8929,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_CVS1",
@@ -7331,7 +8956,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_FarmStore1",
@@ -7353,7 +8983,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_FastFood1",
@@ -7375,7 +9010,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_FitnessCenter1",
@@ -7397,7 +9037,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_FurnitureStore1",
@@ -7419,7 +9064,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Pharmacy1",
@@ -7441,7 +9091,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_PhotoStudio1",
@@ -7463,7 +9118,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_PoliceStation1",
@@ -7485,7 +9145,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_RealEstate1",
@@ -7507,7 +9172,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Restaurant1",
@@ -7529,7 +9199,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_TackleShop1",
@@ -7551,7 +9226,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_WeddingStudio1",
@@ -7573,7 +9253,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Library1",
@@ -7595,7 +9280,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_LocalOffice1",
@@ -7617,7 +9307,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 30
+    "maxFloor": 30,
+    "poolAllowed": false,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Park1",
@@ -7639,7 +9334,12 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   },
   {
     "id": "PurpleCity_Playground1",
@@ -7661,6 +9361,11 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Park",
-    "maxFloor": 29
+    "maxFloor": 29,
+    "poolAllowed": true,
+    "streamingDistance": 4000,
+    "lod0Distance": 300,
+    "lod1Distance": 30000,
+    "lod2Distance": 60000
   }
 ]
