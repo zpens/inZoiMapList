@@ -1,6 +1,11 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.6.2';
+const APP_VERSION = '1.7.0';
 const CHANGELOG = [
+  { ver: '1.7.0', date: '2026-03-15', changes: [
+    '게임 엔진 원본 데이터(JsonResult)에서 sites.json 자동 생성 스크립트 추가',
+    'PurpleCity(캔버스타운) 부지 30개 신규 추가',
+    'bizAllowed 등 필드값 원본 기준으로 수정',
+  ] },
   { ver: '1.6.2', date: '2026-03-14', changes: [
     '블리스베이 자유부지 2개, 미니 부지 1개 목록/통계에서 제거',
   ] },
