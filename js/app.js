@@ -1,6 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.4.3';
+const APP_VERSION = '1.5.0';
 const CHANGELOG = [
+  { ver: '1.5.0', date: '2026-03-14', changes: [
+    '통계 그룹 테이블에 규격별(Z3/Z4/Z5) 분포 컬럼 추가',
+    '통계 세부항목에 규격 컬럼 추가 (정렬 가능)',
+  ] },
   { ver: '1.4.3', date: '2026-03-14', changes: [
     '부지 목록에 규격 부지 표시 추가',
   ] },
@@ -1252,7 +1256,7 @@ function renderStats() {
     else if (groupBy === 'siteType') key = TYPE_LABEL[rawKey] || rawKey;
     else if (groupBy === 'isStandard') key = rawKey === 'standard' ? '📐 규격' : '비규격';
     else if (groupBy === 'isNew') key = rawKey === 'new' ? '🆕 신규 부지' : '기존 부지';
-    if (!groups[key]) groups[key] = { name: key, rawKey, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0 };
+    if (!groups[key]) groups[key] = { name: key, rawKey, count: 0, area: 0, prices: [], placed: 0, sizes: [], std: 0, presets: 0, stdSizes: {} };
     const g = groups[key];
     g.count++;
     const area = (s.sizeX || 0) * (s.sizeY || 0);
@@ -1261,6 +1265,7 @@ function renderStats() {
     if (s.price > 1) g.prices.push(s.price);
     if (allPositions[s.id]) g.placed++;
     if (isStdSize(s)) g.std++;
+    if (s.standardizedSize) g.stdSizes[s.standardizedSize] = (g.stdSizes[s.standardizedSize] || 0) + 1;
     g.presets += (PRESET_DATA[s.id]?.length || 0);
   });
 
@@ -1296,11 +1301,13 @@ function renderStats() {
     const avgArea = r.count ? Math.round(r.area / r.count) : 0;
     const avgP = r.prices.length ? Math.round(statsAvg(r.prices)) : 0;
     const pctW = Math.round(r.count / maxC * 100);
+    const szStr = Object.entries(r.stdSizes||{}).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v])=>`${k}:${v}`).join(' ');
     return `<tr style="cursor:pointer" data-rawkey="${r.rawKey}" ${r.groupByOverride ? `data-groupby="${r.groupByOverride}"` : ''}>
       <td><div class="stats-bar-cell"><span style="font-size:10px;color:var(--accent);margin-right:6px;flex-shrink:0">▶</span><span class="stats-bar-fill" style="width:${pctW}%"></span>${r.name}</div></td>
       <td class="num">${r.count}</td>
       <td class="num">${r.area.toLocaleString()}</td>
       <td class="num">${avgArea.toLocaleString()}</td>
+      <td class="num" style="font-size:10px;white-space:nowrap">${szStr || '-'}</td>
       <td class="num">${avgP ? '₦' + avgP.toLocaleString() : '-'}</td>
       <td class="num">${r.std ? `<span style="color:var(--accent)">${r.std}</span>` : '-'}</td>
       <td class="num">${r.presets || '-'}</td>
@@ -1314,12 +1321,13 @@ function renderStats() {
     const stdSites = sites.filter(s => isStdSize(s));
     const nonStdSites = sites.filter(s => !isStdSize(s));
     const buildVirtual = (list, name, rawKey) => {
-      const r = { name, rawKey, groupByOverride: 'isStandard', count: list.length, area: 0, prices: [], placed: 0, std: 0, presets: 0 };
+      const r = { name, rawKey, groupByOverride: 'isStandard', count: list.length, area: 0, prices: [], placed: 0, std: 0, presets: 0, stdSizes: {} };
       list.forEach(s => {
         r.area += (s.sizeX||0)*(s.sizeY||0);
         if (s.price > 1) r.prices.push(s.price);
         if (allPositions[s.id]) r.placed++;
         if (isStdSize(s)) r.std++;
+        if (s.standardizedSize) r.stdSizes[s.standardizedSize] = (r.stdSizes[s.standardizedSize] || 0) + 1;
         r.presets += (PRESET_DATA[s.id]?.length || 0);
       });
       return r;
@@ -1327,7 +1335,7 @@ function renderStats() {
     const stdRow = buildVirtual(stdSites, '📐 규격부지', 'standard');
     const nonStdRow = buildVirtual(nonStdSites, '비규격', 'nonstandard');
     const virtMax = Math.max(stdRow.count, nonStdRow.count, 1);
-    stdExtraRows = `<tr><td colspan="7" style="padding:2px 10px;border-bottom:2px solid var(--accent);opacity:.5;font-size:10px;color:var(--text2)">규격 여부</td></tr>` +
+    stdExtraRows = `<tr><td colspan="8" style="padding:2px 10px;border-bottom:2px solid var(--accent);opacity:.5;font-size:10px;color:var(--text2)">규격 여부</td></tr>` +
       buildRow(stdRow, virtMax) + buildRow(nonStdRow, virtMax);
   }
 
@@ -1360,6 +1368,7 @@ function renderStats() {
           <th data-sort="count" class="${sc('count')}">개수</th>
           <th data-sort="area" class="${sc('area')}">총면적</th>
           <th data-sort="avgArea" class="${sc('avgArea')}">평균면적</th>
+          <th>규격별</th>
           <th data-sort="avgPrice" class="${sc('avgPrice')}">평균가격</th>
           <th>규격</th>
           <th data-sort="presets" class="${sc('presets')}">프리셋</th>
@@ -1370,6 +1379,7 @@ function renderStats() {
           <td class="num">${totalCount}</td>
           <td class="num">${totalArea.toLocaleString()}</td>
           <td class="num">${totalCount ? Math.round(totalArea / totalCount).toLocaleString() : 0}</td>
+          <td class="num" style="font-size:10px">${Object.entries(sites.reduce((m,s)=>{if(s.standardizedSize)m[s.standardizedSize]=(m[s.standardizedSize]||0)+1;return m},{})).sort((a,b)=>a[0].localeCompare(b[0])).map(([k,v])=>k+':'+v).join(' ')||'-'}</td>
           <td class="num">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</td>
           <td class="num" style="color:var(--accent)">${stdCount}</td>
           <td class="num">${totalPresets}</td>
@@ -1438,6 +1448,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       if (sk === 'id') return sd === 'asc' ? a.id.localeCompare(b.id) : b.id.localeCompare(a.id);
       if (sk === 'city') { va = CITY_LABEL[a.city]||a.city; vb = CITY_LABEL[b.city]||b.city; return sd === 'asc' ? va.localeCompare(vb,'ko') : vb.localeCompare(va,'ko'); }
       if (sk === 'size') { va = (a.sizeX||0)*(a.sizeY||0); vb = (b.sizeX||0)*(b.sizeY||0); }
+      else if (sk === 'stdSize') { va = a.standardizedSize||''; vb = b.standardizedSize||''; return sd === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va); }
       else if (sk === 'price') { va = a.price||0; vb = b.price||0; }
       else if (sk === 'presets') { va = PRESET_DATA[a.id]?.length||0; vb = PRESET_DATA[b.id]?.length||0; }
       return sd === 'asc' ? va - vb : vb - va;
@@ -1447,7 +1458,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const newBadge = s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px">NEW</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
     }).join('');
   };
 
@@ -1485,6 +1496,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
             <th data-sort="id" class="${sc('id')}" style="cursor:pointer">ID</th>
             ${cityHeader}
             <th data-sort="size" class="${sc('size')}" style="cursor:pointer;width:100px;text-align:right">크기</th>
+            <th data-sort="stdSize" class="${sc('stdSize')}" style="cursor:pointer;width:60px;text-align:right">규격</th>
             <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:100px;text-align:right">가격</th>
             <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer;width:70px;text-align:right">프리셋</th>
           </tr></thead>
