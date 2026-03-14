@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.8.0';
+const APP_VERSION = '1.9.0';
 const CHANGELOG = [
+  { ver: '1.9.0', date: '2026-03-15', changes: [
+    '부지 최대 층수 정보 추가 (목록 및 상세 화면)',
+  ] },
   { ver: '1.8.0', date: '2026-03-15', changes: [
     '게임 월드 좌표 기반 부지 자동 배치 (343개 부지)',
     '수동 배치가 있으면 수동 우선, 없으면 자동 좌표 사용',
@@ -299,7 +302,7 @@ function renderSiteList() {
         <div class="site-dot ${item.siteType}" style="font-size:14px;width:auto;height:auto;background:none">${getIcon(item)}</div>
         <div class="site-info">
           <div class="site-name">${item.name}${item.addedDate ? ' <span style="background:#22c55e;color:#fff;font-size:8px;font-weight:700;padding:1px 3px;border-radius:3px;vertical-align:middle">NEW</span>' : ''}</div>
-          <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}${isStdSize(item) ? ' <span style="color:var(--accent);font-weight:600">규격</span>' : ''}</div>
+          <div class="site-meta">${item.displayType || item.siteType} · ${item.sizeX}×${item.sizeY}${isStdSize(item) ? ' <span style="color:var(--accent);font-weight:600">규격</span>' : ''}${item.maxFloor > 0 ? ` · <span style="color:#60a5fa">${item.maxFloor}층</span>` : ''}</div>
         </div>
         ${placed ? '<span class="site-badge">배치됨</span>' : ''}
       </div>`;
@@ -352,6 +355,7 @@ function renderDetail(siteId) {
         <div class="detail-field"><label>크기 (X×Y)</label><value>${s.sizeX} × ${s.sizeY}${isStdSize(s) ? ' <span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>' : ''}</value></div>
         <div class="detail-field"><label>표준 크기</label><value>${s.standardizedSize || '-'}</value></div>
         <div class="detail-field"><label>가격</label><value>${formatPrice(s.price)}</value></div>
+        ${s.maxFloor > 0 ? `<div class="detail-field"><label>최대 층수</label><value>${s.maxFloor}층</value></div>` : ''}
         <div class="detail-field"><label>자영업 허용</label><value>${s.bizAllowed ? '✅ 가능' : '❌ 불가'}</value></div>
         ${s.residentMax ? `<div class="detail-field"><label>최소 거주</label><value>${s.residentMin}명</value></div>
         <div class="detail-field"><label>최대 거주</label><value>${s.residentMax}명</value></div>` : ''}

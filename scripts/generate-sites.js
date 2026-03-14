@@ -160,7 +160,33 @@ function main() {
   detailInfoE01.forEach(d => { detailInfoMap[d.Id] = d; });
   console.log(`  SiteDetailInfo: ${detailInfoArr.length}개 + E01: ${detailInfoE01.length}개`);
 
-  // 5. 기존 sites.json 읽기 (icon/addedDate 보존용)
+  // 5. Site 레벨 파일에서 층수 제한 로드 (floorLevelLimit)
+  const floorLimitMap = {};
+  const siteLevelDirs = [
+    { dir: path.join(JSONRESULT_BASE, 'Site'), prefixes: ['Gangnam_Map_', 'RedCity_Map_', 'PurpleCity_Map_'] },
+    { dir: path.join(JSONRESULT_E01, 'Site'), prefixes: ['Cahaya_Map_', 'PurpleCity2_Map_'] },
+  ];
+  for (const { dir, prefixes } of siteLevelDirs) {
+    if (!fs.existsSync(dir)) continue;
+    const files = fs.readdirSync(dir);
+    for (const prefix of prefixes) {
+      for (const f of files.filter(f => f.startsWith(prefix))) {
+        try {
+          const d = readJsonResult(path.join(dir, f));
+          if (d.siteId && d.floorLevelLimit) {
+            floorLimitMap[d.siteId] = {
+              maxFloor: d.floorLevelLimit.y || 0,
+              bFirstFloorLocked: d.bFirstFloorLocked || false,
+              bBasementsLocked: d.bBasementsLocked || false,
+            };
+          }
+        } catch (e) {}
+      }
+    }
+  }
+  console.log(`  층수 제한 데이터: ${Object.keys(floorLimitMap).length}개`);
+
+  // 6. 기존 sites.json 읽기 (icon/addedDate 보존용)
   let existingSites = [];
   const existingMap = {};
   if (fs.existsSync(SITES_JSON_PATH)) {
@@ -203,6 +229,10 @@ function main() {
     const existing = existingMap[id];
     const icon = existing ? existing.icon : deriveIcon(site);
 
+    // 층수 제한 (Site 레벨 파일에서)
+    const floorInfo = floorLimitMap[id];
+    const maxFloor = floorInfo ? floorInfo.maxFloor : null;
+
     const entry = {
       id,
       name,
@@ -222,7 +252,8 @@ function main() {
       operatingHours,
       disabled: d.bDisabled,
       devOnly: d.bDevOnly,
-      icon
+      icon,
+      maxFloor
     };
 
     // 기존에 addedDate가 있었으면 보존

@@ -18,7 +18,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Residence_CentralAPT105",
@@ -39,7 +40,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Residence_DowonVilla",
@@ -60,7 +62,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Residence_Free01",
@@ -81,7 +84,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free02",
@@ -102,7 +106,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free03",
@@ -123,7 +128,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free04",
@@ -144,7 +150,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free05",
@@ -165,7 +172,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free06",
@@ -186,7 +194,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free07",
@@ -207,7 +216,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_Free08",
@@ -228,7 +238,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Residence_SkyBD",
@@ -249,7 +260,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 2
   },
   {
     "id": "Gangnam_ArchitectureFirm1",
@@ -271,6 +283,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 5,
     "addedDate": "2026-03-14"
   },
   {
@@ -292,7 +305,8 @@
     "operatingHours": "주중 08:00 AM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_AR",
@@ -313,7 +327,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 4
   },
   {
     "id": "Gangnam_Business_Bank",
@@ -334,7 +349,8 @@
     "operatingHours": "주중 08:00 AM ~ 04:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_Cafe",
@@ -355,7 +371,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_ClothStore",
@@ -376,7 +393,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_CutsceneStudio",
@@ -397,7 +415,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Public"
+    "icon": "Public",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Business_CVS",
@@ -418,7 +437,8 @@
     "operatingHours": "매일 08:00 AM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_DynamicLocalShop",
@@ -439,7 +459,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_Exhibition",
@@ -460,7 +481,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_FarmStore",
@@ -481,7 +503,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 2
   },
   {
     "id": "Gangnam_Business_FireStation",
@@ -502,7 +525,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_Gimbab",
@@ -523,7 +547,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_Karaoke",
@@ -544,7 +569,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_PcCafe",
@@ -565,7 +591,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_PhotoStudio",
@@ -586,7 +613,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 29
   },
   {
     "id": "Gangnam_Business_PoliceStation",
@@ -607,7 +635,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_Restaurant",
@@ -628,7 +657,8 @@
     "operatingHours": "매일 06:00 PM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 3
   },
   {
     "id": "Gangnam_Business_SajuCafe",
@@ -649,7 +679,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TackleShop1",
@@ -670,7 +701,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 2
   },
   {
     "id": "Gangnam_Business_TakeOut01",
@@ -691,7 +723,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TakeOut02",
@@ -712,7 +745,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TakeOut03",
@@ -733,7 +767,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TakeOut04",
@@ -754,7 +789,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TakeOut05",
@@ -775,7 +811,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TakeOut06",
@@ -796,7 +833,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_TempleFuneral",
@@ -817,7 +855,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Court1",
@@ -838,7 +877,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 3
   },
   {
     "id": "Gangnam_FakeAgency1",
@@ -859,7 +899,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 30
   },
   {
     "id": "Gangnam_ITCompany1",
@@ -881,6 +922,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 7,
     "addedDate": "2026-03-14"
   },
   {
@@ -903,6 +945,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 5,
     "addedDate": "2026-03-14"
   },
   {
@@ -924,7 +967,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_MedicalCenter",
@@ -945,7 +989,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_TravelAgency",
@@ -966,7 +1011,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RecordCompany1",
@@ -988,6 +1034,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 4,
     "addedDate": "2026-03-14"
   },
   {
@@ -1010,6 +1057,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 5,
     "addedDate": "2026-03-14"
   },
   {
@@ -1031,7 +1079,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_FireStation_Lobby",
@@ -1052,7 +1101,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_FireStationTraining",
@@ -1073,7 +1123,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Business_School",
@@ -1094,7 +1145,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Business_SchoolIn",
@@ -1115,7 +1167,8 @@
     "operatingHours": "주중 09:00 AM ~ 05:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "School"
+    "icon": "School",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_BusinessSite1",
@@ -1136,7 +1189,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 3
   },
   {
     "id": "Gangnam_BusinessSite2",
@@ -1157,7 +1211,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 3
   },
   {
     "id": "Gangnam_BusinessSite3",
@@ -1178,7 +1233,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 4
   },
   {
     "id": "Gangnam_BusinessSite4",
@@ -1199,7 +1255,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 4
   },
   {
     "id": "Gangnam_BusinessSite5",
@@ -1220,7 +1277,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 3
   },
   {
     "id": "Gangnam_BusinessSite6",
@@ -1241,7 +1299,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 5
   },
   {
     "id": "Gangnam_BusinessSite7",
@@ -1262,7 +1321,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 5
   },
   {
     "id": "Gangnam_BusinessSite8",
@@ -1283,7 +1343,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 5
   },
   {
     "id": "Gangnam_BusinessSite9",
@@ -1305,6 +1366,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
+    "maxFloor": 3,
     "addedDate": "2026-03-14"
   },
   {
@@ -1326,7 +1388,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Out229",
@@ -1347,7 +1410,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Out230",
@@ -1368,7 +1432,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_AdamEnt_Lobby",
@@ -1389,7 +1454,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_AirportShuttle",
@@ -1410,7 +1476,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Bus"
+    "icon": "Bus",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_Arcade",
@@ -1431,7 +1498,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralAPT_Lobby",
@@ -1452,7 +1520,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralAPT105_Lobby",
@@ -1473,7 +1542,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralPark",
@@ -1494,7 +1564,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralPark2",
@@ -1515,7 +1586,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralPark3",
@@ -1536,7 +1608,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralParkFountain",
@@ -1557,7 +1630,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralParkFountain2",
@@ -1578,7 +1652,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralParkFountain3",
@@ -1599,7 +1674,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralParkFountain4",
@@ -1620,7 +1696,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_CentralParkFountain5",
@@ -1641,7 +1718,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralParkLawn",
@@ -1662,7 +1740,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralParkLawn2",
@@ -1683,7 +1762,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_CentralRiverPark",
@@ -1704,7 +1784,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_Club",
@@ -1725,7 +1806,8 @@
     "operatingHours": "매일 06:00 PM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_ConcertStage",
@@ -1746,7 +1828,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_EastRiverPark",
@@ -1767,7 +1850,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_Empty02",
@@ -1788,7 +1872,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_Empty03",
@@ -1809,7 +1894,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_FitnessCenter",
@@ -1830,7 +1916,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_FleaAvenue",
@@ -1851,7 +1938,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_FleaAvenue2",
@@ -1872,7 +1960,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_Library",
@@ -1893,7 +1982,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_OutdoorPool",
@@ -1914,7 +2004,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_Playground",
@@ -1935,7 +2026,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_Restaurant_Lobby",
@@ -1956,7 +2048,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_RiverParkFishing",
@@ -1977,7 +2070,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Fishing"
+    "icon": "Fishing",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_SkyBD_Lobby",
@@ -1998,7 +2092,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_TempleCafe",
@@ -2019,7 +2114,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_TempleCemetery",
@@ -2040,7 +2136,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Cemetery"
+    "icon": "Cemetery",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_TempleMid",
@@ -2061,7 +2158,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_TempleNorth",
@@ -2082,7 +2180,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Temple"
+    "icon": "Temple",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_TempleNorth2",
@@ -2103,7 +2202,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Temple"
+    "icon": "Temple",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_TempleSouth",
@@ -2124,7 +2224,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Temple"
+    "icon": "Temple",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Public_WestRiverPark",
@@ -2145,7 +2246,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_TaeKwonDo",
@@ -2166,7 +2268,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_Residence_DowonVilla_Lobby",
@@ -2187,7 +2290,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Gangnam_Public_Court",
@@ -2208,7 +2312,8 @@
     "operatingHours": "주중 09:00 AM ~ 06:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_BroadcastingStation",
@@ -2229,7 +2334,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_CityHall",
@@ -2250,7 +2356,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_Doex",
@@ -2271,7 +2378,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_EducationCenter",
@@ -2292,7 +2400,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_EnvironmentalGroup",
@@ -2313,7 +2422,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_PoliceStation",
@@ -2334,7 +2444,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_StockFirm",
@@ -2355,7 +2466,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Gangnam_RabbitHole_WelfareFoundation",
@@ -2376,7 +2488,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "MiniRedCity_Residence_Area01",
@@ -2418,7 +2531,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": null
   },
   {
     "id": "RedCity_Residence_Free02",
@@ -2439,7 +2553,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": null
   },
   {
     "id": "RedCity_Residence_Free03",
@@ -2460,7 +2575,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Free04",
@@ -2481,7 +2597,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Low1_APT",
@@ -2502,7 +2619,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Residence_Low3_Empty",
@@ -2523,7 +2641,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Mid1_Empty",
@@ -2544,7 +2663,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Mid3_Free",
@@ -2565,7 +2685,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Mid4_APT",
@@ -2586,7 +2707,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Residence_Mid5_APT",
@@ -2607,7 +2729,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Residence_Up1_Empty",
@@ -2628,7 +2751,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Up2_Free",
@@ -2649,7 +2773,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Up3_Free",
@@ -2670,7 +2795,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Up5_Empty",
@@ -2691,7 +2817,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Up6_Free",
@@ -2712,7 +2839,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Residence_Up7_Pent",
@@ -2733,7 +2861,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 2
   },
   {
     "id": "RedCity_Architects",
@@ -2755,6 +2884,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 4,
     "addedDate": "2026-03-14"
   },
   {
@@ -2776,7 +2906,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_Business_Bank",
@@ -2797,7 +2928,8 @@
     "operatingHours": "주중 08:00 AM ~ 04:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_Cafe",
@@ -2818,7 +2950,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_ClothingStore",
@@ -2839,7 +2972,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_Business_Court",
@@ -2860,7 +2994,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_DynamicLocalShop",
@@ -2881,7 +3016,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_FarmStore",
@@ -2902,7 +3038,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 2
   },
   {
     "id": "RedCity_Business_FastFoodRest",
@@ -2923,7 +3060,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_FireStation",
@@ -2944,7 +3082,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_FortuneTeller",
@@ -2965,7 +3104,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_FuneralHome02",
@@ -2986,7 +3126,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_Business_FurnitureStore",
@@ -3007,7 +3148,8 @@
     "operatingHours": "매일 08:00 AM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_IT",
@@ -3028,7 +3170,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_Mart",
@@ -3049,7 +3192,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": null
   },
   {
     "id": "RedCity_Business_Museum",
@@ -3070,7 +3214,8 @@
     "operatingHours": "매일 08:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_ParkOffice",
@@ -3091,7 +3236,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": null
   },
   {
     "id": "RedCity_Business_PhotoStudio",
@@ -3112,7 +3258,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 29
   },
   {
     "id": "RedCity_Business_PoliceStation",
@@ -3133,7 +3280,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_SkyLounge",
@@ -3154,7 +3302,8 @@
     "operatingHours": "매일 06:00 PM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_Business_SurfShop",
@@ -3175,7 +3324,8 @@
     "operatingHours": "매일 08:00 AM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut01",
@@ -3196,7 +3346,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut02",
@@ -3217,7 +3368,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut03",
@@ -3238,7 +3390,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut04",
@@ -3259,7 +3412,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut05",
@@ -3280,7 +3434,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut06",
@@ -3301,7 +3456,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_TakeOut07",
@@ -3322,7 +3478,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_ThemePark02",
@@ -3343,7 +3500,8 @@
     "operatingHours": "매일 10:00 AM ~ 08:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_WeddingStudio",
@@ -3364,7 +3522,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Public"
+    "icon": "Public",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Court2",
@@ -3385,7 +3544,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_FakeAgency1",
@@ -3406,7 +3566,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_ITCompany",
@@ -3428,6 +3589,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 4,
     "addedDate": "2026-03-14"
   },
   {
@@ -3450,6 +3612,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 3,
     "addedDate": "2026-03-14"
   },
   {
@@ -3471,7 +3634,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_RabbitHole_CityHall",
@@ -3492,7 +3656,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_MedicalCenter",
@@ -3513,7 +3678,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_Museum02",
@@ -3534,7 +3700,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_RecordCompany",
@@ -3556,6 +3723,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 4,
     "addedDate": "2026-03-14"
   },
   {
@@ -3578,6 +3746,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 4,
     "addedDate": "2026-03-14"
   },
   {
@@ -3599,7 +3768,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_Business_Park",
@@ -3620,7 +3790,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_School",
@@ -3641,7 +3812,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "School"
+    "icon": "School",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_SchoolIn",
@@ -3662,7 +3834,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_SchoolOut",
@@ -3683,7 +3856,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "School"
+    "icon": "School",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_ThemePark02_Entrance",
@@ -3704,7 +3878,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_ThemePark02_Road",
@@ -3725,7 +3900,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Business_ThemePark03",
@@ -3746,7 +3922,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_ThemePark04",
@@ -3767,7 +3944,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_ThemePark05",
@@ -3788,7 +3966,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_ThemePark06",
@@ -3809,7 +3988,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Business_ThemePark07",
@@ -3830,7 +4010,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_BusinessSite2",
@@ -3851,7 +4032,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_BusinessSite3",
@@ -3872,7 +4054,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_BusinessSite4",
@@ -3893,7 +4076,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_BusinessSite5",
@@ -3914,7 +4098,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 5
   },
   {
     "id": "RedCity_BusinessSite6",
@@ -3935,7 +4120,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_BusinessSite7",
@@ -3956,7 +4142,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 5
   },
   {
     "id": "RedCity_BusinessSite8",
@@ -3977,7 +4164,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_BusinessSite9",
@@ -3999,6 +4187,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "",
+    "maxFloor": 3,
     "addedDate": "2026-03-14"
   },
   {
@@ -4020,7 +4209,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Bus"
+    "icon": "Bus",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Arcade",
@@ -4041,7 +4231,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 2
   },
   {
     "id": "RedCity_Public_Avenue",
@@ -4062,7 +4253,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Avenue02",
@@ -4083,7 +4275,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Avenue03",
@@ -4104,7 +4297,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach01",
@@ -4125,7 +4319,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach02",
@@ -4146,7 +4341,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach03",
@@ -4167,7 +4363,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach03_1",
@@ -4188,7 +4385,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach03_2",
@@ -4209,7 +4407,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sports"
+    "icon": "Sports",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_BlessBayBeach04",
@@ -4230,7 +4429,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Empty01",
@@ -4251,7 +4451,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Empty02",
@@ -4272,7 +4473,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Empty03",
@@ -4293,7 +4495,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Redcity_Public_FitnessCenter",
@@ -4335,7 +4538,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Cemetery"
+    "icon": "Cemetery",
+    "maxFloor": 3
   },
   {
     "id": "RedCity_Public_Library",
@@ -4356,7 +4560,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Livestage",
@@ -4377,7 +4582,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Stage"
+    "icon": "Stage",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Livestage02",
@@ -4398,7 +4604,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Stage"
+    "icon": "Stage",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Low1_Lobby",
@@ -4419,7 +4626,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Mid4_Lobby",
@@ -4440,7 +4648,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_Mid5_Lobby",
@@ -4461,7 +4670,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_MuscleBeach",
@@ -4482,7 +4692,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sports"
+    "icon": "Sports",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleBeach02",
@@ -4503,7 +4714,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleBeach03",
@@ -4524,7 +4736,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleBeach04",
@@ -4545,7 +4758,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleBeach05",
@@ -4566,7 +4780,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleBeach06",
@@ -4587,7 +4802,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Beach"
+    "icon": "Beach",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleGym",
@@ -4608,7 +4824,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sports"
+    "icon": "Sports",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_MuscleGym02",
@@ -4629,7 +4846,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sports"
+    "icon": "Sports",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Park",
@@ -4650,7 +4868,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Park02",
@@ -4671,7 +4890,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Park03",
@@ -4692,7 +4912,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_Park04",
@@ -4713,7 +4934,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_PlayGround",
@@ -4734,7 +4956,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_PlayGround02",
@@ -4755,7 +4978,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_Public_SkyLounge_Lobby",
@@ -4776,7 +5000,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_SmallClub",
@@ -4797,7 +5022,8 @@
     "operatingHours": "매일 06:00 PM ~ 00:00 AM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_Public_SunsetBay",
@@ -4818,7 +5044,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 4
   },
   {
     "id": "RedCity_Public_Up7_Pent_Lobby",
@@ -4839,7 +5066,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "RedCity_RabbitHole_BroadcastingStation",
@@ -4860,7 +5088,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_EducationCenter",
@@ -4881,7 +5110,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_EnvironmentalGroup",
@@ -4902,7 +5132,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_LumiereHall",
@@ -4923,7 +5154,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_StockFirm",
@@ -4944,7 +5176,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_TravelAgency",
@@ -4965,7 +5198,8 @@
     "operatingHours": "매일 08:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "RedCity_RabbitHole_WelfareFoundation",
@@ -4986,7 +5220,8 @@
     "operatingHours": "주중 08:00 AM ~ 07:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 0
   },
   {
     "id": "Cahaya_Residence_EmptySite1",
@@ -5007,7 +5242,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_EmptySite2",
@@ -5028,7 +5264,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_EmptySite4",
@@ -5049,7 +5286,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_EmptySite5",
@@ -5070,7 +5308,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_LocalHouse1",
@@ -5091,7 +5330,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_NPCSite1",
@@ -5112,7 +5352,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_NPCSite2",
@@ -5133,7 +5374,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_NPCSite3",
@@ -5154,7 +5396,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_NPCSite4",
@@ -5175,7 +5418,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_Resort1",
@@ -5196,7 +5440,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Residence_Resort10",
@@ -5217,7 +5462,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence_Free01",
@@ -5238,7 +5484,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence1",
@@ -5259,7 +5506,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence2",
@@ -5280,7 +5528,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence3",
@@ -5301,7 +5550,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence4",
@@ -5322,7 +5572,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence5",
@@ -5343,7 +5594,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Residence6",
@@ -5364,7 +5616,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "House"
+    "icon": "House",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_business_ARLibrary1",
@@ -5385,7 +5638,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_BeachCafe1",
@@ -5406,7 +5660,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_BrunchCafe1",
@@ -5427,7 +5682,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_CafeAndBar1",
@@ -5448,7 +5704,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_CatFoodKiosk",
@@ -5469,7 +5726,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_ClothesShop",
@@ -5491,6 +5749,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Shop",
+    "maxFloor": 3,
     "addedDate": "2026-03-14"
   },
   {
@@ -5512,7 +5771,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_DynamicLocalShop1",
@@ -5533,7 +5793,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_FuneralHome",
@@ -5554,7 +5815,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_LocalRestaurant1",
@@ -5575,7 +5837,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_LocalShop1",
@@ -5596,7 +5859,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_Meditation",
@@ -5617,7 +5881,8 @@
     "operatingHours": "매일 09:00 AM ~10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_PoliceStation1",
@@ -5638,7 +5903,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 2
   },
   {
     "id": "Cahaya_Business_Resort3",
@@ -5659,7 +5925,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_Resort8",
@@ -5680,7 +5947,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 5
   },
   {
     "id": "Cahaya_Business_ResortAmenities1",
@@ -5701,7 +5969,8 @@
     "operatingHours": "24시간 오픈 - 서비스 이용 시간 : 09:00 AM ~ 11:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 2
   },
   {
     "id": "Cahaya_Business_ResortLobby1",
@@ -5722,7 +5991,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Lobby"
+    "icon": "Lobby",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_SmoothieCafe1",
@@ -5743,7 +6013,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Food"
+    "icon": "Food",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_StiltHouse1",
@@ -5764,7 +6035,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_TackleShop1",
@@ -5785,7 +6057,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_TourAgency1",
@@ -5806,7 +6079,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 2
   },
   {
     "id": "Cahaya_Business_TravelAgency",
@@ -5828,6 +6102,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "Building",
+    "maxFloor": 3,
     "addedDate": "2026-03-14"
   },
   {
@@ -5849,7 +6124,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Public"
+    "icon": "Public",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Business_YogaCenter1",
@@ -5870,7 +6146,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_FakeAgency1",
@@ -5891,7 +6168,8 @@
     "operatingHours": "24시간 오픈",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "maxFloor": 3
   },
   {
     "id": "Cahaya_Public_BeachLounge1",
@@ -5912,7 +6190,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Play"
+    "icon": "Play",
+    "maxFloor": 4
   },
   {
     "id": "Cahaya_Public_BeachVolleyball1",
@@ -5933,7 +6212,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Public"
+    "icon": "Public",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_StiltHouseReception1",
@@ -5954,7 +6234,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sleep"
+    "icon": "Sleep",
+    "maxFloor": 1
   },
   {
     "id": "PurpleCity_AccessoryShop1",
@@ -5975,7 +6256,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Arcade1",
@@ -5996,7 +6278,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_ARLibrary1",
@@ -6017,7 +6300,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Cafe1",
@@ -6038,7 +6322,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Cinema1",
@@ -6059,7 +6344,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_ClothingStore1",
@@ -6080,7 +6366,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Club1",
@@ -6101,7 +6388,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_CVS1",
@@ -6122,7 +6410,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_FarmStore1",
@@ -6143,7 +6432,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_FastFood1",
@@ -6164,7 +6454,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_FitnessCenter1",
@@ -6185,7 +6476,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_FurnitureStore1",
@@ -6206,7 +6498,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Pharmacy1",
@@ -6227,7 +6520,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_PhotoStudio1",
@@ -6248,7 +6542,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_PoliceStation1",
@@ -6269,7 +6564,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_RealEstate1",
@@ -6290,7 +6586,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Restaurant1",
@@ -6311,7 +6608,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_TackleShop1",
@@ -6332,7 +6630,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_WeddingStudio1",
@@ -6353,7 +6652,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_BusinessSite4",
@@ -6374,7 +6674,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 3
   },
   {
     "id": "Cahaya_BusinessSite5",
@@ -6395,7 +6696,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 4
   },
   {
     "id": "Cahaya_BusinessSite6",
@@ -6416,7 +6718,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 3
   },
   {
     "id": "Cahaya_BusinessSite7",
@@ -6437,7 +6740,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "maxFloor": 5
   },
   {
     "id": "Cahaya_BusinessSite8",
@@ -6459,6 +6763,7 @@
     "disabled": false,
     "devOnly": false,
     "icon": "HouseholdBiz",
+    "maxFloor": 2,
     "addedDate": "2026-03-14"
   },
   {
@@ -6480,7 +6785,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Sports"
+    "icon": "Sports",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach2",
@@ -6501,7 +6807,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach3",
@@ -6522,7 +6829,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach4",
@@ -6543,7 +6851,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach5",
@@ -6564,7 +6873,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach6",
@@ -6585,7 +6895,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach7",
@@ -6606,7 +6917,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach8",
@@ -6627,7 +6939,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Beach9",
@@ -6648,7 +6961,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Cemetery",
@@ -6669,7 +6983,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Cemetery"
+    "icon": "Cemetery",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_DesertIsland1",
@@ -6690,7 +7005,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_DesertIsland2",
@@ -6711,7 +7027,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Dock"
+    "icon": "Dock",
+    "maxFloor": 0
   },
   {
     "id": "Cahaya_Public_Field1",
@@ -6732,7 +7049,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Field2",
@@ -6753,7 +7071,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Field3",
@@ -6774,7 +7093,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_GuestHouse1",
@@ -6795,7 +7115,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_LocalBooth1",
@@ -6816,7 +7137,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_LocalBooth2",
@@ -6837,7 +7159,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_NightMarket1",
@@ -6858,7 +7181,8 @@
     "operatingHours": "매일 10:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_OutdoorCinema1",
@@ -6879,7 +7203,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Park",
@@ -6900,7 +7225,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Pier1",
@@ -6921,7 +7247,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Fishing"
+    "icon": "Fishing",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Pier2",
@@ -6942,7 +7269,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Dock"
+    "icon": "Dock",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Pier3",
@@ -6963,7 +7291,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Dock"
+    "icon": "Dock",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Pier4",
@@ -6984,7 +7313,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Flight"
+    "icon": "Flight",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_ResortPool1",
@@ -7005,7 +7335,8 @@
     "operatingHours": "매일 09:00 AM ~ 10:00 PM",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_Temple",
@@ -7026,7 +7357,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Temple"
+    "icon": "Temple",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_TempleInside",
@@ -7047,7 +7379,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Temple"
+    "icon": "Temple",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_TurtleNest1",
@@ -7068,7 +7401,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_VillaPool1",
@@ -7089,7 +7423,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_Public_WaterSlide1",
@@ -7110,7 +7445,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": ""
+    "icon": "",
+    "maxFloor": 1
   },
   {
     "id": "Cahaya_RabbitHole_School1",
@@ -7131,7 +7467,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "School"
+    "icon": "School",
+    "maxFloor": 0
   },
   {
     "id": "PurpleCity_Library1",
@@ -7152,7 +7489,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_LocalOffice1",
@@ -7173,7 +7511,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 30
   },
   {
     "id": "PurpleCity_Park1",
@@ -7194,7 +7533,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 29
   },
   {
     "id": "PurpleCity_Playground1",
@@ -7215,7 +7555,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Park"
+    "icon": "Park",
+    "maxFloor": 29
   },
   {
     "id": "Cahaya_Public_PierWalkway1",
