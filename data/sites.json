@@ -501,7 +501,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_BusinessSite8",
@@ -6402,7 +6403,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "HouseholdBiz"
+    "icon": "HouseholdBiz",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Cahaya_Business_TravelAgency",
@@ -6423,7 +6425,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Building"
+    "icon": "Building",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Cahaya_Business_ClothesShop",
@@ -6444,7 +6447,8 @@
     "operatingHours": "",
     "disabled": false,
     "devOnly": false,
-    "icon": "Shop"
+    "icon": "Shop",
+    "addedDate": "2026-03-14"
   },
   {
     "id": "Gangnam_ArchitectureFirm1",
