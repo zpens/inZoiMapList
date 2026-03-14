@@ -1,0 +1,1380 @@
+{
+  "Gangnam": {
+    "Gangnam_Residence_CentralAPT": {
+      "x": 1079.8,
+      "y": 519.8
+    },
+    "Gangnam_Residence_CentralAPT105": {
+      "x": 1221.2,
+      "y": 563.4
+    },
+    "Gangnam_Residence_DowonVilla": {
+      "x": 1433.4,
+      "y": 510.3
+    },
+    "Gangnam_Residence_Free01": {
+      "x": 1005.2,
+      "y": 704.7
+    },
+    "Gangnam_Residence_Free02": {
+      "x": 1323,
+      "y": 644.8
+    },
+    "Gangnam_Residence_Free03": {
+      "x": 1094.5,
+      "y": 668.4
+    },
+    "Gangnam_Residence_Free04": {
+      "x": 929.3,
+      "y": 431.7
+    },
+    "Gangnam_Residence_Free05": {
+      "x": 1065.9,
+      "y": 594.1
+    },
+    "Gangnam_Residence_Free06": {
+      "x": 1200.3,
+      "y": 612.5
+    },
+    "Gangnam_Residence_Free07": {
+      "x": 1370.3,
+      "y": 545.3
+    },
+    "Gangnam_Residence_Free08": {
+      "x": 1513.9,
+      "y": 562.9
+    },
+    "Gangnam_Residence_SkyBD": {
+      "x": 853,
+      "y": 322.1
+    },
+    "Gangnam_ArchitectureFirm1": {
+      "x": 1340.3,
+      "y": 680.9
+    },
+    "Gangnam_Business_AdamEnt": {
+      "x": 1327.7,
+      "y": 560.1
+    },
+    "Gangnam_Business_AR": {
+      "x": 1454.2,
+      "y": 646.5
+    },
+    "Gangnam_Business_Bank": {
+      "x": 1037.9,
+      "y": 472.7
+    },
+    "Gangnam_Business_Cafe": {
+      "x": 1375.8,
+      "y": 352.6
+    },
+    "Gangnam_Business_ClothStore": {
+      "x": 1541.3,
+      "y": 747.2
+    },
+    "Gangnam_Business_CutsceneStudio": {
+      "x": 1685,
+      "y": 606.9
+    },
+    "Gangnam_Business_CVS": {
+      "x": 1220.6,
+      "y": 653.6
+    },
+    "Gangnam_Business_DynamicLocalShop": {
+      "x": 1258.5,
+      "y": 659.8
+    },
+    "Gangnam_Business_Exhibition": {
+      "x": 1370.7,
+      "y": 387.8
+    },
+    "Gangnam_Business_FarmStore": {
+      "x": 1399.8,
+      "y": 655.6
+    },
+    "Gangnam_Business_FireStation": {
+      "x": 772.1,
+      "y": 612.2
+    },
+    "Gangnam_Business_Gimbab": {
+      "x": 885.6,
+      "y": 457.4
+    },
+    "Gangnam_Business_Karaoke": {
+      "x": 898.6,
+      "y": 530.1
+    },
+    "Gangnam_Business_PcCafe": {
+      "x": 1060.9,
+      "y": 321.2
+    },
+    "Gangnam_Business_PhotoStudio": {
+      "x": 1381.9,
+      "y": 749.9
+    },
+    "Gangnam_Business_PoliceStation": {
+      "x": 1438.1,
+      "y": 356.1
+    },
+    "Gangnam_Business_Restaurant": {
+      "x": 1533.8,
+      "y": 467
+    },
+    "Gangnam_Business_SajuCafe": {
+      "x": 1553.5,
+      "y": 653.4
+    },
+    "Gangnam_Business_TackleShop1": {
+      "x": 877.5,
+      "y": 686.9
+    },
+    "Gangnam_Business_TakeOut01": {
+      "x": 1054.5,
+      "y": 376.3
+    },
+    "Gangnam_Business_TakeOut02": {
+      "x": 914.9,
+      "y": 461.5
+    },
+    "Gangnam_Business_TakeOut03": {
+      "x": 1265.1,
+      "y": 641.8
+    },
+    "Gangnam_Business_TakeOut04": {
+      "x": 1658.6,
+      "y": 467
+    },
+    "Gangnam_Business_TakeOut05": {
+      "x": 1142.3,
+      "y": 642.8
+    },
+    "Gangnam_Business_TakeOut06": {
+      "x": 1517.9,
+      "y": 774.4
+    },
+    "Gangnam_Business_TempleFuneral": {
+      "x": 1823,
+      "y": 859.9
+    },
+    "Gangnam_Court1": {
+      "x": 886.4,
+      "y": 585
+    },
+    "Gangnam_FakeAgency1": {
+      "x": 1447.4,
+      "y": 660.6
+    },
+    "Gangnam_ITCompany1": {
+      "x": 946.5,
+      "y": 509
+    },
+    "Gangnam_Newspaper1": {
+      "x": 1012.1,
+      "y": 581.5
+    },
+    "Gangnam_RabbitHole_Cinema": {
+      "x": 998.8,
+      "y": 384.8
+    },
+    "Gangnam_RabbitHole_MedicalCenter": {
+      "x": 1346.7,
+      "y": 779
+    },
+    "Gangnam_RabbitHole_TravelAgency": {
+      "x": 1423.4,
+      "y": 590.8
+    },
+    "Gangnam_RecordCompany1": {
+      "x": 1406.1,
+      "y": 566.4
+    },
+    "Gangnam_ResearchCenter1": {
+      "x": 1486.8,
+      "y": 665.4
+    },
+    "Gangnam_Business_FamilyRestaurant": {
+      "x": 834.7,
+      "y": 408
+    },
+    "Gangnam_Business_FireStation_Lobby": {
+      "x": 772.1,
+      "y": 612.2
+    },
+    "Gangnam_Business_FireStationTraining": {
+      "x": 835.4,
+      "y": 622.3
+    },
+    "Gangnam_Business_School": {
+      "x": 1219.4,
+      "y": 723.5
+    },
+    "Gangnam_Business_SchoolIn": {
+      "x": 1204.3,
+      "y": 741.6
+    },
+    "Gangnam_BusinessSite1": {
+      "x": 1092.9,
+      "y": 435.8
+    },
+    "Gangnam_BusinessSite2": {
+      "x": 1359,
+      "y": 657.2
+    },
+    "Gangnam_BusinessSite3": {
+      "x": 1381.8,
+      "y": 705.4
+    },
+    "Gangnam_BusinessSite4": {
+      "x": 956.9,
+      "y": 490.9
+    },
+    "Gangnam_BusinessSite5": {
+      "x": 1121.3,
+      "y": 582.1
+    },
+    "Gangnam_BusinessSite6": {
+      "x": 1035.4,
+      "y": 528.2
+    },
+    "Gangnam_BusinessSite7": {
+      "x": 1523.2,
+      "y": 692.7
+    },
+    "Gangnam_BusinessSite8": {
+      "x": 1689.3,
+      "y": 387.8
+    },
+    "Gangnam_BusinessSite9": {
+      "x": 1507.9,
+      "y": 725.5
+    },
+    "Gangnam_Out17": {
+      "x": 1372.9,
+      "y": 429.9
+    },
+    "Gangnam_Out229": {
+      "x": 1424.9,
+      "y": 414.1
+    },
+    "Gangnam_Out230": {
+      "x": 1248.3,
+      "y": 549
+    },
+    "Gangnam_Public_AdamEnt_Lobby": {
+      "x": 1364.8,
+      "y": 586
+    },
+    "Gangnam_Public_AirportShuttle": {
+      "x": 1396.7,
+      "y": 337.1
+    },
+    "Gangnam_Public_Arcade": {
+      "x": 948,
+      "y": 565.9
+    },
+    "Gangnam_Public_CentralAPT_Lobby": {
+      "x": 1089.6,
+      "y": 521.1
+    },
+    "Gangnam_Public_CentralAPT105_Lobby": {
+      "x": 1222.1,
+      "y": 556.5
+    },
+    "Gangnam_Public_CentralPark": {
+      "x": 1325.4,
+      "y": 337.7
+    },
+    "Gangnam_Public_CentralPark2": {
+      "x": 1230.4,
+      "y": 330
+    },
+    "Gangnam_Public_CentralPark3": {
+      "x": 1247.3,
+      "y": 397.7
+    },
+    "Gangnam_Public_CentralParkFountain": {
+      "x": 1108.7,
+      "y": 307.9
+    },
+    "Gangnam_Public_CentralParkFountain2": {
+      "x": 1166.7,
+      "y": 367.6
+    },
+    "Gangnam_Public_CentralParkFountain3": {
+      "x": 1161,
+      "y": 407.8
+    },
+    "Gangnam_Public_CentralParkFountain4": {
+      "x": 1107.2,
+      "y": 400
+    },
+    "Gangnam_Public_CentralParkFountain5": {
+      "x": 1107.8,
+      "y": 395.3
+    },
+    "Gangnam_Public_CentralParkLawn": {
+      "x": 1225.1,
+      "y": 409.5
+    },
+    "Gangnam_Public_CentralParkLawn2": {
+      "x": 1273.1,
+      "y": 418.3
+    },
+    "Gangnam_Public_CentralRiverPark": {
+      "x": 1053.5,
+      "y": 757.2
+    },
+    "Gangnam_Public_Club": {
+      "x": 879,
+      "y": 390.9
+    },
+    "Gangnam_Public_ConcertStage": {
+      "x": 946.5,
+      "y": 717.9
+    },
+    "Gangnam_Public_EastRiverPark": {
+      "x": 1128.2,
+      "y": 784.6
+    },
+    "Gangnam_Public_Empty02": {
+      "x": 1473,
+      "y": 578.7
+    },
+    "Gangnam_Public_Empty03": {
+      "x": 1054.9,
+      "y": 371
+    },
+    "Gangnam_Public_FitnessCenter": {
+      "x": 1556.2,
+      "y": 626.1
+    },
+    "Gangnam_Public_FleaAvenue": {
+      "x": 879.8,
+      "y": 176.3
+    },
+    "Gangnam_Public_FleaAvenue2": {
+      "x": 937.7,
+      "y": 218.2
+    },
+    "Gangnam_Public_Library": {
+      "x": 1485.2,
+      "y": 764.7
+    },
+    "Gangnam_Public_OutdoorPool": {
+      "x": 1175.7,
+      "y": 802.1
+    },
+    "Gangnam_Public_Playground": {
+      "x": 1319.1,
+      "y": 608.8
+    },
+    "Gangnam_Public_Restaurant_Lobby": {
+      "x": 1566.4,
+      "y": 432.7
+    },
+    "Gangnam_Public_RiverParkFishing": {
+      "x": 1104.5,
+      "y": 825.9
+    },
+    "Gangnam_Public_SkyBD_Lobby": {
+      "x": 843.7,
+      "y": 355.9
+    },
+    "Gangnam_Public_TempleCafe": {
+      "x": 1680.8,
+      "y": 692
+    },
+    "Gangnam_Public_TempleCemetery": {
+      "x": 1733.5,
+      "y": 850.9
+    },
+    "Gangnam_Public_TempleMid": {
+      "x": 1768.4,
+      "y": 766
+    },
+    "Gangnam_Public_TempleNorth": {
+      "x": 1768.6,
+      "y": 847.9
+    },
+    "Gangnam_Public_TempleNorth2": {
+      "x": 1771.2,
+      "y": 739.4
+    },
+    "Gangnam_Public_TempleSouth": {
+      "x": 1746,
+      "y": 736.7
+    },
+    "Gangnam_Public_WestRiverPark": {
+      "x": 1021.6,
+      "y": 745.4
+    },
+    "Gangnam_RabbitHole_TaeKwonDo": {
+      "x": 1389.2,
+      "y": 667.3
+    },
+    "Gangnam_Residence_DowonVilla_Lobby": {
+      "x": 1433.4,
+      "y": 510.3
+    },
+    "Gangnam_Public_Court": {
+      "x": 941.4,
+      "y": 620.1
+    },
+    "Gangnam_RabbitHole_BroadcastingStation": {
+      "x": 1618.5,
+      "y": 381
+    },
+    "Gangnam_RabbitHole_CityHall": {
+      "x": 969.9,
+      "y": 524.1
+    },
+    "Gangnam_RabbitHole_Doex": {
+      "x": 1301.8,
+      "y": 280.9
+    },
+    "Gangnam_RabbitHole_EducationCenter": {
+      "x": 1429.8,
+      "y": 750.5
+    },
+    "Gangnam_RabbitHole_EnvironmentalGroup": {
+      "x": 1319.1,
+      "y": 703.6
+    },
+    "Gangnam_RabbitHole_PoliceStation": {
+      "x": 713.5,
+      "y": 547
+    },
+    "Gangnam_RabbitHole_StockFirm": {
+      "x": 849.8,
+      "y": 487.9
+    },
+    "Gangnam_RabbitHole_WelfareFoundation": {
+      "x": 1511.3,
+      "y": 814.9
+    }
+  },
+  "RedCity": {
+    "RedCity_Residence_Free03": {
+      "x": 1782.2,
+      "y": 728.7
+    },
+    "RedCity_Residence_Free04": {
+      "x": 1461.9,
+      "y": 797.2
+    },
+    "RedCity_Residence_Low1_APT": {
+      "x": 1865.4,
+      "y": 551.5
+    },
+    "RedCity_Residence_Low3_Empty": {
+      "x": 1858.3,
+      "y": 832.3
+    },
+    "RedCity_Residence_Mid1_Empty": {
+      "x": 1537.8,
+      "y": 939.6
+    },
+    "RedCity_Residence_Mid3_Free": {
+      "x": 1327.2,
+      "y": 734.8
+    },
+    "RedCity_Residence_Mid4_APT": {
+      "x": 1224.4,
+      "y": 814.9
+    },
+    "RedCity_Residence_Mid5_APT": {
+      "x": 1111.8,
+      "y": 760.6
+    },
+    "RedCity_Residence_Up1_Empty": {
+      "x": 1809.3,
+      "y": 286.6
+    },
+    "RedCity_Residence_Up2_Free": {
+      "x": 1703.5,
+      "y": 53.4
+    },
+    "RedCity_Residence_Up3_Free": {
+      "x": 1507.8,
+      "y": 27
+    },
+    "RedCity_Residence_Up5_Empty": {
+      "x": 1123.1,
+      "y": 152.9
+    },
+    "RedCity_Residence_Up6_Free": {
+      "x": 1059.8,
+      "y": 329.2
+    },
+    "RedCity_Residence_Up7_Pent": {
+      "x": 1600.2,
+      "y": 500.4
+    },
+    "RedCity_Architects": {
+      "x": 1184.8,
+      "y": 727
+    },
+    "RedCity_Business_ARLibrary": {
+      "x": 1268.1,
+      "y": 171.5
+    },
+    "RedCity_Business_Bank": {
+      "x": 1349.3,
+      "y": 286.4
+    },
+    "RedCity_Business_Cafe": {
+      "x": 1131.2,
+      "y": 687.6
+    },
+    "RedCity_Business_ClothingStore": {
+      "x": 1449.8,
+      "y": 302.2
+    },
+    "RedCity_Business_Court": {
+      "x": 1383.8,
+      "y": 609.5
+    },
+    "RedCity_Business_DynamicLocalShop": {
+      "x": 1903,
+      "y": 537.2
+    },
+    "RedCity_Business_FarmStore": {
+      "x": 1112.8,
+      "y": 561.5
+    },
+    "RedCity_Business_FastFoodRest": {
+      "x": 1637.3,
+      "y": 784.7
+    },
+    "RedCity_Business_FireStation": {
+      "x": 1251.7,
+      "y": 668
+    },
+    "RedCity_Business_FortuneTeller": {
+      "x": 1454.9,
+      "y": 618.5
+    },
+    "RedCity_Business_FuneralHome02": {
+      "x": 1937.7,
+      "y": 306.7
+    },
+    "RedCity_Business_FurnitureStore": {
+      "x": 1731.5,
+      "y": 384.8
+    },
+    "RedCity_Business_IT": {
+      "x": 1640.1,
+      "y": 281.1
+    },
+    "RedCity_Business_Museum": {
+      "x": 1298.8,
+      "y": 482.7
+    },
+    "RedCity_Business_PhotoStudio": {
+      "x": 1417,
+      "y": 174.7
+    },
+    "RedCity_Business_PoliceStation": {
+      "x": 1287.2,
+      "y": 554.6
+    },
+    "RedCity_Business_SkyLounge": {
+      "x": 1226.4,
+      "y": 331.9
+    },
+    "RedCity_Business_SurfShop": {
+      "x": 1188.5,
+      "y": 562.3
+    },
+    "RedCity_Business_TakeOut01": {
+      "x": 1004.5,
+      "y": 624.6
+    },
+    "RedCity_Business_TakeOut02": {
+      "x": 1428.6,
+      "y": 709.1
+    },
+    "RedCity_Business_TakeOut03": {
+      "x": 1382,
+      "y": 495.8
+    },
+    "RedCity_Business_TakeOut04": {
+      "x": 1435.2,
+      "y": 181.4
+    },
+    "RedCity_Business_TakeOut05": {
+      "x": 1841.2,
+      "y": 484.2
+    },
+    "RedCity_Business_TakeOut06": {
+      "x": 1913.1,
+      "y": 547.3
+    },
+    "RedCity_Business_TakeOut07": {
+      "x": 1589.2,
+      "y": 733.6
+    },
+    "RedCity_Business_ThemePark02": {
+      "x": 952,
+      "y": 607.9
+    },
+    "RedCity_Business_WeddingStudio": {
+      "x": 1301.4,
+      "y": 72.3
+    },
+    "RedCity_Court2": {
+      "x": 1404.2,
+      "y": 576.9
+    },
+    "RedCity_FakeAgency1": {
+      "x": 1502.1,
+      "y": 682.9
+    },
+    "RedCity_ITCompany": {
+      "x": 1450.2,
+      "y": 639.6
+    },
+    "RedCity_Newspapers": {
+      "x": 1156.3,
+      "y": 838.1
+    },
+    "RedCity_RabbitHole_Cinema": {
+      "x": 1521.9,
+      "y": 607.3
+    },
+    "RedCity_RabbitHole_CityHall": {
+      "x": 1371.2,
+      "y": 411.6
+    },
+    "RedCity_RabbitHole_MedicalCenter": {
+      "x": 1652.8,
+      "y": 205.7
+    },
+    "RedCity_RabbitHole_Museum02": {
+      "x": 1737.2,
+      "y": 1019
+    },
+    "RedCity_RecordCompany": {
+      "x": 1518.3,
+      "y": 294.7
+    },
+    "RedCity_ResearchCenter1": {
+      "x": 1259.9,
+      "y": 434.2
+    },
+    "RedCity_Business_BusinessSite1": {
+      "x": 1463.1,
+      "y": 589.5
+    },
+    "RedCity_Business_Park": {
+      "x": 957.1,
+      "y": 721.7
+    },
+    "RedCity_Business_School": {
+      "x": 1627.7,
+      "y": 934.1
+    },
+    "RedCity_Business_SchoolIn": {
+      "x": 1724.9,
+      "y": 905.6
+    },
+    "RedCity_Business_SchoolOut": {
+      "x": 1735.9,
+      "y": 865.3
+    },
+    "RedCity_Business_ThemePark02_Entrance": {
+      "x": 1031.9,
+      "y": 632.1
+    },
+    "RedCity_Business_ThemePark02_Road": {
+      "x": 956.1,
+      "y": 591.9
+    },
+    "RedCity_Business_ThemePark03": {
+      "x": 927.7,
+      "y": 718.9
+    },
+    "RedCity_Business_ThemePark04": {
+      "x": 889.5,
+      "y": 573
+    },
+    "RedCity_Business_ThemePark05": {
+      "x": 877.4,
+      "y": 620
+    },
+    "RedCity_Business_ThemePark06": {
+      "x": 805.6,
+      "y": 547.6
+    },
+    "RedCity_Business_ThemePark07": {
+      "x": 801.1,
+      "y": 597
+    },
+    "RedCity_BusinessSite2": {
+      "x": 1549.3,
+      "y": 648.1
+    },
+    "RedCity_BusinessSite3": {
+      "x": 1237.5,
+      "y": 521.7
+    },
+    "RedCity_BusinessSite4": {
+      "x": 1549.2,
+      "y": 757.9
+    },
+    "RedCity_BusinessSite5": {
+      "x": 1660,
+      "y": 463
+    },
+    "RedCity_BusinessSite6": {
+      "x": 1649.9,
+      "y": 704.5
+    },
+    "RedCity_BusinessSite7": {
+      "x": 1203.7,
+      "y": 653.6
+    },
+    "RedCity_BusinessSite8": {
+      "x": 1549.1,
+      "y": 166.9
+    },
+    "RedCity_BusinessSite9": {
+      "x": 1363,
+      "y": 234.9
+    },
+    "RedCity_Public_AirportShuttle": {
+      "x": 1128.7,
+      "y": 375.3
+    },
+    "RedCity_Public_Arcade": {
+      "x": 1510.9,
+      "y": 649.9
+    },
+    "RedCity_Public_Avenue": {
+      "x": 1525.8,
+      "y": 489.5
+    },
+    "RedCity_Public_Avenue02": {
+      "x": 1508.1,
+      "y": 559.7
+    },
+    "RedCity_Public_Avenue03": {
+      "x": 1420.4,
+      "y": 392.7
+    },
+    "RedCity_Public_BlessBayBeach01": {
+      "x": 1108.3,
+      "y": 94.1
+    },
+    "RedCity_Public_BlessBayBeach02": {
+      "x": 1051.8,
+      "y": 77.1
+    },
+    "RedCity_Public_BlessBayBeach03": {
+      "x": 1046.6,
+      "y": 266.7
+    },
+    "RedCity_Public_BlessBayBeach03_1": {
+      "x": 1033.5,
+      "y": 317.7
+    },
+    "RedCity_Public_BlessBayBeach03_2": {
+      "x": 985.4,
+      "y": 357.7
+    },
+    "RedCity_Public_BlessBayBeach04": {
+      "x": 1047.6,
+      "y": 149.6
+    },
+    "RedCity_Public_Empty01": {
+      "x": 1897.8,
+      "y": 677.1
+    },
+    "RedCity_Public_Empty02": {
+      "x": 1156.5,
+      "y": 591.2
+    },
+    "RedCity_Public_Empty03": {
+      "x": 1504.9,
+      "y": 348.4
+    },
+    "Redcity_Public_FitnessCenter": {
+      "x": 1821.7,
+      "y": 460.7
+    },
+    "RedCity_Public_FuneralHome": {
+      "x": 1932.7,
+      "y": 326.1
+    },
+    "RedCity_Public_Library": {
+      "x": 1699.9,
+      "y": 1003.6
+    },
+    "RedCity_Public_Livestage": {
+      "x": 1011,
+      "y": 709.7
+    },
+    "RedCity_Public_Livestage02": {
+      "x": 1001.4,
+      "y": 747
+    },
+    "RedCity_Public_Low1_Lobby": {
+      "x": 1880.2,
+      "y": 555.5
+    },
+    "RedCity_Public_Mid4_Lobby": {
+      "x": 1229.1,
+      "y": 819.2
+    },
+    "RedCity_Public_Mid5_Lobby": {
+      "x": 1112.9,
+      "y": 760.2
+    },
+    "RedCity_Public_MuscleBeach": {
+      "x": 1004.8,
+      "y": 430.6
+    },
+    "RedCity_Public_MuscleBeach02": {
+      "x": 991,
+      "y": 484.5
+    },
+    "RedCity_Public_MuscleBeach03": {
+      "x": 977.1,
+      "y": 538.5
+    },
+    "RedCity_Public_MuscleBeach04": {
+      "x": 970.1,
+      "y": 420.1
+    },
+    "RedCity_Public_MuscleBeach05": {
+      "x": 956.3,
+      "y": 474
+    },
+    "RedCity_Public_MuscleBeach06": {
+      "x": 942.4,
+      "y": 528
+    },
+    "RedCity_Public_MuscleGym": {
+      "x": 1077.3,
+      "y": 455.5
+    },
+    "RedCity_Public_MuscleGym02": {
+      "x": 1065,
+      "y": 503.4
+    },
+    "RedCity_Public_Park": {
+      "x": 1678.8,
+      "y": 610.1
+    },
+    "RedCity_Public_Park02": {
+      "x": 1798.8,
+      "y": 646.5
+    },
+    "RedCity_Public_Park03": {
+      "x": 1712.2,
+      "y": 479.9
+    },
+    "RedCity_Public_Park04": {
+      "x": 1944.9,
+      "y": 278.7
+    },
+    "RedCity_Public_PlayGround": {
+      "x": 1094.4,
+      "y": 163.7
+    },
+    "RedCity_Public_PlayGround02": {
+      "x": 1431.9,
+      "y": 766.3
+    },
+    "RedCity_Public_SkyLounge_Lobby": {
+      "x": 1255,
+      "y": 340.6
+    },
+    "RedCity_Public_SmallClub": {
+      "x": 1597.4,
+      "y": 707.7
+    },
+    "RedCity_Public_SunsetBay": {
+      "x": 628.7,
+      "y": 467.1
+    },
+    "RedCity_Public_Up7_Pent_Lobby": {
+      "x": 1614.3,
+      "y": 454.8
+    },
+    "RedCity_RabbitHole_BroadcastingStation": {
+      "x": 1615,
+      "y": 398.5
+    },
+    "RedCity_RabbitHole_EducationCenter": {
+      "x": 1652.4,
+      "y": 490.9
+    },
+    "RedCity_RabbitHole_EnvironmentalGroup": {
+      "x": 1263.4,
+      "y": 230.8
+    },
+    "RedCity_RabbitHole_LumiereHall": {
+      "x": 1412.7,
+      "y": 401
+    },
+    "RedCity_RabbitHole_StockFirm": {
+      "x": 1213,
+      "y": 454.9
+    },
+    "RedCity_RabbitHole_TravelAgency": {
+      "x": 1644,
+      "y": 527.8
+    },
+    "RedCity_RabbitHole_WelfareFoundation": {
+      "x": 1356.7,
+      "y": 670.1
+    }
+  },
+  "Cahaya": {
+    "Cahaya_Residence_EmptySite1": {
+      "x": 1727.1,
+      "y": 223.2
+    },
+    "Cahaya_Residence_EmptySite2": {
+      "x": 1742.7,
+      "y": 578.8
+    },
+    "Cahaya_Residence_EmptySite4": {
+      "x": 1619.1,
+      "y": 370.8
+    },
+    "Cahaya_Residence_EmptySite5": {
+      "x": 1608.8,
+      "y": 119.6
+    },
+    "Cahaya_Residence_LocalHouse1": {
+      "x": 1524,
+      "y": 457.7
+    },
+    "Cahaya_Residence_NPCSite1": {
+      "x": 1770,
+      "y": 764.2
+    },
+    "Cahaya_Residence_NPCSite2": {
+      "x": 1534,
+      "y": 254.1
+    },
+    "Cahaya_Residence_NPCSite3": {
+      "x": 1622.3,
+      "y": 706.2
+    },
+    "Cahaya_Residence_NPCSite4": {
+      "x": 1812.3,
+      "y": 120.8
+    },
+    "Cahaya_Residence_Resort1": {
+      "x": 761.1,
+      "y": 629.4
+    },
+    "Cahaya_Residence_Resort10": {
+      "x": 834.7,
+      "y": 490.2
+    },
+    "PurpleCity_Residence_Free01": {
+      "x": 2071.2,
+      "y": 296.9
+    },
+    "PurpleCity_Residence1": {
+      "x": 2071.2,
+      "y": 296.9
+    },
+    "PurpleCity_Residence2": {
+      "x": 2102.5,
+      "y": 297
+    },
+    "PurpleCity_Residence3": {
+      "x": 2133.7,
+      "y": 297.2
+    },
+    "PurpleCity_Residence4": {
+      "x": 2066.2,
+      "y": 238.2
+    },
+    "PurpleCity_Residence5": {
+      "x": 2097.4,
+      "y": 238.4
+    },
+    "PurpleCity_Residence6": {
+      "x": 2128.7,
+      "y": 238.6
+    },
+    "Cahaya_business_ARLibrary1": {
+      "x": 1669.2,
+      "y": 763.9
+    },
+    "Cahaya_Business_BeachCafe1": {
+      "x": 1003.8,
+      "y": 627
+    },
+    "Cahaya_Business_BrunchCafe1": {
+      "x": 910.5,
+      "y": 655.1
+    },
+    "Cahaya_Business_CafeAndBar1": {
+      "x": 1585.4,
+      "y": 306.7
+    },
+    "Cahaya_Business_CatFoodKiosk": {
+      "x": 798.6,
+      "y": 740.3
+    },
+    "Cahaya_Business_ClothesShop": {
+      "x": 1598.1,
+      "y": 650.5
+    },
+    "Cahaya_Business_CVS1": {
+      "x": 1640.2,
+      "y": 598.7
+    },
+    "Cahaya_Business_DynamicLocalShop1": {
+      "x": 1630.2,
+      "y": 502.2
+    },
+    "Cahaya_Business_FuneralHome": {
+      "x": 699.2,
+      "y": 731.9
+    },
+    "Cahaya_Business_LocalRestaurant1": {
+      "x": 1652.5,
+      "y": 452.4
+    },
+    "Cahaya_Business_LocalShop1": {
+      "x": 1542.4,
+      "y": 676.8
+    },
+    "Cahaya_Business_Meditation": {
+      "x": 873,
+      "y": 779
+    },
+    "Cahaya_Business_PoliceStation1": {
+      "x": 1662.1,
+      "y": 686
+    },
+    "Cahaya_Business_Resort3": {
+      "x": 878.4,
+      "y": 666.8
+    },
+    "Cahaya_Business_Resort8": {
+      "x": 736.1,
+      "y": 477.8
+    },
+    "Cahaya_Business_ResortAmenities1": {
+      "x": 801.1,
+      "y": 521.6
+    },
+    "Cahaya_Business_ResortLobby1": {
+      "x": 922.8,
+      "y": 535
+    },
+    "Cahaya_Business_SmoothieCafe1": {
+      "x": 1526.8,
+      "y": 497.4
+    },
+    "Cahaya_Business_StiltHouse1": {
+      "x": 1055.9,
+      "y": 386.6
+    },
+    "Cahaya_Business_TackleShop1": {
+      "x": 1511.1,
+      "y": 741.8
+    },
+    "Cahaya_Business_TourAgency1": {
+      "x": 958.4,
+      "y": 441.3
+    },
+    "Cahaya_Business_TravelAgency": {
+      "x": 1583.4,
+      "y": 440.3
+    },
+    "Cahaya_Business_WeddingStudio": {
+      "x": 1740.4,
+      "y": 422.2
+    },
+    "Cahaya_Business_YogaCenter1": {
+      "x": 1625.6,
+      "y": 446.6
+    },
+    "Cahaya_FakeAgency1": {
+      "x": 1577.1,
+      "y": 365.3
+    },
+    "Cahaya_Public_BeachLounge1": {
+      "x": 1005.9,
+      "y": 652
+    },
+    "Cahaya_Public_BeachVolleyball1": {
+      "x": 999.3,
+      "y": 541.3
+    },
+    "Cahaya_Public_StiltHouseReception1": {
+      "x": 958.2,
+      "y": 442.6
+    },
+    "PurpleCity_AccessoryShop1": {
+      "x": 1972.4,
+      "y": 302.7
+    },
+    "PurpleCity_Arcade1": {
+      "x": 1936.1,
+      "y": 242.6
+    },
+    "PurpleCity_ARLibrary1": {
+      "x": 2017.9,
+      "y": 451.1
+    },
+    "PurpleCity_Cafe1": {
+      "x": 1999.6,
+      "y": 237.8
+    },
+    "PurpleCity_Cinema1": {
+      "x": 1938.3,
+      "y": 446.7
+    },
+    "PurpleCity_ClothingStore1": {
+      "x": 1948.7,
+      "y": 302.6
+    },
+    "PurpleCity_Club1": {
+      "x": 1925,
+      "y": 291
+    },
+    "PurpleCity_CVS1": {
+      "x": 2007.4,
+      "y": 329
+    },
+    "PurpleCity_FarmStore1": {
+      "x": 1945.5,
+      "y": 264.2
+    },
+    "PurpleCity_FastFood1": {
+      "x": 1932,
+      "y": 373.4
+    },
+    "PurpleCity_FitnessCenter1": {
+      "x": 2011.8,
+      "y": 379.8
+    },
+    "PurpleCity_FurnitureStore1": {
+      "x": 1976,
+      "y": 237.7
+    },
+    "PurpleCity_Pharmacy1": {
+      "x": 1930.8,
+      "y": 359.4
+    },
+    "PurpleCity_PhotoStudio1": {
+      "x": 2115.6,
+      "y": 451
+    },
+    "PurpleCity_PoliceStation1": {
+      "x": 2016.1,
+      "y": 430.9
+    },
+    "PurpleCity_RealEstate1": {
+      "x": 2005.7,
+      "y": 308.7
+    },
+    "PurpleCity_Restaurant1": {
+      "x": 2001.9,
+      "y": 264.5
+    },
+    "PurpleCity_TackleShop1": {
+      "x": 1944.3,
+      "y": 250.5
+    },
+    "PurpleCity_WeddingStudio1": {
+      "x": 2078.9,
+      "y": 360.3
+    },
+    "Cahaya_BusinessSite4": {
+      "x": 1664,
+      "y": 707.2
+    },
+    "Cahaya_BusinessSite5": {
+      "x": 1666.7,
+      "y": 531.8
+    },
+    "Cahaya_BusinessSite6": {
+      "x": 1707.3,
+      "y": 421.7
+    },
+    "Cahaya_BusinessSite7": {
+      "x": 959.3,
+      "y": 491.9
+    },
+    "Cahaya_BusinessSite8": {
+      "x": 1704,
+      "y": 706.3
+    },
+    "Cahaya_Public_BasketballCourt1": {
+      "x": 1790.8,
+      "y": 651.6
+    },
+    "Cahaya_Public_Beach2": {
+      "x": 1474.4,
+      "y": 317.4
+    },
+    "Cahaya_Public_Beach3": {
+      "x": 1480.6,
+      "y": 389.7
+    },
+    "Cahaya_Public_Beach4": {
+      "x": 1486.3,
+      "y": 455.5
+    },
+    "Cahaya_Public_Beach5": {
+      "x": 1494.5,
+      "y": 544.7
+    },
+    "Cahaya_Public_Beach6": {
+      "x": 1041,
+      "y": 713.8
+    },
+    "Cahaya_Public_Beach7": {
+      "x": 1035.1,
+      "y": 627.2
+    },
+    "Cahaya_Public_Beach8": {
+      "x": 1026.4,
+      "y": 565.6
+    },
+    "Cahaya_Public_Beach9": {
+      "x": 993.8,
+      "y": 482.6
+    },
+    "Cahaya_Public_Cemetery": {
+      "x": 670.2,
+      "y": 731.7
+    },
+    "Cahaya_Public_DesertIsland1": {
+      "x": 922.5,
+      "y": 63.4
+    },
+    "Cahaya_Public_DesertIsland2": {
+      "x": 920.7,
+      "y": 70.6
+    },
+    "Cahaya_Public_Field1": {
+      "x": 1706.2,
+      "y": 395.8
+    },
+    "Cahaya_Public_Field2": {
+      "x": 1613.4,
+      "y": 264.9
+    },
+    "Cahaya_Public_Field3": {
+      "x": 1647.4,
+      "y": 307.6
+    },
+    "Cahaya_Public_GuestHouse1": {
+      "x": 1546.1,
+      "y": 706.7
+    },
+    "Cahaya_Public_LocalBooth1": {
+      "x": 1687,
+      "y": 614.2
+    },
+    "Cahaya_Public_LocalBooth2": {
+      "x": 1617.4,
+      "y": 650.6
+    },
+    "Cahaya_Public_NightMarket1": {
+      "x": 1537.9,
+      "y": 623.8
+    },
+    "Cahaya_Public_OutdoorCinema1": {
+      "x": 1010.6,
+      "y": 707.1
+    },
+    "Cahaya_Public_Park": {
+      "x": 1755.9,
+      "y": 452.3
+    },
+    "Cahaya_Public_Pier1": {
+      "x": 1446,
+      "y": 768
+    },
+    "Cahaya_Public_Pier2": {
+      "x": 1425.4,
+      "y": 543.9
+    },
+    "Cahaya_Public_Pier3": {
+      "x": 1104.8,
+      "y": 727.6
+    },
+    "Cahaya_Public_Pier4": {
+      "x": 1410.9,
+      "y": 316.6
+    },
+    "Cahaya_Public_ResortPool1": {
+      "x": 911.2,
+      "y": 475.4
+    },
+    "Cahaya_Public_Temple": {
+      "x": 796,
+      "y": 755.7
+    },
+    "Cahaya_Public_TempleInside": {
+      "x": 787.4,
+      "y": 780.8
+    },
+    "Cahaya_Public_TurtleNest1": {
+      "x": 1499.1,
+      "y": 598.5
+    },
+    "Cahaya_Public_VillaPool1": {
+      "x": 731.9,
+      "y": 633.1
+    },
+    "Cahaya_Public_WaterSlide1": {
+      "x": 699,
+      "y": 452.8
+    },
+    "Cahaya_RabbitHole_School1": {
+      "x": 1745.1,
+      "y": 794.5
+    },
+    "PurpleCity_Library1": {
+      "x": 2116.4,
+      "y": 451
+    },
+    "PurpleCity_LocalOffice1": {
+      "x": 2013.9,
+      "y": 404.2
+    },
+    "PurpleCity_Park1": {
+      "x": 2133,
+      "y": 360.6
+    },
+    "PurpleCity_Playground1": {
+      "x": 2069.8,
+      "y": 271.5
+    },
+    "Cahaya_Public_PierWalkway1": {
+      "x": 1513.4,
+      "y": 761.9
+    },
+    "Cahaya_Public_PierWalkway2": {
+      "x": 1476.5,
+      "y": 533.5
+    },
+    "Cahaya_Public_PierWalkway3": {
+      "x": 1474.7,
+      "y": 317
+    },
+    "Cahaya_Public_PierWalkway4": {
+      "x": 1042.2,
+      "y": 727.3
+    },
+    "Cahaya_Public_PierWalkway5": {
+      "x": 1051.1,
+      "y": 363.5
+    }
+  }
+}

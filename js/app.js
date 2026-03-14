@@ -1,6 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.7.0';
+const APP_VERSION = '1.8.0';
 const CHANGELOG = [
+  { ver: '1.8.0', date: '2026-03-15', changes: [
+    '게임 월드 좌표 기반 부지 자동 배치 (343개 부지)',
+    '수동 배치가 있으면 수동 우선, 없으면 자동 좌표 사용',
+  ] },
   { ver: '1.7.0', date: '2026-03-15', changes: [
     '게임 엔진 원본 데이터(JsonResult)에서 sites.json 자동 생성 스크립트 추가',
     'PurpleCity(캔버스타운) 부지 30개 신규 추가',
@@ -1684,18 +1688,20 @@ async function init() {
   // Load map images from IndexedDB
   await loadImagesFromDB();
 
-  // Always load shared positions from server (overrides local)
+  // Load world-positions (auto-generated from game data), then overlay manual positions
   try {
-    const res = await fetch('data/positions.json');
-    if (res.ok) {
-      const positions = await res.json();
-      for (const c of Object.keys(positions)) {
-        if (state.maps[c]) {
-          state.maps[c].positions = positions[c] || {};
-        }
-      }
-      saveState();
+    const [wpRes, posRes] = await Promise.all([
+      fetch('data/world-positions.json'),
+      fetch('data/positions.json')
+    ]);
+    const worldPositions = wpRes.ok ? await wpRes.json() : {};
+    const manualPositions = posRes.ok ? await posRes.json() : {};
+    for (const c of Object.keys(state.maps)) {
+      // Start with world-positions as base, then override with manual positions
+      const merged = { ...(worldPositions[c] || {}), ...(manualPositions[c] || {}) };
+      state.maps[c].positions = merged;
     }
+    saveState();
   } catch(e) { console.warn('Failed to load positions', e); }
 
   // Load map images from save file if not in IndexedDB
