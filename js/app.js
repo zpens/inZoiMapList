@@ -4,6 +4,7 @@ const CHANGELOG = [
   { ver: '2.1.0', date: '2026-03-15', changes: [
     '상세 정보에 수영장 설치 가능 여부 추가',
     '상세 정보에 거리/LOD 섹션 추가 (스트리밍, LOD0~2)',
+    '통계 세부항목에 수영장/스트리밍/LOD0~2 컬럼 추가 (정렬 가능)',
   ] },
   { ver: '2.0.0', date: '2026-03-15', changes: [
     '캔버스타운 도시 탭 추가 (PurpleCity 부지 30개 분리)',
@@ -1500,8 +1501,13 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       if (sk === 'size') { va = (a.sizeX||0)*(a.sizeY||0); vb = (b.sizeX||0)*(b.sizeY||0); }
       else if (sk === 'stdSize') { va = a.standardizedSize||''; vb = b.standardizedSize||''; return sd === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va); }
       else if (sk === 'maxFloor') { va = a.maxFloor||0; vb = b.maxFloor||0; }
+      else if (sk === 'pool') { va = a.poolAllowed?1:0; vb = b.poolAllowed?1:0; }
       else if (sk === 'price') { va = a.price||0; vb = b.price||0; }
       else if (sk === 'presets') { va = PRESET_DATA[a.id]?.length||0; vb = PRESET_DATA[b.id]?.length||0; }
+      else if (sk === 'streaming') { va = a.streamingDistance||0; vb = b.streamingDistance||0; }
+      else if (sk === 'lod0') { va = a.lod0Distance||0; vb = b.lod0Distance||0; }
+      else if (sk === 'lod1') { va = a.lod1Distance||0; vb = b.lod1Distance||0; }
+      else if (sk === 'lod2') { va = a.lod2Distance||0; vb = b.lod2Distance||0; }
       return sd === 'asc' ? va - vb : vb - va;
     });
     return filtered.map(s => {
@@ -1509,7 +1515,7 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
       const stdBadge = isStdSize(s) ? `<span style="color:var(--accent);font-size:10px;font-weight:600;margin-left:4px">규격</span>` : '';
       const newBadge = s.addedDate ? `<span style="background:#22c55e;color:#fff;font-size:9px;font-weight:700;padding:1px 4px;border-radius:3px;margin-left:4px">NEW</span>` : '';
       const cityTd = showCity ? `<td>${CITY_LABEL[s.city]||s.city}</td>` : '';
-      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap;color:#60a5fa">${s.maxFloor > 0 ? s.maxFloor+'층' : '-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td></tr>`;
+      return `<tr style="cursor:pointer" data-id="${s.id}"><td>${s.name}${newBadge}</td><td style="font-size:10px;color:var(--text2)">${s.id}</td>${cityTd}<td class="num" style="white-space:nowrap">${s.sizeX} × ${s.sizeY}${stdBadge}</td><td class="num" style="white-space:nowrap;color:var(--accent)">${s.standardizedSize||'-'}</td><td class="num" style="white-space:nowrap;color:#60a5fa">${s.maxFloor > 0 ? s.maxFloor+'층' : '-'}</td><td class="num" style="text-align:center">${s.poolAllowed ? '<span style="color:#22c55e">✅</span>' : '-'}</td><td class="num" style="white-space:nowrap">${s.price>1?'₦'+s.price.toLocaleString():'-'}</td><td class="num">${presets||'-'}</td><td class="num" style="font-size:10px">${s.streamingDistance||'-'}</td><td class="num" style="font-size:10px">${s.lod0Distance||'-'}</td><td class="num" style="font-size:10px">${s.lod1Distance||'-'}</td><td class="num" style="font-size:10px">${s.lod2Distance||'-'}</td></tr>`;
     }).join('');
   };
 
@@ -1548,9 +1554,14 @@ function renderStatsDetail(dashboard, sites, allPositions, group, groupBy) {
             ${cityHeader}
             <th data-sort="size" class="${sc('size')}" style="cursor:pointer;width:100px;text-align:right">크기</th>
             <th data-sort="stdSize" class="${sc('stdSize')}" style="cursor:pointer;width:60px;text-align:right">규격</th>
-            <th data-sort="maxFloor" class="${sc('maxFloor')}" style="cursor:pointer;width:60px;text-align:right">층수</th>
-            <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:100px;text-align:right">가격</th>
-            <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer;width:70px;text-align:right">프리셋</th>
+            <th data-sort="maxFloor" class="${sc('maxFloor')}" style="cursor:pointer;width:50px;text-align:right">층수</th>
+            <th data-sort="pool" class="${sc('pool')}" style="cursor:pointer;width:50px;text-align:center">수영장</th>
+            <th data-sort="price" class="${sc('price')}" style="cursor:pointer;width:90px;text-align:right">가격</th>
+            <th data-sort="presets" class="${sc('presets')}" style="cursor:pointer;width:55px;text-align:right">프리셋</th>
+            <th data-sort="streaming" class="${sc('streaming')}" style="cursor:pointer;width:55px;text-align:right">스트리밍</th>
+            <th data-sort="lod0" class="${sc('lod0')}" style="cursor:pointer;width:45px;text-align:right">LOD0</th>
+            <th data-sort="lod1" class="${sc('lod1')}" style="cursor:pointer;width:45px;text-align:right">LOD1</th>
+            <th data-sort="lod2" class="${sc('lod2')}" style="cursor:pointer;width:45px;text-align:right">LOD2</th>
           </tr></thead>
           <tbody>${buildRows()}</tbody>
         </table>
