@@ -66,7 +66,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .map-placeholder svg{width:64px;height:64px;margin-bottom:12px;opacity:.3}
 .map-placeholder p{font-size:14px;margin-bottom:8px}
 .map-placeholder small{font-size:11px;opacity:.6}
-.placed-site{position:absolute;cursor:pointer;user-select:none;display:flex;flex-direction:column;align-items:center;transform:translate(-50%,-100%);z-index:1;transition:filter .15s}
+.placed-site{position:absolute;cursor:pointer;user-select:none;display:flex;flex-direction:column;align-items:center;transform:translate(-50%,-100%);transform-origin:50% 100%;z-index:1;transition:filter .15s}
 .placed-site:hover{z-index:10!important;filter:brightness(1.2)}
 .placed-site.selected-on-map{z-index:20!important}
 .placed-site.dragging-site{opacity:.8;z-index:999!important}

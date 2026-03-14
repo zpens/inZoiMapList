@@ -1,8 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.5';
+const APP_VERSION = '1.5.6';
 const CHANGELOG = [
-  { ver: '1.5.5', date: '2026-03-14', changes: [
-    '핀 배치 중앙 정렬 보정값 수정 (줌 레벨 무관하게 정확한 중앙 배치)',
+  { ver: '1.5.6', date: '2026-03-14', changes: [
+    '핀 위치 줌 안정성 수정: 줌인/아웃 시 핀이 이동하지 않도록 transform-origin 고정',
+    '핀 배치 시 클릭 위치 = 핀 꼬리 끝 (지도에 핀을 꽂는 자연스러운 동작)',
   ] },
   { ver: '1.5.4', date: '2026-03-14', changes: [
     '부지 배치 시 클릭 위치가 핀 아이콘 정중앙에 오도록 보정',
@@ -426,14 +427,12 @@ function renderMapSites() {
     if (s) el.dataset.size = `${s.sizeX}×${s.sizeY}`;
     canvasContainer.appendChild(el);
   });
-  // Re-apply counter-scale for zoom > 1
+  // Re-apply counter-scale for zoom > 1 (combined with translate to keep anchor stable)
   const m = currentMap();
-  if (m.zoom > 1) {
-    const pinScale = 1 / m.zoom;
-    document.querySelectorAll('.placed-site').forEach(el => {
-      el.style.scale = pinScale;
-    });
-  }
+  const pinScale = m.zoom > 1 ? 1 / m.zoom : 1;
+  document.querySelectorAll('.placed-site').forEach(el => {
+    el.style.transform = `translate(-50%, -100%) scale(${pinScale})`;
+  });
 }
 
 // ============ ZOOM / PAN ============
@@ -441,10 +440,10 @@ function applyTransform() {
   const m = currentMap();
   canvasContainer.style.transform = `translate(${m.panX}px,${m.panY}px) scale(${m.zoom})`;
   $('zoomInfo').textContent = Math.round(m.zoom * 100) + '%';
-  // Pin size fixed when zoom > 1: apply counter-scale
+  // Pin size fixed when zoom > 1: combine translate+scale in one transform for stable anchoring
   const pinScale = m.zoom > 1 ? 1 / m.zoom : 1;
   document.querySelectorAll('.placed-site').forEach(el => {
-    el.style.scale = pinScale;
+    el.style.transform = `translate(-50%, -100%) scale(${pinScale})`;
   });
 }
 
@@ -638,8 +637,7 @@ canvasArea.addEventListener('click', e => {
     const m = currentMap();
     const rect = canvasArea.getBoundingClientRect();
     const x = (e.clientX - rect.left - m.panX) / m.zoom;
-    // Offset so pin-head center aligns with click: pin-head 36px + tail 8px = 44px total, head center at 18px from top, so offset = 44-18 = 26px
-    const y = (e.clientY - rect.top - m.panY) / m.zoom + 26;
+    const y = (e.clientY - rect.top - m.panY) / m.zoom;
     m.positions[state.placingId] = { x, y };
     const id = state.placingId;
     stopPlacing();
