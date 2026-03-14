@@ -1,7 +1,8 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.9.1';
+const APP_VERSION = '2.0.0';
 const CHANGELOG = [
-  { ver: '1.9.1', date: '2026-03-15', changes: [
+  { ver: '2.0.0', date: '2026-03-15', changes: [
+    '캔버스타운 도시 탭 추가 (PurpleCity 부지 30개 분리)',
     '통계 세부항목에 층수 컬럼 추가 (정렬 가능)',
   ] },
   { ver: '1.9.0', date: '2026-03-15', changes: [
@@ -96,7 +97,7 @@ let SITES_DATA = [];
 let PRESET_DATA = {};
 let DETAIL_EXTRA = {};
 let SITE_IMAGES = {};
-let MEMOS_DATA = { Gangnam: [], RedCity: [], Cahaya: [] };
+let MEMOS_DATA = { Gangnam: [], RedCity: [], Cahaya: [], CanvasTown: [] };
 
 
 // ============ STATE ============
@@ -130,7 +131,7 @@ const state = {
 };
 
 // Init maps state
-['Gangnam','RedCity','Cahaya'].forEach(c => {
+['Gangnam','RedCity','Cahaya','CanvasTown'].forEach(c => {
   state.maps[c] = { imageData: null, positions: {}, panX: 0, panY: 0, zoom: 1 };
 });
 
@@ -195,7 +196,7 @@ try {
 // Load images from IndexedDB after init
 async function loadImagesFromDB() {
   await IDB.open();
-  for (const c of ['Gangnam','RedCity','Cahaya']) {
+  for (const c of ['Gangnam','RedCity','Cahaya','CanvasTown']) {
     const img = await IDB.loadImage('map_' + c);
     if (img) state.maps[c].imageData = img;
   }
@@ -1217,9 +1218,10 @@ const STATS_CITY_OPTIONS = [
   { value: 'all', label: '전체 도시' },
   { value: 'Gangnam', label: '도원' },
   { value: 'RedCity', label: '블리스베이' },
-  { value: 'Cahaya', label: '차하야' }
+  { value: 'Cahaya', label: '차하야' },
+  { value: 'CanvasTown', label: '캔버스타운' }
 ];
-const CITY_LABEL = { Gangnam: '도원', RedCity: '블리스베이', Cahaya: '차하야' };
+const CITY_LABEL = { Gangnam: '도원', RedCity: '블리스베이', Cahaya: '차하야', CanvasTown: '캔버스타운' };
 const TYPE_LABEL = { Residence: '주거', Business: '비즈니스', Public: '공용', Bus: '버스', Override: '오버라이드' };
 
 const STANDARD_SIZES = [[30,20],[40,30],[50,40],[60,50],[70,60],[80,40],[80,70]];

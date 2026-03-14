@@ -976,34 +976,6 @@
       "x": 834.7,
       "y": 490.2
     },
-    "PurpleCity_Residence_Free01": {
-      "x": 2071.2,
-      "y": 296.9
-    },
-    "PurpleCity_Residence1": {
-      "x": 2071.2,
-      "y": 296.9
-    },
-    "PurpleCity_Residence2": {
-      "x": 2102.5,
-      "y": 297
-    },
-    "PurpleCity_Residence3": {
-      "x": 2133.7,
-      "y": 297.2
-    },
-    "PurpleCity_Residence4": {
-      "x": 2066.2,
-      "y": 238.2
-    },
-    "PurpleCity_Residence5": {
-      "x": 2097.4,
-      "y": 238.4
-    },
-    "PurpleCity_Residence6": {
-      "x": 2128.7,
-      "y": 238.6
-    },
     "Cahaya_business_ARLibrary1": {
       "x": 1669.2,
       "y": 763.9
@@ -1115,82 +1087,6 @@
     "Cahaya_Public_StiltHouseReception1": {
       "x": 958.2,
       "y": 442.6
-    },
-    "PurpleCity_AccessoryShop1": {
-      "x": 1972.4,
-      "y": 302.7
-    },
-    "PurpleCity_Arcade1": {
-      "x": 1936.1,
-      "y": 242.6
-    },
-    "PurpleCity_ARLibrary1": {
-      "x": 2017.9,
-      "y": 451.1
-    },
-    "PurpleCity_Cafe1": {
-      "x": 1999.6,
-      "y": 237.8
-    },
-    "PurpleCity_Cinema1": {
-      "x": 1938.3,
-      "y": 446.7
-    },
-    "PurpleCity_ClothingStore1": {
-      "x": 1948.7,
-      "y": 302.6
-    },
-    "PurpleCity_Club1": {
-      "x": 1925,
-      "y": 291
-    },
-    "PurpleCity_CVS1": {
-      "x": 2007.4,
-      "y": 329
-    },
-    "PurpleCity_FarmStore1": {
-      "x": 1945.5,
-      "y": 264.2
-    },
-    "PurpleCity_FastFood1": {
-      "x": 1932,
-      "y": 373.4
-    },
-    "PurpleCity_FitnessCenter1": {
-      "x": 2011.8,
-      "y": 379.8
-    },
-    "PurpleCity_FurnitureStore1": {
-      "x": 1976,
-      "y": 237.7
-    },
-    "PurpleCity_Pharmacy1": {
-      "x": 1930.8,
-      "y": 359.4
-    },
-    "PurpleCity_PhotoStudio1": {
-      "x": 2115.6,
-      "y": 451
-    },
-    "PurpleCity_PoliceStation1": {
-      "x": 2016.1,
-      "y": 430.9
-    },
-    "PurpleCity_RealEstate1": {
-      "x": 2005.7,
-      "y": 308.7
-    },
-    "PurpleCity_Restaurant1": {
-      "x": 2001.9,
-      "y": 264.5
-    },
-    "PurpleCity_TackleShop1": {
-      "x": 1944.3,
-      "y": 250.5
-    },
-    "PurpleCity_WeddingStudio1": {
-      "x": 2078.9,
-      "y": 360.3
     },
     "Cahaya_BusinessSite4": {
       "x": 1664,
@@ -1340,22 +1236,6 @@
       "x": 1745.1,
       "y": 794.5
     },
-    "PurpleCity_Library1": {
-      "x": 2116.4,
-      "y": 451
-    },
-    "PurpleCity_LocalOffice1": {
-      "x": 2013.9,
-      "y": 404.2
-    },
-    "PurpleCity_Park1": {
-      "x": 2133,
-      "y": 360.6
-    },
-    "PurpleCity_Playground1": {
-      "x": 2069.8,
-      "y": 271.5
-    },
     "Cahaya_Public_PierWalkway1": {
       "x": 1513.4,
       "y": 761.9
@@ -1376,5 +1256,6 @@
       "x": 1051.1,
       "y": 363.5
     }
-  }
+  },
+  "CanvasTown": {}
 }

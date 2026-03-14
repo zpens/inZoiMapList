@@ -138,7 +138,7 @@ function main() {
   console.log(`  Cahaya fit: ${cahayaTransform.usedCount}/${cahayaTransform.totalCount}`);
 
   // 전체 사이트에 좌표 적용
-  const result = { Gangnam: {}, RedCity: {}, Cahaya: {} };
+  const result = { Gangnam: {}, RedCity: {}, Cahaya: {}, CanvasTown: {} };
   let generated = 0, skipped = 0;
 
   for (const site of sites) {
@@ -156,6 +156,10 @@ function main() {
     } else if (city === 'Cahaya') {
       world = cahayaWorld[id] || purpleWorld[id] || purple2World[id];
       transform = cahayaTransform;
+    } else if (city === 'CanvasTown') {
+      world = purpleWorld[id] || purple2World[id];
+      // 캔버스타운은 아직 캘리브레이션 데이터 없음 — 좌표 생성 스킵
+      transform = null;
     }
 
     if (world && transform) {
@@ -168,7 +172,7 @@ function main() {
   }
 
   console.log(`\n결과: ${generated}개 좌표 생성, ${skipped}개 스킵 (월드 좌표 없음)`);
-  for (const city of ['Gangnam', 'RedCity', 'Cahaya']) {
+  for (const city of ['Gangnam', 'RedCity', 'Cahaya', 'CanvasTown']) {
     console.log(`  ${city}: ${Object.keys(result[city]).length}개`);
   }
 

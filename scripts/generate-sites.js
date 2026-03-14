@@ -71,7 +71,7 @@ function deriveCity(id) {
   if (id.startsWith('Gangnam_')) return 'Gangnam';
   if (id.startsWith('RedCity_')) return 'RedCity';
   if (id.startsWith('MiniRedCity_')) return 'RedCity';
-  if (id.startsWith('PurpleCity')) return 'Cahaya';
+  if (id.startsWith('PurpleCity')) return 'CanvasTown';
   if (id.startsWith('Cahaya_')) return 'Cahaya';
   return '';
 }
@@ -276,7 +276,7 @@ function main() {
   }
 
   // 8. 정렬 (city → siteType → id 순)
-  const cityOrder = { Gangnam: 0, RedCity: 1, Cahaya: 2 };
+  const cityOrder = { Gangnam: 0, RedCity: 1, Cahaya: 2, CanvasTown: 3 };
   const typeOrder = { Residence: 0, Business: 1, Public: 2, Override: 3, Bus: 4 };
   results.sort((a, b) => {
     const c = (cityOrder[a.city] ?? 9) - (cityOrder[b.city] ?? 9);
