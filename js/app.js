@@ -1296,6 +1296,7 @@ function renderStats() {
   const sitesWithPresets = sites.filter(s => PRESET_DATA[s.id]?.length).length;
   const totalPresets = sites.reduce((sum, s) => sum + (PRESET_DATA[s.id]?.length || 0), 0);
   const newCount = sites.filter(s => s.addedDate).length;
+  const poolCount = sites.filter(s => s.poolAllowed).length;
   const resCount = sites.filter(s => s.siteType === 'Residence').length;
   const bizCount = sites.filter(s => s.siteType === 'Business').length;
   const pubCount = sites.filter(s => s.siteType === 'Public').length;
@@ -1407,6 +1408,7 @@ function renderStats() {
       <div class="stats-card"><div class="stats-card-value">${totalArea.toLocaleString()}</div><div class="stats-card-label">총 면적</div></div>
       <div class="stats-card"><div class="stats-card-value">${avgPrice ? '₦' + avgPrice.toLocaleString() : '-'}</div><div class="stats-card-label">평균 가격</div></div>
       <div class="stats-card"><div class="stats-card-value" style="color:var(--accent)">${stdCount}</div><div class="stats-card-label">📐 규격 부지</div></div>
+      <div class="stats-card"><div class="stats-card-value" style="color:#60a5fa">${poolCount}</div><div class="stats-card-label">🏊 수영장 가능</div></div>
       ${newCount ? `<div class="stats-card"><div class="stats-card-value" style="color:#22c55e">${newCount}</div><div class="stats-card-label">🆕 신규 부지</div></div>` : ''}
       <div class="stats-card"><div class="stats-card-value">${sitesWithPresets}</div><div class="stats-card-label">🏗️ 프리셋 보유</div></div>
       <div class="stats-card"><div class="stats-card-value">${totalPresets}</div><div class="stats-card-label">🏗️ 총 프리셋 수</div></div>
