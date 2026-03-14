@@ -1,6 +1,9 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.5.4';
+const APP_VERSION = '1.5.5';
 const CHANGELOG = [
+  { ver: '1.5.5', date: '2026-03-14', changes: [
+    '핀 배치 중앙 정렬 보정값 수정 (줌 레벨 무관하게 정확한 중앙 배치)',
+  ] },
   { ver: '1.5.4', date: '2026-03-14', changes: [
     '부지 배치 시 클릭 위치가 핀 아이콘 정중앙에 오도록 보정',
   ] },
@@ -636,7 +639,7 @@ canvasArea.addEventListener('click', e => {
     const rect = canvasArea.getBoundingClientRect();
     const x = (e.clientX - rect.left - m.panX) / m.zoom;
     // Offset so pin-head center aligns with click: pin-head 36px + tail 8px = 44px total, head center at 18px from top, so offset = 44-18 = 26px
-    const y = (e.clientY - rect.top - m.panY) / m.zoom + 26 / m.zoom;
+    const y = (e.clientY - rect.top - m.panY) / m.zoom + 26;
     m.positions[state.placingId] = { x, y };
     const id = state.placingId;
     stopPlacing();
