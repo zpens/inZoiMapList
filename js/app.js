@@ -1,6 +1,10 @@
 // ============ VERSION / CHANGELOG ============
-const APP_VERSION = '1.4.0';
+const APP_VERSION = '1.4.1';
 const CHANGELOG = [
+  { ver: '1.4.1', date: '2026-03-14', changes: [
+    '모바일 헤더 터치 영역 확대 (44px 이상)',
+    'iOS 안전 영역(safe-area) 대응 (노치/홈바)',
+  ] },
   { ver: '1.4.0', date: '2026-03-14', changes: [
     '신규 부지 NEW 뱃지 표시 (목록, 상세정보, 통계 세부항목)',
     '통계 그룹 기준에 "신규/기존" 추가',
